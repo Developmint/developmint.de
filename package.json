@@ -1,0 +1,64 @@
+{
+  "name": "developmint.de",
+  "version": "1.0.0",
+  "description": "Our company website",
+  "author": "Alexander Lichter <alichter@developmint.de>",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development nuxt",
+    "build": "NODE_ENV=production nuxt build",
+    "start": "NODE_ENV=production nuxt start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "npm run lint && npm run build && bundlesize"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.1.1",
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/pwa": "^2.0.8",
+    "autoprefixer": "^8.1.0",
+    "bundlesize": "^0.16.0",
+    "glob-all": "^3.1.0",
+    "intersection-observer": "^0.5.0",
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.4.0",
+    "nuxt-i18n": "^2.7.0",
+    "purgecss": "^0.20.1",
+    "purgecss-webpack-plugin": "^0.20.1",
+    "sass-loader": "^6.0.7",
+    "shifty": "^2.3.1",
+    "tailwindcss": "^0.5.1",
+    "vue-observe-visibility": "^0.3.1",
+    "vuelidate": "^0.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.3.0",
+    "husky": "^0.15.0-rc.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "bundlesize": [
+    {
+      "path": "./.nuxt/dist/+([0123456789]|lang-*).*.js",
+      "maxSize": "6.5 kB"
+    },
+    {
+      "path": "./.nuxt/dist/app.*.js",
+      "maxSize": "15 kB"
+    },
+    {
+      "path": "./.nuxt/dist/vendor*.js",
+      "maxSize": "62.50 kB"
+    }
+  ]
+}

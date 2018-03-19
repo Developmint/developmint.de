@@ -1,0 +1,63 @@
+@variants group-hover {
+  .text-shadow {
+    text-shadow: 4px 4px 10px config('colors.rains');
+  }
+}
+
+@variants hover {
+  .text-shadow-sm {
+    text-shadow: 4px 4px 10px config('colors.rains');
+  }
+}
+
+.shadow-over-rains-lighter {
+  box-shadow: 0 0 60px -18px config('colors.rains-lighter');
+}
+
+.shadow-over-grey-darkest {
+  box-shadow: 0 0 30px -18px config('colors.grey-darkest');
+}
+
+@variants responsive, hover, group-hover {
+  .scale-1025 {
+    transform: scale(1.025);
+  }
+}
+
+::selection {
+  @apply .bg-developmint .text-white;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */
+{
+  transform: translateZ(-10px);
+  opacity: 0;
+}
+
+.shadow-white {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+.shadow-red {
+  box-shadow: 0 0 0 2px config("colors.red");
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}

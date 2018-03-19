@@ -1,0 +1,12 @@
+@tailwind preflight;
+
+@import "components/_nav";
+@import "components/_btn";
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "animations";
+@import "backgrounds";
+@import "shame";

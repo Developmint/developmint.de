@@ -1,0 +1,46 @@
+module.exports = {
+  locales: [
+    {
+      code: 'en',
+      iso: 'en-US',
+      name: 'English',
+      langFile: 'en.js'
+    },
+    {
+      code: 'de',
+      iso: 'de-DE',
+      name: 'Deutsch',
+      langFile: 'de.js'
+    }
+  ],
+  defaultLocale: 'en',
+  seo: true,
+  loadLanguagesAsync: true,
+  detectBrowserLanguage: true,
+  langDir: 'i18n/',
+  routes: {
+    about: {
+      de: '/ueber-uns',
+      en: '/about-us'
+    },
+    work: {
+      de: '/referenzen',
+      en: '/work'
+    },
+    legal: {
+      de: '/impressum',
+      en: '/legal'
+    },
+    disclaimer: {
+      de: '/haftungsausschluss',
+      en: '/disclaimer'
+    },
+    privacy: {
+      de: '/datenschutz',
+      en: '/privacy'
+    }
+  },
+  vueI18n: {
+    fallbackLocale: 'en'
+  }
+}
