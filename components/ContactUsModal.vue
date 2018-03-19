@@ -72,6 +72,7 @@
             {{ $t('contact.buttons.back') }}
           </button>
           <button
+            :disabled="submitting"
             class="ml-4 mt-4 rounded hover:bg-gradient-rains-dark-rains transition-all hover:border-developmint px-6 py-3 border border-grey-light text-grey-light"
             type="submit">
             {{ $t('contact.buttons.submit') }}
@@ -104,6 +105,7 @@ export default {
       name: '',
       email: '',
       msg: '',
+      submitting: false,
       isSubmitted: false,
       error: false
     }
@@ -135,12 +137,13 @@ export default {
       }
     },
     validate () {
-      if (this.$v.$error) {
+      if (this.$v.$error || this.submitting) {
         return
       }
       this.submitForm()
     },
     async submitForm () {
+      this.submitting = true
       this.$ga.event('submit', 'form', this.$i18n.locale)
       this.error = false
       try {
@@ -149,10 +152,12 @@ export default {
           email: this.email,
           msg: this.msg
         })
+        this.submitting = false
         this.isSubmitted = true
         await new Promise(resolve => setTimeout(resolve, 2500))
         this.$emit('close')
       } catch (e) {
+        this.submitting = false
         this.error = true
         console.log(e)
       }
