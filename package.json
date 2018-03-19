@@ -49,8 +49,12 @@
   },
   "bundlesize": [
     {
-      "path": "./.nuxt/dist/+([0123456789]|lang-*).*.js",
+      "path": "./.nuxt/dist/+([0123456789]).*.js",
       "maxSize": "6.5 kB"
+    },
+    {
+      "path": "./.nuxt/dist/+(lang-*).*.js",
+      "maxSize": "10 kB"
     },
     {
       "path": "./.nuxt/dist/app.*.js",
