@@ -21,7 +21,7 @@
     "intersection-observer": "^0.5.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.4.0",
-    "nuxt-i18n": "^2.7.0",
+    "nuxt-i18n": "^2.7.1",
     "purgecss": "^0.20.1",
     "purgecss-webpack-plugin": "^0.20.1",
     "sass-loader": "^6.0.7",
