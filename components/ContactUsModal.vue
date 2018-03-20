@@ -16,7 +16,7 @@
           class="bg-grey-lighter inline-flex rounded items-center px-4 border-white transition-all w-full my-2">
           <label
             for="name"
-            class="text-developmint-darker">Name</label>
+            class="text-developmint-darker whitespace-no-wrap">Name</label>
           <input
             id="name"
             v-model.trim.lazy="name"
@@ -34,7 +34,7 @@
           class="bg-grey-lighter inline-flex rounded items-center px-4 border-white transition-all w-full my-2">
           <label
             for="email"
-            class="text-developmint-darker">E-Mail</label>
+            class="text-developmint-darker whitespace-no-wrap">E-Mail</label>
           <input
             id="email"
             v-model.trim.lazy="email"
