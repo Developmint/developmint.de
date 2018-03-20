@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { deterministicRotate, seoCreator } from '~/shared/helpers'
+import { deterministicRotate } from '~/shared/helpers'
 
 export default {
   components: {
@@ -97,7 +97,7 @@ export default {
     }
   ]),
   head () {
-    return seoCreator('work', this)
+    return this.$createSeo('work')
   }
 }
 </script>

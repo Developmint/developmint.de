@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { deterministicRotate, seoCreator } from '~/shared/helpers'
+import { deterministicRotate } from '~/shared/helpers'
 
 export default {
   components: {
@@ -49,7 +49,7 @@ export default {
     }
   ]),
   head () {
-    return seoCreator('about', this, [{
+    return this.$createSeo('about', [{
       name: 'og:image',
       content: require('~/assets/img/bg/about-us.jpg')
     }])

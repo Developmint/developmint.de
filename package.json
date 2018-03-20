@@ -62,7 +62,7 @@
     },
     {
       "path": "./.nuxt/dist/vendor*.js",
-      "maxSize": "62.50 kB"
+      "maxSize": "63 kB"
     }
   ]
 }

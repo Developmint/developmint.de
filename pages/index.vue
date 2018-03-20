@@ -104,8 +104,6 @@
 </template>
 
 <script>
-import { seoCreator } from '~/shared/helpers'
-
 export default {
   components: {
     InformationIcon: () => import('~/components/index/InformationIcon'),
@@ -153,7 +151,7 @@ export default {
   head () {
     return {
       title: '',
-      ...seoCreator('index', this)
+      ...this.$createSeo('index')
     }
   }
 }

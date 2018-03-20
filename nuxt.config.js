@@ -152,6 +152,7 @@ module.exports = {
    * Nuxt plugins
    */
   plugins: [
+    { src: '~/plugins/vue-prototype-extensions' },
     { src: '~/plugins/vue-scroll-directive', ssr: false },
     { src: '~/plugins/vue-observe-visibility-directive', ssr: false }
   ],
