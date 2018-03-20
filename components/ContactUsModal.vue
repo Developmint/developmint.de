@@ -124,10 +124,10 @@ export default {
       minLength: minLength(25)
     }
   },
-  created () {
+  mounted () {
     window.addEventListener('keyup', this.onKeyUp)
   },
-  destroyed () {
+  beforeDestroy () {
     window.removeEventListener('keyup', this.onKeyUp)
   },
   methods: {
