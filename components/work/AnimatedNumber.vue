@@ -1,7 +1,3 @@
-<template>
-  <span v-text="number"/>
-</template>
-
 <script>
 export default {
   props: {
@@ -64,6 +60,9 @@ export default {
           this.state = 0
         })
     }
+  },
+  render (h) {
+    return h('span', this.number)
   }
 }
 </script>
