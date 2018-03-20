@@ -2,7 +2,6 @@ import Vue from 'vue'
 
 // What a monster :O
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
-  console.log(this.$i18n.messages[this.$i18n.locale].seo[slug])
   return Object.entries(this.$i18n.messages[this.$i18n.locale].seo[slug]).reduce((acc, [key, value]) => {
     if (key === 'meta') {
       const defaultMetaArray = [

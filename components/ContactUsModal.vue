@@ -159,7 +159,7 @@ export default {
       } catch (e) {
         this.submitting = false
         this.error = true
-        console.log(e)
+        console.error(e)
       }
     }
   }
