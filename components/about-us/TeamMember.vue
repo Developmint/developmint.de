@@ -18,25 +18,29 @@
           <a
             v-if="links.web"
             :href="links.web"
-            class="no-underline group">
+            class="no-underline group"
+            @click="logClick('web')">
             <GlobeIcon class="block w-6 h-6 mx-3 text-grey-darker group-hover:text-developmint transition-all fill-current"/>
           </a>
           <a
             v-if="links.github"
             :href="links.github"
-            class="no-underline group">
+            class="no-underline group"
+            @click="logClick('github')">
             <GitHubIcon class="block w-6 h-6 mx-3 text-grey-darker group-hover:text-black transition-all fill-current"/>
           </a>
           <a
             v-if="links.twitter"
             :href="links.twitter"
-            class="no-underline group">
+            class="no-underline group"
+            @click="logClick('twitter')">
             <TwitterIcon class="block w-6 h-6 mx-3 text-grey-darker group-hover:text-blue-light transition-all fill-current"/>
           </a>
           <a
             v-if="links.linkedin"
             :href="links.linkedin"
-            class="no-underline group">
+            class="no-underline group"
+            @click="logClick('linkedin')">
             <LinkedInIcon class="block w-6 h-6 mx-3 text-grey-darker group-hover:text-blue-dark transition-all fill-current"/>
           </a>
         </div>
@@ -77,6 +81,14 @@ export default {
     odd: {
       type: Boolean,
       required: true
+    }
+  },
+  methods: {
+    logClick (icon) {
+      this.$ga.event({
+        eventCategory: 'click',
+        eventAction: `${this.name} - ${icon}`
+      })
     }
   }
 }
