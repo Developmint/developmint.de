@@ -1,8 +1,9 @@
 # developmint.de
 
-![Build status](https://api.travis-ci.org/Developmint/developmint.de.svg?branch=master)
+[![Build status](https://api.travis-ci.org/Developmint/developmint.de.svg?branch=master)](https://travis-ci.org/Developmint/developmint.de)
 ![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 Our company page: [developmint.de](https://developmint.de)
 
 ## Build Setup
