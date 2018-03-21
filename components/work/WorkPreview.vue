@@ -9,7 +9,8 @@
         v-bind="bindUrl"
         target="_blank"
         rel="noopener"
-        class="text-rains flex justify-center group sm:mt-8 lg:my-8">
+        class="text-rains flex justify-center group sm:mt-8 lg:my-8"
+        @click="logClick('img')">
         <img
           :src="require(`~/assets/img/work/${slug}.jpg`)"
           :srcset="`${require(`~/assets/img/work/${slug}@2x.jpg`)} 2x`"
@@ -22,7 +23,8 @@
           v-bind="bindUrl"
           target="_blank"
           rel="noopener"
-          class="block text-rains no-underline text-center mt-4 font-bold text-2xl hover:text-shadow-sm transition-all"/>
+          class="block text-rains no-underline text-center mt-4 font-bold text-2xl hover:text-shadow-sm transition-all"
+          @click="logClick('heading')"/>
         <div
           class="mt-2 p-6 py-8 md:py-6 text-justify my-16 md:my-0 md:py- md:px-16"
           v-html="$t(`work.projects.${slug}.shortDescription`)"
@@ -52,6 +54,14 @@ export default {
     bindUrl () {
       // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
       return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
+    }
+  },
+  methods: {
+    logClick (type) {
+      this.$ga.event({
+        eventCategory: 'click',
+        eventAction: `${this.slug} - ${type}`
+      })
     }
   }
 }
