@@ -8,7 +8,7 @@
         {{ $t('about.subheading') }}
       </h2>
     </section>
-    <section class="w-4/5 mx-auto my-24 bg-rains-light lg:flex">
+    <section class="w-4/5 mx-auto my-24 bg-rains-light xl:flex">
       <team-member
         v-for="(member, i) in $options.members"
         :key="i"

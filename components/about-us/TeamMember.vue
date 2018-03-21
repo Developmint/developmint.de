@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center mx-2 lg:m-8 lg:mx-16">
+  <div class="flex flex-col items-center my-24 mx-2 lg:m-8 lg:my-16 xl:my-0 lg:mx-16">
     <div class="w-full flex flex-col lg:flex-row items-center mb-4">
       <div class="my-4 flex-no-shrink">
         <img

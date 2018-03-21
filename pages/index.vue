@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <section class="w-full md:w-3/4 mx-auto mt-16 py-8 p-4 text-md">
+      <section class="w-full xl:w-3/4 mx-auto mt-16 py-8 p-4 text-md">
         <h1 class="text-center mb-8 text-3xl font-normal">{{ $t('index.expertises.heading') }}</h1>
         <p class="text-center text-lg my-1">{{ $t('index.expertises.subheadings[0]') }}</p>
         <p class="text-center text-lg my-3 mb-8">{{ $t('index.expertises.subheadings[1]') }}</p>

@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="{'border border-t border-b bg-grey-lighter': odd, 'bg-grey-lightest shadow-lg': !odd}"
+    :class="{'border border-t border-b bg-grey-light md:bg-grey-lighter': odd, 'bg-grey-lightest shadow-lg': !odd}"
     class="w-full transition-all">
     <div
       :class="{'xl:flex-row-reverse': odd, 'xl:flex-row': !odd}"
@@ -14,7 +14,7 @@
           :src="require(`~/assets/img/work/${slug}.jpg`)"
           :srcset="`${require(`~/assets/img/work/${slug}@2x.jpg`)} 2x`"
           :alt="`${$t(`work.projects.${slug}.title`)} ${$t(`general.preview`)}`"
-          class="transition-all group-hover:scale-1025 group-hover:shadow-lg shadow-md border-2 border-grey-light rounded">
+          class="transition-all group-hover:scale-1025 group-hover:shadow-lg shadow-md border md:border-2 border-rains-lighter md:border-grey-light md:rounded">
       </a>
       <div class="my-6 xl:mx-8 xl:px-6 flex-no-grow xl:w-1/2">
         <a
@@ -24,7 +24,7 @@
           rel="noopener"
           class="block text-rains no-underline text-center mt-4 font-bold text-2xl hover:text-shadow-sm transition-all"/>
         <div
-          class="mt-2 p-6 text-justify md:px-16"
+          class="mt-2 p-6 py-8 md:py-6 text-justify my-16 md:my-0 md:py- md:px-16"
           v-html="$t(`work.projects.${slug}.shortDescription`)"
         />
       </div>

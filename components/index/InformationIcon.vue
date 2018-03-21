@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col flex-1 my-8 lg:mx-4 xl:mx-8 group transition-all p-4 md:p-8 rounded lg:hover:scale-1025">
+  <div class="flex flex-col flex-1 my-8 lg:mx-2 xl:mx-8 group transition-all p-4 md:p-8 rounded lg:hover:scale-1025">
     <img
       :src="require(`~/assets/img/info-icon/${img}`)"
       :alt="alt"
