@@ -207,7 +207,7 @@ module.exports = {
     appendix: {
       heading: 'Is this everything?',
       subheading: 'Of course not! We have worked on many projects we can\'t tell you about because of NDAs or upcoming launches.' +
-      'Also, there are small side projects that each of us pursues as well.',
+      ' Also, there are small side projects that each of us pursues as well.',
       statistics: [
         'Happy companies',
         'Lines of Code',
