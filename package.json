@@ -12,36 +12,36 @@
     "test": "npm run lint && npm run build && bundlesize"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.1.1",
+    "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
-    "autoprefixer": "^8.1.0",
-    "bundlesize": "^0.16.0",
+    "autoprefixer": "^8.2.0",
+    "bundlesize": "^0.17.0",
     "glob-all": "^3.1.0",
     "intersection-observer": "^0.5.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "nuxt": "^1.4.0",
-    "nuxt-i18n": "^2.7.1",
-     "purgecss": "^0.21.0",
-    "purgecss-webpack-plugin": "^0.20.1",
+    "nuxt-i18n": "^2.9.2",
+    "purgecss": "^0.21.0",
+    "purgecss-webpack-plugin": "^0.22.0",
     "sass-loader": "^6.0.7",
     "shifty": "^2.3.1",
-    "tailwindcss": "^0.5.1",
+    "tailwindcss": "^0.5.2",
     "vue-meta": "^1.5.0",
     "vue-observe-visibility": "^0.3.1",
     "vuelidate": "^0.6.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
-    "eslint": "^4.19.0",
+    "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.3.0",
-    "husky": "^0.15.0-rc.12"
+    "eslint-plugin-vue": "^4.4.0",
+    "husky": "^1.0.0-rc.1"
   },
   "husky": {
     "hooks": {
