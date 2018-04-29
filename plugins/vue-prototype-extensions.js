@@ -2,8 +2,8 @@ import Vue from 'vue'
 
 // What a monster :O
 Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
-  return Object.entries(this.$i18n.messages[this.$i18n.locale].seo[slug]).reduce((acc, [key, value]) => {
-    if (key === 'meta') {
+  return Object.entries(this.$i18n.messages[this.$i18n.locale].seo[slug])
+    .reduce((acc, [key, actualValue]) => {
       const defaultMetaArray = [
         {
           name: 'og:url',
@@ -11,24 +11,28 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
         }
       ]
 
-      value = Array.isArray(value) ? value : [value]
-
       // If meta, add base array (likely og:image) and defaultArray containing og:url
-      acc[key] = value.concat(defaultMetaArray).concat(baseMetaArray).reduce((acc, metaObject) => {
-        metaObject.name = Array.isArray(metaObject.name) ? metaObject.name : [metaObject.name]
+      const valueForKey = key === 'meta'
+        ? actualValue
+        : wrap(actualValue)
+          .concat(defaultMetaArray)
+          .concat(baseMetaArray)
+          .reduce((acc, metaObject) => acc.concat(retrieveMetaObjectArray(metaObject)), [])
 
-        return acc.concat(metaObject.name.map(n => ({
-          hid: n,
-          name: n,
-          property: n,
-          // Fix url when the meta information is og:image
-          content: metaObject.name.includes('og:image') ? process.env.baseUrl + metaObject.content.substr(1) : metaObject.content
-        })))
-      }, [])
-    } else {
-      acc[key] = value
-    }
+      return { ...acc, [key]: valueForKey }
+    }, {})
+}
 
-    return acc
-  }, {})
+const wrap = a => Array.isArray(a) ? a : [a]
+
+const retrieveMetaObjectArray = metaObject => {
+  const wrappedName = wrap(metaObject.name)
+
+  return wrappedName.map(n => ({
+    hid: n,
+    name: n,
+    property: n,
+    // Fix url when the meta information is og:image
+    content: wrappedName.includes('og:image') ? process.env.baseUrl + metaObject.content.substr(1) : metaObject.content
+  }))
 }
