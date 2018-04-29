@@ -17,7 +17,7 @@ module.exports = {
    * Scroll behavior
    */
   router: {
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior: (to, from, savedPosition) => {
       let position = false
 
       if (to.matched.length < 2 || to.matched.some((r) => r.components.default.options.scrollToTop)) {
