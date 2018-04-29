@@ -99,6 +99,7 @@ module.exports = {
                 'sameAs': [
                   'https://twitter.com/TheAlexLichter',
                   'https://github.com/manniL',
+                  'https://lichter.io',
                   'https://linkedin.com/in/alexanderlichter'
                 ]
               },
