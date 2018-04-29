@@ -48,7 +48,10 @@ module.exports = {
    */
   head: {
     titleTemplate,
-    meta: [{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
+    meta: [
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'Developmint' }
+    ],
     noscript: [{ innerHTML: 'This website requires JavaScript.' }],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700' }
