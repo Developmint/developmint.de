@@ -12,7 +12,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
       ]
 
       // If meta, add base array (likely og:image) and defaultArray containing og:url
-      const valueForKey = key === 'meta'
+      const valueForKey = key !== 'meta'
         ? actualValue
         : wrap(actualValue)
           .concat(defaultMetaArray)
