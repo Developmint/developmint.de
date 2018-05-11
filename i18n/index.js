@@ -4,26 +4,30 @@ module.exports = {
       code: 'en',
       iso: 'en-US',
       name: 'English',
-      langFile: 'en.js'
+      file: 'en.js'
     },
     {
       code: 'de',
       iso: 'de-DE',
       name: 'Deutsch',
-      langFile: 'de.js'
+      file: 'de.js'
     }
   ],
   defaultLocale: 'en',
   seo: true,
-  loadLanguagesAsync: true,
-  detectBrowserLanguage: true,
+  lazy: true,
+  detectBrowserLanguage: {
+    cookieKey: 'redirected',
+    useCookie: true
+  },
   langDir: 'i18n/',
-  routes: {
+  parsePages: false,
+  pages: {
     about: {
       de: '/ueber-uns',
       en: '/about-us'
     },
-    work: {
+    'work/index': {
       de: '/referenzen',
       en: '/work'
     },
