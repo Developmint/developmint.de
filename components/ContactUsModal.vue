@@ -147,7 +147,7 @@ export default {
       this.$ga.event('submit', 'form', this.$i18n.locale)
       this.error = false
       try {
-        await this.$axios.$post('/', {
+        await this.$axios.$post('', {
           name: this.name,
           email: this.email,
           msg: this.msg

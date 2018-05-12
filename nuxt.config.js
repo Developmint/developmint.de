@@ -176,7 +176,7 @@ module.exports = {
       ]
     }],
     '@nuxtjs/pwa',
-    ['@nuxtjs/axios', { baseURL: process.env.API_URL || process.env.NODE_ENV === 'production' ? 'https://api.developmint.de/' : 'http://api.developmint.test' }],
+    ['@nuxtjs/axios', { baseURL: '/api/contact' }],
     ['nuxt-i18n', i18n]
   ],
 
@@ -202,6 +202,9 @@ module.exports = {
     theme_color: tailwindConfig.colors.developmint
   },
 
+  serverMiddleware: [
+    '~/api/contact'
+  ],
   /*
    * Build configuration
    */

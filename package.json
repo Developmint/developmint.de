@@ -17,9 +17,11 @@
     "@nuxtjs/pwa": "^2.0.8",
     "autoprefixer": "^8.5.0",
     "bundlesize": "^0.17.0",
+    "express": "^4.16.3",
     "glob-all": "^3.1.0",
     "intersection-observer": "^0.5.0",
     "node-sass": "^4.9.0",
+    "nodemailer": "^4.6.4",
     "nuxt": "^1.4.0",
     "nuxt-i18n": "^3.2.3",
     "purgecss": "^0.21.0",
@@ -27,9 +29,11 @@
     "sass-loader": "^7.0.1",
     "shifty": "^2.3.1",
     "tailwindcss": "^0.5.3",
+    "validator": "^10.2.0",
     "vue-meta": "^1.5.0",
     "vue-observe-visibility": "^0.3.1",
-    "vuelidate": "^0.7.1"
+    "vuelidate": "^0.7.1",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
