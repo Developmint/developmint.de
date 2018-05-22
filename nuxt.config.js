@@ -170,7 +170,10 @@ module.exports = {
       id: 'UA-62902757-7',
       debug: {
         sendHitTask: process.env.NODE_ENV === 'production'
-      }
+      },
+      set: [
+        { field: 'anonymizeIp', value: true }
+      ]
     }],
     '@nuxtjs/pwa',
     ['@nuxtjs/axios', { baseURL: process.env.API_URL || process.env.NODE_ENV === 'production' ? 'https://api.developmint.de/' : 'http://api.developmint.test' }],
