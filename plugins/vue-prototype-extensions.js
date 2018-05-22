@@ -15,8 +15,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
       const valueForKey = key !== 'meta'
         ? actualValue
         : wrap(actualValue)
-          .concat(defaultMetaArray)
-          .concat(baseMetaArray)
+          .concat(defaultMetaArray, baseMetaArray)
           .reduce((acc, metaObject) => acc.concat(retrieveMetaObjectArray(metaObject)), [])
 
       return { ...acc, [key]: valueForKey }
