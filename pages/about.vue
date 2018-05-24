@@ -42,6 +42,7 @@ export default {
       slug: 'max',
       name: 'Max Langer',
       links: {
+        web: 'https://max.codes/',
         twitter: 'https://twitter.com/mangerlahn',
         github: 'https://github.com/mangerlahn/',
         linkedin: 'https://www.linkedin.com/in/max-langer-17b133136/'
