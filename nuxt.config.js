@@ -243,6 +243,7 @@ module.exports = {
             ]),
             styleExtensions: ['.css'],
             whitelist: ['body', 'html', 'nuxt-progress'],
+            whitelistPatterns: [/cookie-consent/],
             extractors: [
               {
                 extractor: class {
