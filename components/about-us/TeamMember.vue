@@ -53,10 +53,10 @@
 </template>
 
 <script>
-import GitHubIcon from '../icons/GitHubIcon'
-import GlobeIcon from '../icons/GlobeIcon'
-import TwitterIcon from '../icons/TwitterIcon'
-import LinkedInIcon from '../icons/LinkedInIcon'
+import GitHubIcon from '../icons/GitHubIcon.js'
+import GlobeIcon from '../icons/GlobeIcon.js'
+import TwitterIcon from '../icons/TwitterIcon.js'
+import LinkedInIcon from '../icons/LinkedInIcon.js'
 
 export default {
   components: {
