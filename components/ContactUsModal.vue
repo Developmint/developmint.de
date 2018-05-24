@@ -19,7 +19,7 @@
             class="text-developmint-darker whitespace-no-wrap">Name</label>
           <input
             id="name"
-            v-model.trim.lazy="name"
+            v-model.trim="name"
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="text"
             @input="$v.name.$touch()"
@@ -37,7 +37,7 @@
             class="text-developmint-darker whitespace-no-wrap">E-Mail</label>
           <input
             id="email"
-            v-model.trim.lazy="email"
+            v-model.trim="email"
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="email"
             @input="$v.email.$touch()"
@@ -55,7 +55,7 @@
             class="py-4 text-developmint-darker">{{ $t('contact.fields.tell') }}</label>
           <textarea
             id="msg"
-            v-model.trim.lazy="msg"
+            v-model.trim="msg"
             class="appearance-none bg-transparent text-developmint-darkest resize-none"
             rows="6"
             @input="$v.msg.$touch()"
@@ -72,8 +72,8 @@
             {{ $t('contact.buttons.back') }}
           </button>
           <button
-            :disabled="submitting"
-            class="ml-4 mt-4 rounded hover:bg-gradient-rains-dark-rains transition-all hover:border-developmint px-6 py-3 border border-grey-light text-grey-light"
+            :class="submitButtonClasses"
+            :disabled="disableSubmission"
             type="submit">
             {{ $t('contact.buttons.submit') }}
           </button>
@@ -124,6 +124,24 @@ export default {
       minLength: minLength(25)
     }
   },
+  computed: {
+    empty () {
+      const keys = ['name', 'email', 'msg']
+
+      return keys.map(k => this[k]).some(v => !v)
+    },
+    disableSubmission () {
+      return this.empty || this.$v.$error || this.submitting
+    },
+    submitButtonClasses () {
+      const baseClasses = 'ml-4 mt-4 px-6 py-3 rounded transition-all border text-grey-light'
+      const additionalClasses = this.disableSubmission
+        ? 'opacity-50 cursor-not-allowed border-grey-light'
+        : 'hover:bg-gradient-rains-dark-rains border-developmint-light hover:border-developmint'
+
+      return `${baseClasses} ${additionalClasses}`
+    }
+  },
   mounted () {
     window.addEventListener('keyup', this.onKeyUp)
   },
@@ -137,7 +155,7 @@ export default {
       }
     },
     validate () {
-      if (this.$v.$error || this.submitting) {
+      if (this.disableSubmission) {
         return
       }
       this.submitForm()
