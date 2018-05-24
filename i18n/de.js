@@ -490,8 +490,8 @@ module.exports = {
       <br>
       Als Alternative (inbesonder für mobile Geräte), klicken sie auf
       <a href="#optout">diesen Link</a> um den gleichen Effekt für diese Seite zu erzielen.<br>
-      Mit dem Klicken des Links wird ein "Opt-out Cookie" erzeugt und auf Ihrem Gerät gespeichert, damit Google Analytics
-      für Sie auf unserer Seite deaktivieren können<br>
+      Mit dem Klicken des Links wird ein "Opt-out Cookie" erzeugt und auf Ihrem Gerät gespeichert, damit wir Google 
+      Analytics für Sie auf unserer Seite deaktivieren können<br>
       Sollten Sie den Cookie löschen, müssen Sie sich erneut per opt-out austragen.<br>
       <br>
       Weitere Informationen zum Datenschutz im Zusammenhang mit Google Analytics finden Sie etwa in
