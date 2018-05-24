@@ -168,6 +168,7 @@ module.exports = {
     // Simple usage
     ['@nuxtjs/google-analytics', {
       id: 'UA-62902757-7',
+      disabled: () => document.cookie.indexOf('ga_optout=true') !== -1,
       debug: {
         sendHitTask: process.env.NODE_ENV === 'production'
       },

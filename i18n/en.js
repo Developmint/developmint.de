@@ -217,169 +217,275 @@ module.exports = {
     }
   },
   legal: {
-    legal: '<h1>Legal Notice</h1>' +
-    'Information in accordance with section 5 TMG' +
-    '<br>' +
-    '<br>' +
-    'Developmint GbR<br>' +
-    'Corotweg 15<br>' +
-    '04289 Leipzig<br>' +
-    '<h2>Represented by</h2>' +
-    'Alexander Lichter<br>' +
-    'Max Langer' +
-    '<br><br>' +
-    '<h3>Personally liable partner</h3>' +
-    '<br><br>' +
-    'Alexander Lichter' +
-    '<br>' +
-    'Max Langer' +
-    '<br>' +
-    '<h2>Contact</h2>' +
-    'E-Mail: <a href="mailto:support@developmint.de">support@developmint.de</a>' +
-    '<br>' +
-    'Website: <a href="https://www.developmint.de/" target="_blank" rel="noopener">www.developmint.de</a>' +
-    '<br>' +
-    '<h2>VAT number</h2>' +
-    'VAT identification number in accordance with section 27 a of the German VAT' +
-    'act' +
-    '<br>' +
-    'DE301268038' +
-    '<br>' +
-    '<h2>Person responsible for content in accordance with 55 Abs. 2 RStV</h2>' +
-    'Max Langer<br>' +
-    'Alexander Lichter<br>' +
-    '<h2>Licensing</h2>' +
-    '<ul>' +
-    '<li>Image of the founders: Martin Welcker - CC-BY-NC-SA 3.0</li>' +
-    '<li>Illustrations on Index page: unDraw - MIT</li>' +
-    '<li>Project images: Alexander Lichter und Max Langer - CC-BY-NC-SA 3.0</li>' +
-    '<li>Source code - MIT</li>' +
-    '<li>Text, journalistic and other written content: Alexander Lichter and Max Langer -  CC-BY-NC-SA 3.0</li>' +
-    '<li>Other not further specified content: Alexander Lichter and Max Langer - CC-BY-NC-SA 3.0</li>' +
-    '</ul>',
-    disclaimer: '<h2>Disclaimer</h2>' +
-    '<br>' +
-    '<b>Accountability for content</b>' +
-    '<br>' +
-    'The contents of our pages have been created with the utmost care. However, we' +
-    'cannot guarantee the contents\' accuracy,' +
-    'completeness or topicality. According to statutory provisions, we are' +
-    'furthermore responsible for our own content on' +
-    'these web pages. In this context, please note that we are accordingly not' +
-    'obliged to monitor merely the transmitted or' +
-    'saved information of third parties, or investigate circumstances pointing to' +
-    'illegal activity. Our obligations to' +
-    'remove or block the use of information under generally applicable laws remain' +
-    'unaffected by this as per &sect;&sect;' +
-    '8 to 10 of the Telemedia Act (TMG).' +
-    '<br>' +
-    '<br>' +
-    '<b>Accountability for links</b>' +
-    '<br>' +
-    'Responsibility for the content of external links (to web pages of third' +
-    'parties) lies solely with the operators of' +
-    'the linked pages. No violations were evident to us at the time of linking.' +
-    'Should any legal infringement become known' +
-    'to us, we will remove the respective link immediately.' +
-    '<br>' +
-    '<br>' +
-    '<b>Copyright</b>' +
-    '<br>' +
-    'Our web pages and their contents are subject to German copyright law. Unless' +
-    'expressly permitted by law' +
-    '(&sect; 44a et seq. of the copyright law), every form of utilizing,' +
-    'reproducing or processing works subject to' +
-    'copyright protection on our web pages requires the prior consent of the' +
-    'respective owner of the rights. Individual' +
-    'reproductions of a work are allowed only for private use, so must not serve' +
-    'either directly or indirectly for earnings.' +
-    'Unauthorized utilization of copyrighted works is punishable (&sect; 106 of' +
-    'the copyright law).' +
-    '<br>' +
-    '<br>' +
-    '<b>Data protection</b>' +
-    '<br>' +
-    'It is generally possible to use our website without providing personal data. Insofar as we collect' +
-    'personal data via this website (for example, name, address or e-mail addresses), this is, as far as' +
-    'possible, always on a voluntary basis. Your personal data will not be shared with third parties without' +
-    'your express permission. We wish to remind you that there are inherent security risks in transmitting' +
-    'data (for example, email communication) via the Internet. It is not possible to ensure that data is' +
-    'completely protected against unauthorised access by third parties. Third parties are expressly' +
-    'prohibited from using contact details published herein, as required under the “Impressum”' +
-    '(legal notice) requirement of German law, for the purpose of sending advertising or informational' +
-    'material which has not been specifically requested. Where spam e-mails or other unsolicited advertising' +
-    'information is sent, the operators of the relevant websites specifically reserve the right to take' +
-    'legal action.',
-    privacy: '<h2>Data Privacy Policy</h2>' +
-    '<p>Our website may be used without entering personal information. Different rules may apply to certain services' +
-    ' on our site, however, and are explained separately below. We collect personal information from you (e.g. name,' +
-    ' address, email address, telephone number, etc.) in accordance with the provisions of German data protection' +
-    ' statutes. Information is considered personal if it can be associated exclusively to a specific natural person.' +
-    ' The legal framework for data protection may be found in the German Federal Data Protection Act (BDSG) and the' +
-    ' Telemedia Act (TMG). The provisions below serve to provide information as to the manner, extent and purpose' +
-    ' for collecting, using and processing personal information by the provider.</p>' +
-    '<p><strong>Developmint GbR Alexander Lichter & Max Langer - Corotweg 15 - 04289 Leipzig, Germany</strong><br>' +
-    '<strong>+49 17670625208</strong><br>' +
-    '<strong>support@developmint.de</strong></p>' +
-    '<p>Please be aware that data transfer via the internet is subject to security risks and, therefore, complete' +
-    ' protection against third-party access to transferred data cannot be ensured.</p>' +
-    '<h4>Cookies</h4>' +
-    '<p>Our website makes use of so-called cookies in order to recognize repeat use of our website by the same' +
-    ' user/internet connection subscriber. Cookies are small text files that your internet browser downloads and' +
-    ' stores on your computer. They are used to improve our website and services. In most cases these are so-called' +
-    ' "session cookies" that are deleted once you leave our website.</p>' +
-    '<p> To an extent, however, these cookies also pass along information used to automatically recognize you.' +
-    ' Recognition occurs through an IP address saved to the cookies. The information thereby obtained is used to' +
-    ' improve our services and to expedite your access to the website.</p>' +
-    '<p> You can prevent cookies from being installed by adjusting the settings on your browser software accordingly.' +
-    ' You should be aware, however, that by doing so you may not be able to make full use of all the functions' +
-    ' of our website.</p>' +
-    '<h4>Server Data</h4>' +
-    '<p>For technical reasons, data such as the following, which your internet browser transmits to us or to our web' +
-    ' space provider (so called server log files), is collected:' +
-    '      - type and version of the browser you use' +
-    '      - operating system' +
-    '      - websites that linked you to our site (referrer URL)' +
-    '      - websites that you visit' +
-    '      - date and time of your visit' +
-    '      - your Internet Protocol (IP) address.' +
-    '      This anonymous data is stored separately from any personal information you may have provided,' +
-    ' thereby making it impossible to connect it to any particular person. The data is used for statistical purposes' +
-    ' in order to improve our website and services.</p>' +
-    '<h4>Contacting Us</h4>' +
-    '<p>On our website we offer you the opportunity to contact us, either by email and/or by using a contact form.' +
-    ' In such event, information provided by the user is stored for the purpose of facilitating communications with' +
-    ' the user. No data is transferred to third parties. Nor is any of this information matched to any information' +
-    ' that may be collected by other components of our website.</p>' +
-    '<h4>Use of Google Analytics with anonymization</h4>' +
-    '<p>Our website uses Google Analytics, a web analysis service from Google Inc., 1600 Amphitheatre Parkway,' +
-    ' Mountain View, CA 94043 USA, hereinafter referred to as “Google“. Google Analytics employs so-called “cookies“,' +
-    ' text files that are stored to your computer in order to facilitate an analysis of your use of the site.</p>' +
-    '<p>The information generated by these cookies, such as time, place and frequency of your visits to our site,' +
-    ' including your IP address, is transmitted to Google’s location in the US and stored there.</p>' +
-    '<p>We use Google Analytics with an IP anonymization feature on our website. In doing so, Google abbreviates and' +
-    ' thereby anonymizes your IP address before transferring it from member states of the European Union or signatory' +
-    ' states to the Agreement on the European Economic Area.</p>' +
-    '<p>Google will use this information to evaluate your usage of our site, to compile reports on website activity' +
-    ' for us, and to provide other services related to website- and internet usage. Google may also transfer this' +
-    ' information to third parties if this is required by law or to the extent this data is processed by third' +
-    ' parties on Google´s behalf.</p>' +
-    '<p>Google states that it will in never associate your IP address with other data held by Google. You can prevent' +
-    ' cookies from being installed by adjusting the settings on your browser software accordingly. You should be' +
-    ' aware, however, that by doing so you may not be able to make full use of all the functions of our website.</p>' +
-    '<p>Google also offers a disabling option for the most common browsers, thus providing you with greater control' +
-    ' over the data which is collected and processed by Google. If you enable this option, no information regarding' +
-    ' your website visit is transmitted to Google Analytics. However, the activation does not prevent the' +
-    ' transmission of information to us or to any other web analytics services we may use. For more information' +
-    ' about the disabling option provided by Google, and how to enable this option, visit' +
-    ' <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank"' +
-    ' rel="nofollow noopener">https://tools.google.com/dlpage/gaoptout?hl=en</a></p>' +
-    '<h3>Information/Cancellation/Deletion</h3>' +
-    '<p>On the basis of the Federal Data Protection Act, you may contact us at no cost if you have questions' +
-    ' relating to the collection, processing or use of your personal information, if you wish to request the' +
-    ' correction, blocking or deletion of the same, or if you wish to cancel explicitly granted consent. Please' +
-    ' note that you have the right to have incorrect data corrected or to have personal data deleted, where such' +
-    ' claim is not barred by any legal obligation to retain this data.</p>'
+    legal: `
+    <h1>Legal Notice</h1>
+    Information in accordance with section 5 TMG
+    <br>
+    <br>
+    Developmint GbR<br>
+    Corotweg 15<br>
+    04289 Leipzig<br>
+    <h2>Represented by</h2>
+    Alexander Lichter<br>
+    Max Langer
+    <br><br>
+    <h3>Personally liable partner</h3>
+    <br><br>
+    Alexander Lichter
+    <br>
+    Max Langer
+    <br>
+    <h2>Contact</h2>
+    E-Mail: <a href="mailto:support@developmint.de">support@developmint.de</a>
+    <br>
+    Website: <a href="https://www.developmint.de/" target="_blank" rel="noopener">www.developmint.de</a>
+    <br>
+    <h2>VAT number</h2>
+    VAT identification number in accordance with section 27 a of the German VAT
+    act
+    <br>
+    DE301268038
+    <br>
+    <h2>Person responsible for content in accordance with 55 Abs. 2 RStV</h2>
+    Max Langer<br>
+    Alexander Lichter<br>
+    <h2>Licensing</h2>
+    <ul>
+        <li>
+          Image of the founders: Martin Welcker -
+          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+             rel="noreferrer noopener nofollow"
+             target="_blank">CC-BY-NC-SA 3.0</a></li>
+        <li>
+          Illustrations on Index page: unDraw -
+          <a href="https://undraw.co/license"
+             rel="noreferrer noopener nofollow"
+             target="_blank">MIT</a></li>
+        <li>
+          Project images: Alexander Lichter und Max Langer -
+          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+             rel="noreferrer noopener nofollow"
+             target="_blank">CC-BY-NC-SA 3.0</a>
+        </li>
+        <li>
+          Source code -
+          <a href="https://raw.githubusercontent.com/developmint/developmint.de/master/LICENSE"
+             rel="noreferrer noopener nofollow"
+             target="_blank">MIT</a></li>
+        <li>
+          Text, journalistic and other written content: Alexander Lichter and Max Langer
+          -
+          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+             rel="noreferrer noopener nofollow"
+             target="_blank">CC-BY-NC-SA 3.0</a>
+        </li>
+        <li>
+          Other not further specified content: Alexander Lichter and Max Langer
+          -
+          <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+             rel="noreferrer noopener nofollow"
+             target="_blank">CC-BY-NC-SA 3.0</a>
+        </li>
+      </ul>`,
+    disclaimer: `
+    <h2>Disclaimer</h2>
+    <br>
+    <b>Accountability for content</b>
+    <br>
+    The contents of our pages have been created with the utmost care. However, we
+    cannot guarantee the contents' accuracy,
+    completeness or topicality. According to statutory provisions, we are
+    furthermore responsible for our own content on
+    these web pages. In this context, please note that we are accordingly not
+    obliged to monitor merely the transmitted or
+    saved information of third parties, or investigate circumstances pointing to
+    illegal activity. Our obligations to
+    remove or block the use of information under generally applicable laws remain
+    unaffected by this as per &sect;&sect;
+    8 to 10 of the Telemedia Act (TMG).
+    <br>
+    <br>
+    <b>Accountability for links</b>
+    <br>
+    Responsibility for the content of external links (to web pages of third
+    parties) lies solely with the operators of
+    the linked pages. No violations were evident to us at the time of linking.
+    Should any legal infringement become known
+    to us, we will remove the respective link immediately.
+    <br>
+    <br>
+    <b>Copyright</b>
+    <br>
+    Our web pages and their contents are subject to German copyright law. Unless
+    expressly permitted by law
+    (&sect; 44a et seq. of the copyright law), every form of utilizing,
+    reproducing or processing works subject to
+    copyright protection on our web pages requires the prior consent of the
+    respective owner of the rights. Individual
+    reproductions of a work are allowed only for private use, so must not serve
+    either directly or indirectly for earnings.
+    Unauthorized utilization of copyrighted works is punishable (&sect; 106 of
+    the copyright law).`,
+    privacy: `
+    <h1 class="font-normal text-3xl py-4">Privacy Policy</h1>
+    <p>
+      Hey you! First of all, thanks for your interest in our privacy policy.<br>
+      We deeply care about the security of your data and will do our best to collect only the needed information and
+      protect those!
+    </p>
+
+    <h2 class="font-normal text-2xl py-4">Overview</h2>
+
+    <h3 class="font-normal text-xl py-4">Who is responsible for the collection of data on developmint.de?</h3>
+    <p>
+      We are! Developmint GbR. Our contact data can be found in the
+      <a href="/legal" rel="nofollow" target="_blank">legal notice</a>.
+    </p>
+
+    <h3 class="font-normal text-xl py-4">How do we collect your data?</h3>
+    <p>
+      We collect data you provide us when you contact us (eg. through the contact form, e-mail, telephone or social
+      media).<br>
+      Furthermore we collect data anonymized through Google Analytics (see 3.).<br>
+      Technical data (like the OS, screen size, language preference, browser) is collected automatically to improve your
+      website experience.
+    </p>
+    
+    <h3 class="font-normal text-xl py-4">How do we use your data?</h3>
+    <p>
+      We use statistics to further develop the Website, to recognize problems or errors and to find out what you, the
+      user, like most.<br>
+      If you provided us your e-mail address, it will only be used to answer your contact request.
+    </p>
+
+    <h3 class="font-normal text-xl py-4">What are your rights?</h3>
+    <p>
+      You have the right to request information about purpose, origin and recipients of your data at any given time and
+      free of charge.<br>
+      You can demand correction, locking or deletion of your data. <br>
+      Also you can revoke given consents for processing data. <br>
+      To file a request, simply send a mail to privacy@developmint.de.<br>
+      <br>
+      In case we don’t comply with your request, you have the right to complain at the responsible regulating authority.<br>
+      Of course, it’s in our interest to guarantee your personal data privacy.<br>
+      If you have any questions please feel free to contact us via privacy@developmint.de.<br>
+    </p>
+
+    <h3 class="font-normal text-xl py-4">Legal basis</h3>
+    <p>
+      The legal basis for privacy can be found in the GDPR (General Data Protection Regulation) and the Telemedia Act
+      (Telemediengesetz, TMG).
+    </p>
+
+    <h2 class="font-normal text-2xl py-4">2. Collection and Use of Personal Information</h2>
+
+    <h3 class="font-normal text-xl py-4">Cookies</h3>
+    <p>
+      This Website uses cookies (as we already announced when you visited the page the first time).<br>
+      Cookies are small pieces of information which are stored as file and placed on your device by a Website.<br>
+      They do not harm your device and do not contain viruses or malware.<br>
+      Cookies can be read by the Website on your subsequent visits.<br>
+      Cookies will be deleted after a defined time. You can do this also manually in your browser<br>
+      <br>
+      We use Cookies to save your preferences (f.ex. which consents you gave) and to create statistics and evaluations
+      concerning our Website usage so we can further optimize developmint.de (see 3.).<br>
+      This is allowed through the GDPR because we can prove legitimate interests.<br>
+      The Cookies allow us to detect if you have visited the page before. This does not mean that we know your identity
+      because of these Cookies.
+    </p>
+    
+    <h3 class="font-normal text-xl py-4">Contacting us</h3>
+    <p>
+      When you contact us (f.ex. through a contact form, via e-mail, telephone or social media), we will use the data
+      you provide us only to process that contact request. The data could be saved in a Customer-Relationship-Management
+      system ("CRM") or similar organization system.<br>
+      We delete the data as soon as they are not necessary anymore. We verify the necessity every year - furthermore,
+      the legal archiving obligations apply.
+      No data is transferred to third parties.<br>
+      Nor is any of this information matched to any information that may be collected by other components of our
+      website.
+    </p>
+    
+    <h3 class="font-normal text-xl py-4">Log files</h3>
+    <p>
+      To follow up fraud or malicious use of developmint.de, we store server log files containing the following data:
+    </p>
+    <br>
+    <ul>
+      <li>Browser type and version</li>
+      <li>Operating system</li>
+      <li>Referrer-URL (previously visited site)</li>
+      <li>Current page</li>
+      <li>IP address</li>
+      <li>Time of request</li>
+    </ul>
+    <br>
+     <p>
+     This data will only be used in case of fraud. We store those server logs for 30 days and delete the data after the
+     period (if they are not related to any incidents that happened, otherwise we delete them after the incident has 
+     been resolved).<br>
+     No data is transferred to third parties.<br>
+     Nor is any of this information matched to any information that may be collected by other components of our
+     website.
+    </p>
+    
+    <h2 class="font-normal text-2xl py-4">3. Analytics Tools</h2>
+
+    <h3 class="font-normal text-xl py-4">Google Analytics</h3>
+    <p>
+      Our Website is using Google Analytics, an analytics tool from Google Inc. (“Google”).<br>
+      In this context, pseudonymized user profiles are created and cookies (see 2.) are used.<br>
+      The information gathered by the cookie is sent to Google’s servers located in the USA and stored there.<br>
+      <br>
+      The following data will be gathered and submitted to Google:<br>
+    </p>
+    <br>
+    <ul>
+      <li>Browser type and version</li>
+      <li>Operating system</li>
+      <li>Referrer-URL (previously visited site)</li>
+      <li>Current page</li>
+      <li>Anonymized IP address</li>
+      <li>Time of request</li>
+    </ul>
+    <br>
+    <p>
+      The information will be used to analyze the usage of developmint.de, to create reports about the user’s activity
+      and to offer other services that are related to our user’s activity and the usage of the web.<br>
+      Your IP address will not be consolidated with other data stored on Google’s servers.<br>
+      <br>
+      You can prevent us and Google Analytics setting a cookie via your browser settings.<br>
+      Please notice that the usage of our services and the user experience could suffer from preventing our Website to
+      set a cookie.<br>
+      If you want to prevent Google from setting any cookies on your computer, you can use
+      <a
+        href="http://tools.google.com/dlpage/gaoptout?hl=en"
+        rel="noreferrer noopener nofollow"
+        target="_blank"
+      >this browser-plugin</a>.<br>
+      <br>
+      Alternatively, or if you’re using a mobile browser, click on
+      <a href="#optout">this link</a>
+      to prevent Google from gathering data on our Website.<br>
+      With clicking this link, an opt-out cookie will be saved on your device.<br>
+      If you delete your cookies, you will need to click on the link again to stay opted-out.<br>
+      <br>
+      You find further information about privacy protection and Google Analytics in
+      <a
+        href="https://support.google.com/analytics/answer/6004245?hl=de"
+        rel="noreferrer noopener nofollow"
+        target="_blank"
+      >this Google Help articles</a>
+    </p>
+
+    <h2 class="font-normal text-2xl py-4">Privacy Statement Changes</h2>
+    <p>
+      We may change this Privacy Statement from time to time, and in our sole discretion. We encourage you to frequently
+      check this page for any changes to this Privacy Statement. Your continued use of the Website after any change in
+      this Privacy Statement will constitute your acceptance of such change.
+
+      last edited: 24.05.2018
+    </p>`
   },
   seo: {
     index: {}, // Must stay here, even if empty

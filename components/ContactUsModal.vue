@@ -65,6 +65,14 @@
         <span
           v-show="$v.msg.$error"
           class="text-sm self-start ml-2 mb-4 text-red-light">Please provide a valid message with at least 25 characters</span>
+        <p class="my-4 px-2 text-grey-light">
+          We use the data you provide us through this form only to process your contact request! You
+          find more information in our
+          <nuxt-link
+            :to="localePath('privacy')"
+            class="text-white hover:text-developmint-lighter"
+          >Privacy Policy</nuxt-link>
+        </p>
         <div class="flex justify-between lg:block lg:ml-auto">
           <button
             class="lg:hidden mr-4 mt-4 rounded hover:border-yellow transition-all hover:text-yellow px-6 py-3 border border-yellow-dark text-grey-light"

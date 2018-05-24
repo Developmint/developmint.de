@@ -19,6 +19,19 @@ export default {
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]
     }
+  },
+  watch: {
+    '$route' (to, from) {
+      if (to.hash === '#optout') {
+        this.optOut()
+      }
+    }
+  },
+  methods: {
+    optOut () {
+      document.cookie = 'ga_optout=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
+      this.$ga.disable()
+    }
   }
 }
 </script>

@@ -1,9 +1,11 @@
 @tailwind preflight;
 
-@import "components/_nav";
-@import "components/_btn";
+@import "components/nav";
+@import "components/btn";
 
 @tailwind components;
+
+@import "components/cookie";
 
 @tailwind utilities;
 

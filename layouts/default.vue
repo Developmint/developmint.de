@@ -1,5 +1,6 @@
 <template>
   <div class="font-lato text-rains text-base antialiased leading-normal bg-grey-lightest overflow-hidden">
+    <consent/>
     <navbar/>
     <nuxt/>
     <app-footer/>
@@ -11,9 +12,11 @@
 
 <script>
 import Navbar from '~/components/Navbar'
+import Consent from '~/components/Consent'
 
 export default {
   components: {
+    Consent,
     Navbar,
     AppFooter: () => import('~/components/Footer'),
     ContactUs: () => import('~/components/ContactUsModal')
