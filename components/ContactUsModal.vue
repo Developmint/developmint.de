@@ -70,6 +70,7 @@
           find more information in our
           <nuxt-link
             :to="localePath('privacy')"
+            tabindex="-1"
             class="text-white hover:text-developmint-lighter"
           >Privacy Policy</nuxt-link>
         </p>
