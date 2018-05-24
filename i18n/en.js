@@ -286,6 +286,7 @@ module.exports = {
              rel="noreferrer noopener nofollow"
              target="_blank">CC-BY-NC-SA 3.0</a>
         </li>
+        <li>Text on the legal notice, disclaimer and privacy page: Alexander Lichter - All rights reserved</li>
       </ul>`,
     disclaimer: `
     <h2>Disclaimer</h2>

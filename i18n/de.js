@@ -302,6 +302,9 @@ module.exports = {
            rel="noreferrer noopener nofollow"
            target="_blank">CC-BY-NC-SA 3.0</a>
       </li>
+      <li>
+        Texte auf den Seiten "Impressum","Haftungsausschluss" und "Datenschutz": Alexander Lichter - All rights reserved
+      </li>
     </ul>
     <br><br>`,
     disclaimer: `
