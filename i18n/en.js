@@ -75,7 +75,7 @@ module.exports = {
     ],
     quotes: [
       {
-        quote: 'Hiring Developmint for my project was one of the best decisions I could met!',
+        quote: 'Hiring Developmint for my project was one of the best decisions I could make!',
         person: 'Michael Müller - eXcuro'
       },
       {
