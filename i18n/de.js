@@ -98,7 +98,7 @@ module.exports = {
           title: 'Angebote',
           listItems: [
             '<span class="italic">Enterprise</span> Web applications',
-            'Website(um)gestaltung',
+            'Website(um)gestaltung und -hosting',
             '<span class="italic">iOS</span> und <span class="italic">macOS</span> apps',
             'SEO and Marketingberatung',
             'Zukunftssichere Software'

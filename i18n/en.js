@@ -95,7 +95,7 @@ module.exports = {
           title: 'Offers',
           listItems: [
             '<span class="italic">Enterprise</span> Web applications',
-            'Website creation and (re)design',
+            'Website creation, (re)design and hosting',
             '<span class="italic">iOS</span> and <span class="italic">macOS</span> applications',
             'SEO and marketing consulting',
             'Future-proof software'
