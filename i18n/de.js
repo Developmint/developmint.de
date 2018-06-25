@@ -40,7 +40,7 @@ module.exports = {
       heading: 'Sie haben die Wahl',
       text: 'Sind Sie auf der Suche nach einem Unternehmen das effiziente und vollkommene Software baut, die' +
       ' ständig am Puls der Zeit orientiert? Dann sind Sie bei ' +
-      '<a href="/de/referenzen" class="no-underline text-developmint hover:text-developmint-light">Developmint</a>' +
+      '<a href="/referenzen" class="no-underline text-developmint hover:text-developmint-light">Developmint</a>' +
       ' goldrichtig. Mit einer gelungenen Mischung aus Neugierde, Erfahrung und dem Mut über den Tellerrand zu' +
       ' schauen konnten wir bereits eine Vielzahl von Unternehmen von uns Überzeugen. Und keiner unserer Kunden hat' +
       ' es bisher bereut!<br><br> Durch erprobte Strategien und breitgefächerte Kompetenz können die meisten' +
