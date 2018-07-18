@@ -2,6 +2,7 @@ const tailwindConfig = require('./tailwind.js')
 const path = require('path')
 const glob = require('glob-all')
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
+const helmet = require('helmet')
 const i18n = require('./i18n')
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 module.exports = {
@@ -204,6 +205,7 @@ module.exports = {
   },
 
   serverMiddleware: [
+    helmet(),
     '~/api/contact'
   ],
   /*
