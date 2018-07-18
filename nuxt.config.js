@@ -205,7 +205,9 @@ module.exports = {
   },
 
   serverMiddleware: [
-    helmet(),
+    helmet({
+      referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
+    }),
     '~/api/contact'
   ],
   /*
