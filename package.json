@@ -33,7 +33,7 @@
     "validator": "^10.4.0",
     "vue-analytics": "^5.12.2",
     "vue-cookieconsent-component": "^1.2.0",
-    "vue-if-bot": "^1.1.2",
+    "vue-if-bot": "^1.2.0",
     "vue-meta": "^1.5.2",
     "vue-observe-visibility": "^0.4.1",
     "vuelidate": "^0.7.4",
