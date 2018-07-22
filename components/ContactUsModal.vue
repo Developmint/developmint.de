@@ -82,7 +82,7 @@
           </button>
           <button
             :class="submitButtonClasses"
-            :disabled="disableSubmission"
+            :disabled="submissionDisabled"
             type="submit">
             {{ $t('contact.buttons.submit') }}
           </button>
@@ -135,16 +135,16 @@ export default {
   },
   computed: {
     empty () {
-      const keys = ['name', 'email', 'msg']
+      const dataKeys = ['name', 'email', 'msg']
 
-      return keys.map(k => this[k]).some(v => !v)
+      return dataKeys.map(k => this[k]).some(v => !v)
     },
-    disableSubmission () {
+    submissionDisabled () {
       return this.empty || this.$v.$error || this.submitting
     },
     submitButtonClasses () {
       const baseClasses = 'ml-4 mt-4 px-6 py-3 rounded transition-all border text-grey-light'
-      const additionalClasses = this.disableSubmission
+      const additionalClasses = this.submissionDisabled
         ? 'opacity-50 cursor-not-allowed border-grey-light'
         : 'hover:bg-gradient-rains-dark-rains border-developmint-light hover:border-developmint'
 
@@ -152,21 +152,25 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('keyup', this.onKeyUp)
-  },
-  beforeDestroy () {
-    window.removeEventListener('keyup', this.onKeyUp)
-  },
-  methods: {
-    onKeyUp (event) {
-      if (event.keyCode === 27) {
-        this.$emit('close')
-      }
-    },
-    validate () {
-      if (this.disableSubmission) {
+    const keyHandler = (event) => {
+      if (event.keyCode !== 27) {
         return
       }
+
+      this.$emit('close')
+    }
+
+    window.addEventListener('keyup', keyHandler)
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', keyHandler)
+    })
+  },
+  methods: {
+    validate () {
+      if (this.submissionDisabled) {
+        return
+      }
+
       this.submitForm()
     },
     async submitForm () {
@@ -174,6 +178,7 @@ export default {
       this.$ga.event('submit', 'form', this.$i18n.locale)
       this.error = false
       try {
+        // Empty string is no bug as API URL is already configured
         await this.$axios.$post('', {
           name: this.name,
           email: this.email,

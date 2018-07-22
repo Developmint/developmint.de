@@ -91,13 +91,21 @@ export default {
     }
   },
   mounted () {
-    if (typeof window !== 'undefined') {
-      this.handleScroll()
-      window.addEventListener('resize', this.handleResize)
+    if (typeof window === 'undefined') {
+      return
     }
-  },
-  beforeDestroy () {
-    window.removeEventListener('resize', this.handleResize)
+    this.handleScroll()
+
+    const resizeHandler = () => {
+      if (this.isUncollapsed && (window.innerWidth >= Number(lg.slice(0, -2)))) {
+        this.isUncollapsed = false
+      }
+    }
+
+    window.addEventListener('resize', resizeHandler)
+    this.$once('hook:destroyed', () => {
+      window.removeEventListener('resize', resizeHandler)
+    })
   },
   methods: {
     toggleVisibility () {
@@ -105,11 +113,6 @@ export default {
     },
     handleScroll () {
       this.scrollOffset = window.scrollY
-    },
-    handleResize () {
-      if (this.isUncollapsed && (window.innerWidth >= Number(lg.slice(0, -2)))) {
-        this.isUncollapsed = false
-      }
     }
   },
   links: ['about', 'work']
