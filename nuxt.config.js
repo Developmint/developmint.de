@@ -1,3 +1,4 @@
+const policies = require('./csp')
 const tailwindConfig = require('./tailwind.js')
 const path = require('path')
 const glob = require('glob-all')
@@ -5,6 +6,8 @@ const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const helmet = require('helmet')
 const i18n = require('./i18n')
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
+const isDev = process.env.NODE_ENV !== 'production'
+const isProd = !isDev
 module.exports = {
 
   /*
@@ -171,7 +174,7 @@ module.exports = {
       id: 'UA-62902757-7',
       disabled: () => document.cookie.indexOf('ga_optout=true') !== -1,
       debug: {
-        sendHitTask: process.env.NODE_ENV === 'production'
+        sendHitTask: isProd
       },
       set: [
         { field: 'anonymizeIp', value: true }
@@ -211,6 +214,14 @@ module.exports = {
     '~/serverMiddleware/no-server-header',
     '~/api/contact'
   ],
+
+  render: {
+    csp: {
+      enabled: false,
+      policies
+    }
+  },
+
   /*
    * Build configuration
    */
