@@ -7,6 +7,7 @@
       <h2 class="text-white xl:text-5xl text-center lg:text-left capitalize font-normal mb-2 lg:mb-4 xl:mb-8">
         {{ $t('contact.heading') }}
       </h2>
+      <pre class="hidden">{{ $v }}</pre>
       <form
         v-show="!isSubmitted"
         class=" w-5/6 lg:w-2/3 xl:w-1/3 mx-auto flex flex-col items-center text-sm"
@@ -19,10 +20,9 @@
             class="text-developmint-darker whitespace-no-wrap">Name</label>
           <input
             id="name"
-            v-model.trim="name"
+            v-model.trim="$v.name.$model"
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="text"
-            @input="$v.name.$touch()"
             @focus="focusedElement = 'name'"
             @blur="foucsedElement = ''">
         </div>
@@ -37,10 +37,9 @@
             class="text-developmint-darker whitespace-no-wrap">E-Mail</label>
           <input
             id="email"
-            v-model.trim="email"
+            v-model.trim="$v.email.$model"
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="email"
-            @input="$v.email.$touch()"
             @focus="focusedElement = 'email'"
             @blur="foucsedElement = ''">
         </div>
@@ -55,10 +54,9 @@
             class="py-4 text-developmint-darker">{{ $t('contact.fields.tell') }}</label>
           <textarea
             id="msg"
-            v-model.trim="msg"
+            v-model.trim="$v.msg.$model"
             class="appearance-none bg-transparent text-developmint-darkest resize-none"
             rows="6"
-            @input="$v.msg.$touch()"
             @focus="focusedElement='msg'"
             @blur="foucsedElement = ''"/>
         </div>
@@ -110,10 +108,10 @@ export default {
   mixins: [validationMixin],
   data () {
     return {
-      focusedElement: '',
       name: '',
       email: '',
       msg: '',
+      focusedElement: '',
       submitting: false,
       isSubmitted: false,
       error: false
@@ -121,8 +119,7 @@ export default {
   },
   validations: {
     name: {
-      required,
-      minLength: minLength(4)
+      required
     },
     email: {
       required,
@@ -197,3 +194,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  textarea:focus, input:focus {
+    outline: none;
+  }
+</style>
