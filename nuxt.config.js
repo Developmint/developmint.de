@@ -1,14 +1,17 @@
-const policies = require('./csp')
-const tailwindConfig = require('./tailwind.js')
-const path = require('path')
-const glob = require('glob-all')
-const PurgeCssPlugin = require('purgecss-webpack-plugin')
-const helmet = require('helmet')
-const i18n = require('./i18n')
+import policies from './csp'
+import tailwindConfig from './tailwind.js'
+import path from 'path'
+import glob from 'glob-all'
+import PurgeCssPlugin from 'purgecss-webpack-plugin'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+import helmet from 'helmet'
+import i18n from './i18n'
+
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
-const isDev = process.env.NODE_ENV !== 'production'
-const isProd = !isDev
-module.exports = {
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = !isProd
+export default {
 
   /*
    * Environment
@@ -216,8 +219,7 @@ module.exports = {
   ],
 
   render: {
-    csp: {
-      enabled: false,
+    csp: isDev ? false : {
       policies
     }
   },
@@ -231,8 +233,8 @@ module.exports = {
       allChunks: true
     },
     postcss: [
-      require('tailwindcss')('./tailwind.js'),
-      require('autoprefixer')
+      tailwindcss('./tailwind.js'),
+      autoprefixer
     ],
 
     /*
@@ -273,18 +275,6 @@ module.exports = {
           }))
         }
       }
-      config.module.rules.push({
-        test: /\.js$/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['vue-app'],
-          babelrc: false,
-          cacheDirectory: true
-        },
-        include: [
-          path.resolve(__dirname, './node_modules/vuelidate/src')
-        ]
-      })
     }
   }
 }
