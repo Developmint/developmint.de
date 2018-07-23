@@ -228,7 +228,6 @@ export default {
    * Build configuration
    */
   build: {
-    vendor: ['intersection-observer', 'vue-observe-visibility'],
     extractCSS: {
       allChunks: true
     },
