@@ -8,6 +8,8 @@ import autoprefixer from 'autoprefixer'
 import helmet from 'helmet'
 import i18n from './i18n'
 
+import contact from './api/contact'
+
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
@@ -214,8 +216,7 @@ export default {
     helmet({
       referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
     }),
-    '~/serverMiddleware/no-server-header',
-    '~/api/contact'
+    contact(isDev)
   ],
 
   render: {

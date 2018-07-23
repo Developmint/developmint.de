@@ -4,6 +4,7 @@ const validator = require('validator')
 const xssFilters = require('xss-filters')
 
 const app = express()
+let isDev = false
 
 app.use(express.json())
 
@@ -20,13 +21,9 @@ app.post('/', function (req, res) {
     return res.status(422).json({ 'error': 'Ugh.. That looks unprocessable!' })
   }
 
-  sendMail(...sanitizedAttributes)
+  isDev ? sendMailDev(...sanitizedAttributes) : sendMail(...sanitizedAttributes)
   res.status(200).json({ 'message': 'OH YEAH' })
 })
-module.exports = {
-  path: '/api/contact',
-  handler: app
-}
 
 const validateAndSanitize = (key, value) => {
   const rejectFunctions = {
@@ -51,4 +48,16 @@ const sendMail = (name, email, msg) => {
     subject: 'New contact form message',
     text: msg
   })
+}
+
+const sendMailDev = (...args) => {
+  console.log(...args)
+}
+
+module.exports = (nuxtDev = false) => {
+  isDev = nuxtDev
+  return {
+    'path': '/api/contact',
+    handler: app
+  }
 }
