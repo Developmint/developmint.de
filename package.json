@@ -16,7 +16,6 @@
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
     "autoprefixer": "^9.0.1",
-    "bundlesize": "^0.17.0",
     "express": "^4.16.3",
     "glob-all": "^3.1.0",
     "helmet": "^3.12.2",
@@ -56,23 +55,5 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
-  },
-  "bundlesize": [
-    {
-      "path": "./.nuxt/dist/+([0123456789]).*.js",
-      "maxSize": "6.5 kB"
-    },
-    {
-      "path": "./.nuxt/dist/+(lang-*).*.js",
-      "maxSize": "10 kB"
-    },
-    {
-      "path": "./.nuxt/dist/app.*.js",
-      "maxSize": "15 kB"
-    },
-    {
-      "path": "./.nuxt/dist/vendor*.js",
-      "maxSize": "63 kB"
-    }
-  ]
+  }
 }
