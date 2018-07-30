@@ -229,8 +229,18 @@ export default {
    * Build configuration
    */
   build: {
-    extractCSS: {
-      allChunks: true
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
     },
     postcss: [
       tailwindcss('./tailwind.js'),
