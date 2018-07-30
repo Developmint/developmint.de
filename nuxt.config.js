@@ -235,7 +235,7 @@ export default {
         cacheGroups: {
           styles: {
             name: 'styles',
-            test: /\.(css|vue)$/,
+            test: /\.(s?css|vue)$/,
             chunks: 'all',
             enforce: true
           }
