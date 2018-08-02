@@ -195,8 +195,39 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   textarea:focus, input:focus {
     outline: none;
+  }
+
+  :invalid {
+    box-shadow: none;
+  }
+
+  :-moz-submit-invalid {
+    box-shadow: none;
+  }
+
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+  .shadow-white {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+  }
+  .shadow-red {
+    box-shadow: 0 0 0 2px config("colors.red");
+  }
+
+  .close-button {
+    @apply .hidden .font-mono .ml-auto .text-grey-light .text-xl .w-8 .h-8 .rounded-full .border .mt-2;
+
+    &::before {
+      content: '×'
+    }
+
+    @screen lg {
+      @apply .block;
+    }
   }
 </style>

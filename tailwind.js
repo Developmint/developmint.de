@@ -864,6 +864,7 @@ module.exports = {
     shadows: ['responsive', 'hover'],
     svgFill: [],
     svgStroke: [],
+    tableLayout: ['responsive'],
     textAlign: ['responsive'],
     textColors: ['responsive', 'hover', 'group-hover'],
     textSizes: ['responsive', 'group-hover'],
@@ -909,6 +910,9 @@ module.exports = {
     prefix: '',
     important: false,
     separator: ':'
-  }
+  },
 
+  experiments: {
+    shadowLookup: true
+  }
 }

@@ -25,3 +25,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .bg-404 {
+    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 35, 0.65)), url("~/assets/img/bg/404.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+</style>

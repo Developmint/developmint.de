@@ -42,22 +42,3 @@
   transform: translateZ(-10px);
   opacity: 0;
 }
-
-.shadow-white {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
-}
-.shadow-red {
-  box-shadow: 0 0 0 2px config("colors.red");
-}
-
-:invalid {
-  box-shadow: none;
-}
-
-:-moz-submit-invalid {
-  box-shadow: none;
-}
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}

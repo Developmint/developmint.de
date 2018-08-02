@@ -230,6 +230,7 @@ export default {
    */
   build: {
     extractCSS: true,
+    /*
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -242,6 +243,7 @@ export default {
         }
       }
     },
+    */
     postcss: [
       tailwindcss('./tailwind.js'),
       autoprefixer

@@ -22,10 +22,11 @@
 
 <script>
 import { deterministicRotate } from '~/shared/helpers'
+import TeamMember from '~/components/about-us/TeamMember'
 
 export default {
   components: {
-    TeamMember: () => import('~/components/about-us/TeamMember')
+    TeamMember
   },
   members: deterministicRotate([
     {
@@ -57,3 +58,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .bg-about-us {
+    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~/assets/img/bg/about-us_sm.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @screen md {
+      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~/assets/img/bg/about-us.jpg");
+      background-position: top;
+    }
+  }
+</style>

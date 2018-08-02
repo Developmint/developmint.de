@@ -17,3 +17,37 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .cookie-consent {
+    @apply .w-full .py-2 .relative .flex .items-center .justify-center .bg-developmint-darker .text-developmint-lightest .text-xs;
+
+    @screen md {
+      @apply .text-sm .text-center;
+    }
+
+    &-link {
+      @apply .no-underline .text-developmint-light;
+      &:hover {
+        @apply text-developmint-lighter;
+      }
+    }
+
+    &-message,
+    &-compliance {
+      @apply .mx-2 .my-1 .px-2;
+
+      @screen md {
+        @apply .px-4;
+      }
+    }
+
+    &-compliance {
+      @apply .cursor-pointer .text-white .py-2 .rounded .border-white .border;
+
+      &:hover {
+        @apply bg-white .text-black;
+      }
+    }
+  }
+</style>
