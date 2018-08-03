@@ -90,7 +90,7 @@ export default {
             'sameAs': [
               'https://github.com/Developmint'
             ],
-            'foundingDate': ' 2015-08-10',
+            'foundingDate': '2015-08-10',
             'founders': [
               {
                 '@context': 'http://schema.org',
