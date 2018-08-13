@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col flex-1 items-center my-24 mx-2 lg:m-8 lg:my-16 xl:my-0 lg:mx-16">
+  <div class="flex flex-col flex-1 items-center my-24 mx-4 lg:m-8 lg:my-16 xl:my-0 lg:mx-18">
     <div class="w-full flex flex-col lg:flex-row items-center mb-4">
       <div class="my-4 flex-no-shrink">
         <img
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div
+    <p
       class="flex-grow text-justify leading-normal px-2"
       v-html="$t(`about.${slug}`)"/>
   </div>

@@ -8,7 +8,7 @@
       class="w-full flex items-center justify-between flex-wrap lg:flex-no-wrap lg:p-6 pb-0 lg:pb-0 pin-t transition-all-300">
       <div
         :class="subNavClasses"
-        class="container mx-auto p-4 lg:px-8 flex flex-wrap justify-between items-center transition-padding">
+        class="container mx-2 md:mx-auto p-4 lg:px-8 flex flex-wrap justify-between items-center transition-padding">
         <nuxt-link
           :to="localePath('index')"
           class="lg:mr-8"

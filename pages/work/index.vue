@@ -1,10 +1,10 @@
 <template>
   <div>
-    <section class="min-h-750 bg-work flex flex-col justify-center items-center">
-      <h1 class="text-center text-6xl font-normal text-rains-lighter capitalize mt-32">
+    <section class="min-h-screen md:min-h-750 bg-work flex flex-col justify-center items-center">
+      <h1 class="text-center text-4xl md:text-6xl font-normal text-rains-lighter capitalize mt-16 md:mt-32 mb-4 md:mb-0">
         {{ $t('work.index.heading') }}
       </h1>
-      <h2 class="font-normal text-center text-rains-lighter text-3xl w-4/5">
+      <h2 class="font-normal text-center text-rains-lighter text-xl md:text-3xl w-4/5">
         {{ $t('work.index.subheading') }}
       </h2>
     </section>
@@ -106,10 +106,10 @@ export default {
 <style lang="scss">
   .bg-work {
     background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~/assets/img/bg/work_sm.jpg");
+    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");
     background-position: bottom;
     @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~/assets/img/bg/work.jpg");
+      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work.jpg");
       background-position: center;
     }
   }

@@ -4,7 +4,7 @@
       class="close-button"
       @click="$emit('close')"/>
     <div class="m-4 mt-0 lg:m-16 xl:m-32 mx-auto flex flex-col items-center justify-center">
-      <h2 class="text-white xl:text-5xl text-center lg:text-left capitalize font-normal mb-2 lg:mb-4 xl:mb-8">
+      <h2 class="text-white text-2xl md:text-3xl xl:text-5xl text-center lg:text-left capitalize font-normal mb-2 lg:mb-4 xl:mb-8">
         {{ $t('contact.heading') }}
       </h2>
       <pre class="hidden">{{ $v }}</pre>
@@ -62,8 +62,8 @@
         </div>
         <span
           v-show="$v.msg.$error"
-          class="text-sm self-start ml-2 mb-4 text-red-light">Please provide a valid message with at least 25 characters</span>
-        <p class="my-4 px-2 text-grey-light">
+          class="text-xm self-start ml-2 mb-4 text-red-light">Please provide a valid message with at least 25 characters</span>
+        <p class="text-xs md:text-base my-4 px-2 text-grey-light">
           We use the data you provide us through this form only to process your contact request! You
           find more information in our
           <nuxt-link

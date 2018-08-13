@@ -1,14 +1,14 @@
 <template>
   <div>
-    <section class="min-h-750 bg-about-us flex flex-col justify-center items-center">
-      <h1 class="text-center text-6xl font-normal text-rains-lighter capitalize mt-32">
+    <section class="min-h-screen md:min-h-750 bg-about-us flex flex-col justify-center items-center">
+      <h1 class="text-center text-4xl md:text-6xl font-normal text-rains-lighter capitalize mt-16 md:mt-32 mb-4 md:mb-0">
         {{ $t('about.heading') }}
       </h1>
-      <h2 class="font-normal text-center text-rains-lighter text-3xl w-4/5">
+      <h2 class="font-normal text-center text-rains-lighter text-xl md:text-3xl w-4/5">
         {{ $t('about.subheading') }}
       </h2>
     </section>
-    <section class="w-4/5 mx-auto my-24 bg-rains-light xl:flex">
+    <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <team-member
         v-for="(member, i) in $options.members"
         :key="i"
@@ -61,12 +61,12 @@ export default {
 
 <style lang="scss">
   .bg-about-us {
-    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~/assets/img/bg/about-us_sm.jpg");
+    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
     @screen md {
-      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~/assets/img/bg/about-us.jpg");
+      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
       background-position: top;
     }
   }

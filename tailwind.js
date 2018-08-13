@@ -589,6 +589,7 @@ module.exports = {
   */
 
   maxWidth: {
+    'none': 'none',
     'xs': '20rem',
     'sm': '30rem',
     'md': '40rem',

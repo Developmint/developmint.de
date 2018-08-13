@@ -42,3 +42,8 @@
   transform: translateZ(-10px);
   opacity: 0;
 }
+
+.bg-footer {
+  background-image: linear-gradient(rgba(9, 0, 16, 1), rgba(11, 7, 16, 0.97));
+  background-size: cover;
+}

@@ -1,5 +1,5 @@
 .nav-link {
-  @apply .block .text-white .no-underline .uppercase .border-developmint-lighter .transition-border-color;
+  @apply .block .text-white .no-underline .uppercase .border-developmint-lighter .transition-border-color .my-2;
   @screen lg {
     @apply .mt-4 .mb-1 .mx-6 ;
   }

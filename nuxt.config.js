@@ -143,7 +143,7 @@ export default {
   meta: {
     name: 'Developmint',
     description: 'Developmint is an experienced Software agency based in Dresden (Germany). Let your visions become' +
-    ' reality with us!',
+      ' reality with us!',
     viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
     author: 'Developmint',
     ogHost: process.env.BASE_URL || 'https://developmint.de/',
@@ -191,6 +191,23 @@ export default {
   ],
 
   /*
+   * Workbox
+   */
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.(?:googleapis|gstatic).com/(.*)',
+        strategyOptions: {
+          cacheName: 'google-fonts',
+          cacheExpiration: {
+            maxEntries: 30,
+            maxAgeSeconds: 300
+          }
+        }
+      }
+    ]
+  },
+  /*
    * Customize the progress bar color
    */
   loading: { color: tailwindConfig.colors.developmint },
@@ -230,20 +247,7 @@ export default {
    */
   build: {
     extractCSS: true,
-    /*
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.(s?css|vue)$/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
-    },
-    */
+    transpile: [/vue-if-bot/],
     postcss: [
       tailwindcss('./tailwind.js'),
       autoprefixer

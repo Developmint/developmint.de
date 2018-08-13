@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="h-screen lg:min-h-750 bg-hero flex flex-col justify-center items-center">
+    <section class="min-h-screen md:min-h-750 bg-hero flex flex-col justify-center items-center">
       <div
         :class="{'capitalize' : $i18n.locale !== 'de'}"
         class="text-center text-lg lg:text-3xl text-rains-lighter mt-8 md:mt-16 lg:mt-32">
@@ -164,25 +164,20 @@ export default {
 
   .bg-hero {
     background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~/assets/img/bg/hero_sm.jpg");
+    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
 
     @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~/assets/img/bg/hero.jpg");
+      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
     }
   }
 
   .bg-cta-end {
     background-size: cover;
-    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~/assets/img/bg/contact_sm.jpg");
+    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact_sm.jpg");
 
     @screen md {
-      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~/assets/img/bg/contact.jpg");
+      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
       background-position: bottom;
     }
-  }
-
-  .bg-footer {
-    background-image: linear-gradient(rgba(9, 0, 16, 1), rgba(11, 7, 16, 0.97));
-    background-size: cover;
   }
 </style>
