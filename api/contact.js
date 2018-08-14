@@ -1,18 +1,18 @@
-const express = require('express')
-const nodemailer = require('nodemailer')
-const validator = require('validator')
-const xssFilters = require('xss-filters')
+import express from 'express'
+import nodemailer from 'nodemailer'
+import validator from 'validator'
+import xssFilters from 'xss-filters'
 
 const app = express()
 let isDev = false
 
 app.use(express.json())
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.status(405).json({ error: 'sorry!' })
 })
 
-app.post('/', function (req, res) {
+app.post('/', (req, res) => {
   const attributes = ['name', 'email', 'msg']
   const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]))
   const someInvalid = sanitizedAttributes.some(r => !r)
@@ -21,7 +21,8 @@ app.post('/', function (req, res) {
     return res.status(422).json({ 'error': 'Ugh.. That looks unprocessable!' })
   }
 
-  isDev ? sendMailDev(...sanitizedAttributes) : sendMail(...sanitizedAttributes)
+  const sendMailFunction = isDev ? sendMailDev : sendMail
+  sendMailFunction(...sanitizedAttributes)
   res.status(200).json({ 'message': 'OH YEAH' })
 })
 
@@ -37,7 +38,7 @@ const validateAndSanitize = (key, value) => {
 }
 
 const sendMail = (name, email, msg) => {
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     sendmail: true,
     newline: 'unix',
     path: '/usr/sbin/sendmail'
@@ -54,7 +55,7 @@ const sendMailDev = (...args) => {
   console.log(...args)
 }
 
-module.exports = (nuxtDev = false) => {
+export default (nuxtDev = false) => {
   isDev = nuxtDev
   return {
     'path': '/api/contact',
