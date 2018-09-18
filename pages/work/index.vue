@@ -102,15 +102,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .bg-work {
-    background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");
-    background-position: bottom;
-    @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work.jpg");
-      background-position: center;
-    }
-  }
-</style>

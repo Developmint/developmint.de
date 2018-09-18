@@ -156,28 +156,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .bg-gradient-rains-rains-dark {
-    background-image: linear-gradient(to right, config('colors.rains'), config('colors.rains-dark'));
-  }
-
-  .bg-hero {
-    background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
-
-    @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
-    }
-  }
-
-  .bg-cta-end {
-    background-size: cover;
-    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact_sm.jpg");
-
-    @screen md {
-      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
-      background-position: bottom;
-    }
-  }
-</style>

@@ -33,7 +33,7 @@ export default {
       slug: 'alex',
       name: 'Alexander Lichter',
       links: {
-        web: 'https://lichter.io/',
+        web: 'https://lichter.io/?ref=developmint.de',
         twitter: 'https://twitter.com/TheAlexLichter',
         github: 'https://github.com/manniL/',
         linkedin: 'https://www.linkedin.com/in/alexanderlichter'
@@ -43,7 +43,7 @@ export default {
       slug: 'max',
       name: 'Max Langer',
       links: {
-        web: 'https://max.codes/',
+        web: 'https://max.codes/?ref=developmint.de',
         twitter: 'https://twitter.com/mangerlahn',
         github: 'https://github.com/mangerlahn/',
         linkedin: 'https://www.linkedin.com/in/max-langer-17b133136/'
@@ -58,16 +58,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .bg-about-us {
-    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
-    background-size: cover;
-    background-position: top;
-
-    @screen md {
-      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
-      background-position: top;
-    }
-  }
-</style>
