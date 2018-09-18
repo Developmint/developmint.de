@@ -6,6 +6,7 @@ import PurgeCssPlugin from 'purgecss-webpack-plugin'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import helmet from 'helmet'
+import shrinkRay from 'shrink-ray-current'
 import i18n from './i18n'
 
 import contact from './api/contact'
@@ -239,7 +240,8 @@ export default {
   render: {
     csp: isDev ? false : {
       policies
-    }
+    },
+    compressor: shrinkRay()
   },
 
   /*
