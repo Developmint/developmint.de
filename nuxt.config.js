@@ -123,6 +123,7 @@ export default {
                 'sameAs': [
                   'https://twitter.com/mangerlahn',
                   'https://github.com/mangerlahn',
+                  'https://max.codes/',
                   'https://www.linkedin.com/in/max-langer-17b133136/'
                 ]
               }
