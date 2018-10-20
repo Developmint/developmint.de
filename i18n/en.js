@@ -7,7 +7,7 @@ module.exports = {
   },
   nav: {
     about: 'About Us',
-    work: 'Work',
+    work: 'Our Work',
     'contact-us': 'Contact Us'
   },
   footer: {

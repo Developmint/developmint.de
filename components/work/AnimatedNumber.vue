@@ -1,4 +1,7 @@
 <script>
+
+import { tween } from 'shifty/src/tweenable'
+
 export default {
   props: {
     from: {
@@ -11,7 +14,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 1000
+      required: true
     },
     easing: {
       type: String,
@@ -22,7 +25,7 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       number: null,
       state: 0
@@ -30,7 +33,7 @@ export default {
   },
   watch: {
     shouldStart: {
-      handler (newValue) {
+      handler(newValue) {
         if (newValue) {
           this.start()
         }
@@ -39,10 +42,10 @@ export default {
     }
   },
   methods: {
-    updateNumber (state) {
-      this.number = parseInt(state.x).toLocaleString()
+    updateNumber(state) {
+      this.number = Number(state.x).toLocaleString()
     },
-    start () {
+    start() {
       if (this.state > 0) {
         return
       }
@@ -54,14 +57,15 @@ export default {
         easing: this.easing,
         step: this.updateNumber
       }
-      require('shifty/src/tweenable').tween(options)
+
+      tween(options)
         .then(this.updateNumber)
         .then(() => {
           this.state = 0
         })
     }
   },
-  render (h) {
+  render(h) {
     return h('span', this.number)
   }
 }

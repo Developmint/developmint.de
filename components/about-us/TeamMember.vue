@@ -53,10 +53,12 @@
 </template>
 
 <script>
-import GitHubIcon from '../icons/GitHubIcon.js'
-import GlobeIcon from '../icons/GlobeIcon.js'
-import TwitterIcon from '../icons/TwitterIcon.js'
-import LinkedInIcon from '../icons/LinkedInIcon.js'
+import GitHubIcon from '~/components/icons/GitHubIcon'
+import GlobeIcon from '~/components/icons/GlobeIcon.js'
+import TwitterIcon from '~/components/icons/TwitterIcon.js'
+import LinkedInIcon from '~/components/icons/LinkedInIcon.js'
+
+import logClick from '~/mixins/logClick'
 
 export default {
   components: {
@@ -65,6 +67,7 @@ export default {
     GlobeIcon,
     GitHubIcon
   },
+  mixins: [logClick],
   props: {
     slug: {
       type: String,
@@ -81,14 +84,6 @@ export default {
     odd: {
       type: Boolean,
       required: true
-    }
-  },
-  methods: {
-    logClick (icon) {
-      this.$ga.event({
-        eventCategory: 'click',
-        eventAction: `${this.name} - ${icon}`
-      })
     }
   }
 }

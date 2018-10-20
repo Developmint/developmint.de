@@ -8,7 +8,7 @@
 
 <script>
 import IfBot from 'vue-if-bot/dist/vue-if-bot.es'
-import CookieConsent from '~/node_modules/vue-cookieconsent-component/src/components/CookieConsent'
+import CookieConsent from 'vue-cookieconsent-component/src/components/CookieConsent.vue'
 
 export default {
   components: {

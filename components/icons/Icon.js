@@ -16,7 +16,7 @@ export default {
       default: ''
     }
   },
-  render (h, { children, data, props: { viewBox, path, iconTitle } }) {
+  render(h, { children, data, props: { viewBox, path, iconTitle } }) {
     return h('svg', {
       ...data,
       attrs: {
