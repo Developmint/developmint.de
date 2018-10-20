@@ -39,7 +39,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-let colors = {
+const colors = {
   'transparent': 'transparent',
 
   'black': '#22292f',
@@ -421,7 +421,7 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({default: colors['grey-light']}, colors),
+  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
 
   /*
   |-----------------------------------------------------------------------------

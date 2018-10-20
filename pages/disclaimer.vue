@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-  head () {
+  head() {
     return {
       ...this.$t('seo.disclaimer'),
       meta: [

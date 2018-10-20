@@ -1,5 +1,3 @@
-import policies from './csp'
-import tailwindConfig from './tailwind.js'
 import path from 'path'
 import glob from 'glob-all'
 import PurgeCssPlugin from 'purgecss-webpack-plugin'
@@ -7,6 +5,8 @@ import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import helmet from 'helmet'
 import shrinkRay from 'shrink-ray-current'
+import tailwindConfig from './tailwind.js'
+import policies from './csp'
 import i18n from './i18n'
 
 import contact from './api/contact'
@@ -30,7 +30,7 @@ export default {
     scrollBehavior: (to, from, savedPosition) => {
       let position = false
 
-      if (to.matched.length < 2 || to.matched.some((r) => r.components.default.options.scrollToTop)) {
+      if (to.matched.length < 2 || to.matched.some(r => r.components.default.options.scrollToTop)) {
         position = { x: 0, y: 0 }
       }
 
@@ -38,7 +38,7 @@ export default {
         position = savedPosition
       }
 
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         // wait for the out transition to complete (if necessary)
         window.$nuxt.$once('triggerScroll', () => {
           // coords will be used if no selector is provided,
@@ -226,7 +226,7 @@ export default {
     short_name: 'Developmint',
     start_url: '/',
     display: 'standalone',
-    background_color: tailwindConfig.colors['rains'],
+    background_color: tailwindConfig.colors.rains,
     theme_color: tailwindConfig.colors.developmint
   },
 
@@ -259,7 +259,7 @@ export default {
      * Run ESLint on save
      * Add PurgeCSS
      */
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.isClient) {
         if (ctx.isDev) {
           config.module.rules.push({
@@ -283,7 +283,7 @@ export default {
             extractors: [
               {
                 extractor: class {
-                  static extract (content) {
+                  static extract(content) {
                     return content.match(/[A-z0-9-:\\/]+/g)
                   }
                 },

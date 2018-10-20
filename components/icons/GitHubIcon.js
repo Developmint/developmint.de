@@ -3,7 +3,7 @@ import Icon from './Icon'
 export default {
   functional: true,
   components: { Icon },
-  render (h, { data }) {
+  render(h, { data }) {
     return h(Icon, {
       ...data,
       props: {

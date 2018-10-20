@@ -70,27 +70,27 @@ import Consent from '~/components/Consent'
 
 export default {
   components: { Consent },
-  data () {
+  data() {
     return {
       isUncollapsed: false,
       scrollOffset: 0
     }
   },
   computed: {
-    isUserScrolling () { return this.scrollOffset },
-    navClasses () {
+    isUserScrolling() { return this.scrollOffset },
+    navClasses() {
       return {
         'pt-2 lg:pt-2 bg-rains': this.isUserScrolling || this.isUncollapsed,
         'bg-transparent': !this.isUserScrolling
       }
     },
-    subNavClasses () {
+    subNavClasses() {
       return {
         'py-2 lg:py-2': this.isUserScrolling
       }
     }
   },
-  mounted () {
+  mounted() {
     if (typeof window === 'undefined') {
       return
     }
@@ -108,10 +108,10 @@ export default {
     })
   },
   methods: {
-    toggleVisibility () {
+    toggleVisibility() {
       this.isUncollapsed = !this.isUncollapsed
     },
-    handleScroll () {
+    handleScroll() {
       this.scrollOffset = window.scrollY
     }
   },

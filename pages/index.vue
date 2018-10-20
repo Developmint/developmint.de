@@ -110,7 +110,7 @@ export default {
     Quote: () => import('~/components/index/Quote'),
     ExpertiseCategory: () => import('~/components/index/ExpertiseCategory')
   },
-  data () {
+  data() {
     return {
       currentSloganIndex: 0,
       currentQuoteIndex: 0,
@@ -118,37 +118,37 @@ export default {
     }
   },
   computed: {
-    slogans () {
+    slogans() {
       return this.$t('index.hero.slogans')
     },
-    currentSlogan () {
+    currentSlogan() {
       return this.slogans[this.currentSloganIndex]
     },
-    quotes () {
+    quotes() {
       return this.$t('index.quotes')
     },
-    currentQuote () {
+    currentQuote() {
       return this.quotes[this.currentQuoteIndex]
     }
   },
-  mounted () {
+  mounted() {
     setInterval(this.nextSlogan, 7.5 * 1000)
     setInterval(this.nextQuote, 7.5 * 1000)
   },
   methods: {
-    nextSlogan () {
+    nextSlogan() {
       this.currentSloganIndex = (this.currentSloganIndex + 1) % this.slogans.length
     },
-    nextQuote () {
+    nextQuote() {
       this.currentQuoteIndex = (this.currentQuoteIndex + 1) % this.quotes.length
     },
-    visibilityChanged (visible) {
+    visibilityChanged(visible) {
       if (visible) {
         this.showIcons = true
       }
     }
   },
-  head () {
+  head() {
     return {
       title: '',
       ...this.$createSeo('index')

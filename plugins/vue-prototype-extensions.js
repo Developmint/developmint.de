@@ -24,7 +24,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
 
 const wrap = a => Array.isArray(a) ? a : [a]
 
-const retrieveMetaObjectArray = metaObject => {
+const retrieveMetaObjectArray = (metaObject) => {
   const wrappedName = wrap(metaObject.name)
 
   return wrappedName.map(n => ({

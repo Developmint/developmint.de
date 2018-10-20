@@ -22,7 +22,7 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       number: null,
       state: 0
@@ -30,7 +30,7 @@ export default {
   },
   watch: {
     shouldStart: {
-      handler (newValue) {
+      handler(newValue) {
         if (newValue) {
           this.start()
         }
@@ -39,10 +39,10 @@ export default {
     }
   },
   methods: {
-    updateNumber (state) {
+    updateNumber(state) {
       this.number = parseInt(state.x).toLocaleString()
     },
-    start () {
+    start() {
       if (this.state > 0) {
         return
       }
@@ -61,7 +61,7 @@ export default {
         })
     }
   },
-  render (h) {
+  render(h) {
     return h('span', this.number)
   }
 }
