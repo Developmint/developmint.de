@@ -57,8 +57,7 @@ export default {
   head: {
     titleTemplate,
     meta: [
-      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
-      { hid: 'og:site_name', name: 'og:site_name', content: 'Developmint' }
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript.' }],
     link: [
@@ -146,6 +145,7 @@ export default {
     viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
     author: 'Developmint',
     ogHost: process.env.BASE_URL || 'https://developmint.de/',
+    ogSiteName: 'Developmint',
     ogImage: {
       path: 'logo.png'
     },
