@@ -5,9 +5,9 @@
   "author": "Alexander Lichter <alichter@developmint.de>",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development nuxt",
-    "build": "NODE_ENV=production nuxt build",
-    "start": "NODE_ENV=production nuxt start",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "npm run lint && npm run build"
   },
