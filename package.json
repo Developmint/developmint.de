@@ -9,7 +9,7 @@
     "build": "NODE_ENV=production nuxt build",
     "start": "NODE_ENV=production nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "npm run lint && npm run build && bundlesize"
+    "test": "npm run lint && npm run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.3",
