@@ -50,16 +50,14 @@ module.exports = {
     informationIcons: [
       {
         title: 'Stylisch auf allen Geräten',
-        img: 'devices.svg',
-        alt: 'Devices icon',
+        img: 'DevicesIcon',
         content: '<p class="font-normal text-md">Unsere Arbeit ist darauf ausgelegt auf jedem populären Gerät gut' +
         ' auszusehen, egal ob es sich um einem kleinen Smartphone-Bildschirm oder einen großen Fernseher handelt.' +
         ' Welches Gerät der Endnutzer auch hat, Ihre Software wird super darauf aussehen!</p>'
       },
       {
         title: 'Von der Idee zum Produkt',
-        img: 'data.svg',
-        alt: 'Data icon',
+        img: 'DataIcon',
         content: '<p class="font-normal text-md">Nicht ganz sicher was Sie wollen? Kein Problem, wir finden das' +
         ' einfach gemeinsam heraus! Nachdem wir mehr über Ihre Ideen und Planungen erfahren haben, fokussieren wir' +
         ' uns darauf diese Umzusetzen und mit unseren Erfahrungen und Best Practices das Beste aus ihren Gedanken' +
@@ -67,8 +65,7 @@ module.exports = {
       },
       {
         title: 'Langzeit-Analyse',
-        img: 'analytics.svg',
-        alt: 'Analytics icon',
+        img: 'AnalyticsIcon',
         content: '<p class="font-normal text-md">Wenn die Veröffentlichung der App oder Website gekommen ist, dann' +
         ' ist die Arbeit noch nicht vorüber. Nutzerfeedback analysieren und auf die Wünsche dieser reagieren ist' +
         ' wichtig für ein erfolgreiches Projekt. Developmint kann Ihnen bei diesen zwei Aufgaben helfen, indem' +

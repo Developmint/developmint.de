@@ -73,11 +73,13 @@
               <information-icon
                 v-for="(data,index) in $t('index.informationIcons')"
                 :class="{'opacity-0': !showIcons}"
-                :img="data.img"
                 :key="index"
                 :title="data.title"
-                :alt="data.alt"
-                :content="data.content"/>
+                :content="data.content">
+                <component
+                  :is="data.img"
+                  class="h-48 p-1 mb-8 transition-all"/>
+              </information-icon>
             </div>
           </transition>
         </div>
@@ -107,6 +109,9 @@
 export default {
   components: {
     InformationIcon: () => import('~/components/index/InformationIcon'),
+    DevicesIcon: () => import('~/assets/img/icons/index/devices.svg'),
+    DataIcon: () => import('~/assets/img/icons/index/data.svg'),
+    AnalyticsIcon: () => import('~/assets/img/icons/index/analytics.svg'),
     Quote: () => import('~/components/index/Quote'),
     ExpertiseCategory: () => import('~/components/index/ExpertiseCategory')
   },

@@ -50,24 +50,21 @@ module.exports = {
     informationIcons: [
       {
         title: 'Beautiful on all devices',
-        img: 'devices.svg',
-        alt: 'Devices icon',
+        img: 'DevicesIcon',
         content: '<p class="font-normal text-md">Our work is designed to look great on every popular device' +
         ' type, from small mobile phone displays to large screens. No matter which device the user has, they\'ll' +
         ' love the design!</p>'
       },
       {
         title: 'Expand your ideas',
-        img: 'data.svg',
-        alt: 'Data icon',
+        img: 'DataIcon',
         content: '<p class="font-normal text-md">Unsure what you really want? No problem, we will find out' +
         ' together! While focusing on your initial ideas, we make use of our experience to guide the outcome in' +
         ' the right direction.</p>'
       },
       {
         title: 'Long-term analysis',
-        img: 'analytics.svg',
-        alt: 'Analytics icon',
+        img: 'AnalyticsIcon',
         content: '<p class="font-normal text-md">Work isn\'t done with releasing the app or website. Analyzing' +
         ' user feedback and reacting to it is important for a successful project. Developmint will help you with' +
         ' both, providing you evaluations and suggestions for the steps coming after the release.</p>'
