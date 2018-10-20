@@ -21,29 +21,17 @@
       <p class="w-full md:w-1/2 p-8 md:p-3">{{ $t('work.appendix.subheading') }}</p>
       <div class="w-full md:w-3/4 flex flex-col lg:flex-row items-center lg:justify-around mt-16">
         <div
-          v-observe-visibility="handleVisibility"
-          class="my-8 lg:my-0 mx-4 text-xl">
+          v-observe-visibility="!i ? handleVisibility : () => {}"
+          v-for="({duration, to, prefix}, i) in $options.numbers"
+          :key="i"
+          class="my-8 lg:my-0 mx-4 text-xl"
+        >
           <animated-number
             :should-start="isVisible"
-            :to="30"
+            :duration="duration"
+            :to="to"
             class="text-2xl font-bold"/>
-          <span>+ {{ $t('work.appendix.statistics')[0] }}</span>
-        </div>
-        <div class="my-8 lg:my-0 mx-4 text-xl">
-          <animated-number
-            :should-start="isVisible"
-            :duration="3500"
-            :to="100000"
-            class="text-2xl font-bold"/>
-          <span>+ {{ $t('work.appendix.statistics')[1] }}</span>
-        </div>
-        <div class="my-8 lg:my-0 mx-4 text-xl">
-          <animated-number
-            :should-start="isVisible"
-            :duration="2500"
-            :to="100"
-            class="text-2xl font-bold"/>
-          <span>% {{ $t('work.appendix.statistics')[2] }}</span>
+          <span>{{ prefix }} {{ $t('work.appendix.statistics')[i] }}</span>
         </div>
       </div>
     </div>
@@ -97,6 +85,23 @@ export default {
       url: ''
     }
   ]),
+  numbers: [
+    {
+      duration: 1000,
+      to: 30,
+      prefix: '+'
+    },
+    {
+      duration: 3500,
+      to: 100000,
+      prefix: '+'
+    },
+    {
+      duration: 2500,
+      to: 100,
+      prefix: '%'
+    }
+  ],
   head() {
     return this.$createSeo('work')
   }

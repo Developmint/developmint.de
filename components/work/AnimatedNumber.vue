@@ -14,7 +14,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 1000
+      required: true
     },
     easing: {
       type: String,
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     updateNumber(state) {
-      this.number = parseInt(state.x).toLocaleString()
+      this.number = Number(state.x).toLocaleString()
     },
     start() {
       if (this.state > 0) {
