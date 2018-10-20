@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-  - "10"
+- "10"
 cache:
+  yarn: true
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm t
+- yarn test
 notifications:
   email: false
