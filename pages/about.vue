@@ -25,6 +25,7 @@ import { deterministicRotate } from '~/shared/helpers'
 import TeamMember from '~/components/about-us/TeamMember'
 
 export default {
+  scrollToTop: true,
   components: {
     TeamMember
   },

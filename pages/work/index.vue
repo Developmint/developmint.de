@@ -43,6 +43,7 @@ import { deterministicRotate } from '~/shared/helpers'
 import WorkPreview from '~/components/work/WorkPreview'
 
 export default {
+  scrollToTop: true,
   components: {
     WorkPreview,
     AnimatedNumber: () => import('~/components/work/AnimatedNumber')
