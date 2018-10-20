@@ -35,7 +35,7 @@
   </nav>
 </template>
 <script>
-import GitHubIcon from './icons/GitHubIcon'
+import GitHubIcon from '~/components/icons/GitHubIcon'
 import { version } from '~/package.json'
 
 export default {

@@ -35,7 +35,10 @@
 </template>
 
 <script>
+import logClick from '~/mixins/logClick'
+
 export default {
+  mixins: [logClick],
   props: {
     slug: {
       type: String,
@@ -54,14 +57,6 @@ export default {
     bindUrl() {
       // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
       return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
-    }
-  },
-  methods: {
-    logClick(type) {
-      this.$ga.event({
-        eventCategory: 'click',
-        eventAction: `${this.slug} - ${type}`
-      })
     }
   }
 }

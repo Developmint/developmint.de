@@ -91,9 +91,6 @@ export default {
     }
   },
   mounted() {
-    if (typeof window === 'undefined') {
-      return
-    }
     this.handleScroll()
 
     const resizeHandler = () => {

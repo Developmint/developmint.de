@@ -1,4 +1,7 @@
 <script>
+
+import { tween } from 'shifty/src/tweenable'
+
 export default {
   props: {
     from: {
@@ -54,7 +57,8 @@ export default {
         easing: this.easing,
         step: this.updateNumber
       }
-      require('shifty/src/tweenable').tween(options)
+
+      tween(options)
         .then(this.updateNumber)
         .then(() => {
           this.state = 0

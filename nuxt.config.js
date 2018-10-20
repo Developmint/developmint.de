@@ -1,8 +1,6 @@
 import path from 'path'
 import glob from 'glob-all'
 import PurgeCssPlugin from 'purgecss-webpack-plugin'
-import tailwindcss from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
 import helmet from 'helmet'
 import shrinkRay from 'shrink-ray-current'
 import tailwindConfig from './tailwind.js'
@@ -249,11 +247,12 @@ export default {
    */
   build: {
     extractCSS: true,
-    transpile: [/vue-if-bot/],
-    postcss: [
-      tailwindcss('./tailwind.js'),
-      autoprefixer
-    ],
+    transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
+    postcss: {
+      plugins: {
+        tailwindcss: ('./tailwind.js')
+      }
+    },
 
     /*
      * Run ESLint on save

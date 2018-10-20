@@ -6,8 +6,7 @@
       <h2 class="my-2 text-center font-normal">{{ title }}</h2>
       <div class="lg:flex justify-center">
         <ul
-          style="list-style: none"
-          class="pl-0">
+          class="list-reset">
           <li
             v-for="(item, index) in listItems"
             :key="index"

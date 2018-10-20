@@ -170,7 +170,7 @@ export default {
 
       this.submitForm()
     },
-    submitForm: async function () {
+    async submitForm() {
       this.submitting = true
       this.$ga.event('submit', 'form', this.$i18n.locale)
       this.error = false
