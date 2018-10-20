@@ -53,19 +53,14 @@
 </template>
 
 <script>
-import GitHubIcon from '~/components/icons/GitHubIcon'
-import GlobeIcon from '~/components/icons/GlobeIcon.js'
-import TwitterIcon from '~/components/icons/TwitterIcon.js'
-import LinkedInIcon from '~/components/icons/LinkedInIcon.js'
-
 import logClick from '~/mixins/logClick'
 
 export default {
   components: {
-    LinkedInIcon,
-    TwitterIcon,
-    GlobeIcon,
-    GitHubIcon
+    GitHubIcon: () => import('~/assets/img/icons/github.svg'),
+    GlobeIcon: () => import('~/assets/img/icons/team/globe.svg'),
+    TwitterIcon: () => import('~/assets/img/icons/team/twitter.svg'),
+    LinkedInIcon: () => import('~/assets/img/icons/team/linkedin.svg')
   },
   mixins: [logClick],
   props: {

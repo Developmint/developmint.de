@@ -1,9 +1,6 @@
 <template>
   <div class="flex flex-col flex-1 my-8 lg:mx-2 xl:mx-8 group transition-all p-4 md:p-8 rounded lg:hover:scale-1025">
-    <img
-      :src="require(`~/assets/img/info-icon/${img}`)"
-      :alt="alt"
-      class="h-48 p-1 mb-8 transition-all">
+    <slot/>
     <h2 class="mt-3 text-lg text-center mb-4 group-hover:text-black transition-all">
       {{ title }}
     </h2>
@@ -17,14 +14,6 @@
 export default {
   props: {
     title: {
-      required: true,
-      type: String
-    },
-    img: {
-      required: true,
-      type: String
-    },
-    alt: {
       required: true,
       type: String
     },

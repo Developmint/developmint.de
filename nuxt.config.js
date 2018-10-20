@@ -187,7 +187,8 @@ export default {
     }],
     '@nuxtjs/pwa',
     ['@nuxtjs/axios', { baseURL: '/api/contact' }],
-    ['nuxt-i18n', i18n]
+    ['nuxt-i18n', i18n],
+    'nuxt-svg-loader'
   ],
 
   /*

@@ -35,11 +35,12 @@
   </nav>
 </template>
 <script>
-import GitHubIcon from '~/components/icons/GitHubIcon'
 import { version } from '~/package.json'
 
 export default {
-  components: { GitHubIcon },
+  components: {
+    GitHubIcon: () => import('~/assets/img/icons/github.svg')
+  },
   links: ['legal', 'privacy', 'disclaimer'],
   version,
   currentYear: (new Date()).getFullYear()
