@@ -94,10 +94,10 @@ module.exports = {
         {
           title: 'Angebote',
           listItems: [
-            '<span class="italic">Enterprise</span> Web applications',
-            'Website(um)gestaltung und -hosting',
+            '<b>Nuxt.js Beratung</b>',
+            'Webanwendungen auf Enterprise Level',
             '<span class="italic">iOS</span> und <span class="italic">macOS</span> apps',
-            'SEO and Marketingberatung',
+            'SEO- and Marketingberatung',
             'Zukunftssichere Software'
           ]
         },
@@ -117,7 +117,7 @@ module.exports = {
             'Laravel',
             'Swift',
             'Objective C',
-            'Vue.js',
+            '<b>Nuxt.js</b>, Vue.js',
             'Bootstrap, TailwindCSS'
           ]
         }
@@ -193,6 +193,14 @@ module.exports = {
         ' Des Weiteren ist der Code der Seite <a href="https://github.com/manniL/lichter.io" target="_blank"' +
         ' rel="noopener" class="text-developmint hover:text-developmint-light no-underline">öffentlich</a>, damit man' +
         ' einen direkten Einblick in die Arbeitsweise erhält.'
+      },
+      'nuxt': {
+        title: 'Nuxt.js',
+        shortDescription: `Nuxt.js ist ein großes open-source Javascript Framework für moderene Anwendungen die
+        serverseitig gerendert werden. Mit über 15.000 Sternen auf GitHub ist es zu einem wichtigen Tool für
+        Entwickler und ganze Firmen geworden. Wir sind stolz darauf, Nuxt.js mit Code und Zeit zu unterstützen.
+        Alexander Lichter, ein Mitglied des Kernteams, steht unseren Kunden außerdem für <b>Consulting</b> und
+        Beratung zur Verfügung.`
       },
       'ostseeferien-binz': {
         title: 'Ostseeferien Binz',

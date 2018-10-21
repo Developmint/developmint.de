@@ -11,9 +11,13 @@
         rel="noopener"
         class="text-rains flex justify-center group sm:mt-8 lg:my-8 md:w-1/2"
         @click="logClick('img')">
+        <component
+          v-if="svg"
+          :is="svg"
+          class="transition-all group-hover:scale-1025 group-hover:shadow-lg shadow-md border md:border-2 border-rains-lighter md:border-grey-light md:rounded max-w-none"/>
         <img
-          :src="require(`~/assets/img/work/${slug}.jpg`)"
-          :srcset="`${require(`~/assets/img/work/${slug}@2x.jpg`)} 2x`"
+          v-else
+          v-bind="imageSources"
           :alt="`${$t(`work.projects.${slug}.title`)} ${$t(`general.preview`)}`"
           class="transition-all group-hover:scale-1025 group-hover:shadow-lg shadow-md border md:border-2 border-rains-lighter md:border-grey-light md:rounded max-w-none">
       </a>
@@ -51,12 +55,22 @@ export default {
     url: {
       type: String,
       required: true
+    },
+    svg: {
+      type: Boolean | Function,
+      default: false
     }
   },
   computed: {
     bindUrl() {
       // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
       return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
+    },
+    imageSources() {
+      return {
+        src: require(`~/assets/img/work/${this.slug}.jpg`),
+        srcset: `${require(`~/assets/img/work/${this.slug}@2x.jpg`)} 2x`
+      }
     }
   }
 }

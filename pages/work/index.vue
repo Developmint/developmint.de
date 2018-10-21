@@ -10,11 +10,10 @@
     </section>
     <div class="flex flex-wrap justify-center">
       <work-preview
-        v-for="({slug, url}, i) in $options.projects"
+        v-for="(info, i) in $options.projects"
         :key="i"
         :odd="!!(i % 2)"
-        :slug="slug"
-        :url="url"/>
+        v-bind="info"/>
     </div>
     <div class="bg-white shadow w-full py-32 flex flex-col items-center">
       <h3 class="text-2xl text-center">{{ $t('work.appendix.heading') }}</h3>
@@ -76,6 +75,11 @@ export default {
     {
       slug: 'lichter-io',
       url: 'https://lichter.io/'
+    },
+    {
+      slug: 'nuxt',
+      url: 'https://nuxtjs.org/',
+      svg: () => import('~/assets/img/work/nuxt.svg')
     },
     {
       slug: 'ostseeferien-binz',

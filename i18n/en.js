@@ -91,8 +91,8 @@ module.exports = {
         {
           title: 'Offers',
           listItems: [
+            '<b>Nuxt.js Consulting</b>',
             '<span class="italic">Enterprise</span> Web applications',
-            'Website creation, (re)design and hosting',
             '<span class="italic">iOS</span> and <span class="italic">macOS</span> applications',
             'SEO and marketing consulting',
             'Future-proof software'
@@ -114,7 +114,7 @@ module.exports = {
             'Laravel',
             'Swift',
             'Objective C',
-            'Vue.js',
+            '<b>Nuxt.js</b>, Vue.js',
             'Bootstrap, TailwindCSS'
           ]
         }
@@ -186,6 +186,14 @@ module.exports = {
         ' about how the website was created? No problem, the code is <a href="https://github.com/manniL/lichter.io"' +
         ' target="_blank" rel="noopener" class="text-developmint hover:text-developmint-light no-underline">open' +
         ' source</a>'
+      },
+      'nuxt': {
+        title: 'Nuxt.js',
+        shortDescription: `Nuxt.js is a huge open-source javascript framework for server-side-rendered applications
+        based on Vue.js. With more than 15,000 stars on GitHub is has grown to an important tool for developers and
+        companies. We are proud to support Nuxt.js with code contributions and dedicated time. Alexander Lichter,
+        who can call himself Nuxt.js core team member since September 2018 is also available for <b>consulting</b>
+        for our clients.`
       },
       'ostseeferien-binz': {
         title: 'Ostseeferien Binz',
