@@ -252,7 +252,7 @@ export default {
     transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
     postcss: {
       plugins: {
-        tailwindcss: ('./tailwind.js')
+        tailwindcss: './tailwind.js'
       }
     },
 
