@@ -1,6 +1,3 @@
-import path from 'path'
-import glob from 'glob-all'
-import PurgeCssPlugin from 'purgecss-webpack-plugin'
 import helmet from 'helmet'
 import shrinkRay from 'shrink-ray-current'
 import tailwindConfig from './tailwind.js'
@@ -248,12 +245,19 @@ export default {
    * Build configuration
    */
   build: {
-    extractCSS: true,
     transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
     postcss: {
       plugins: {
         tailwindcss: './tailwind.js'
       }
+    },
+
+    purgeCSS: {
+      mode: 'postcss',
+      paths: [
+        'i18n/**/*.js'
+      ],
+      whitelistPatterns: [/cookie-consent/]
     },
 
     /*
@@ -269,29 +273,6 @@ export default {
             loader: 'eslint-loader',
             exclude: /(node_modules)/
           })
-        } else {
-          config.plugins.push(new PurgeCssPlugin({
-            paths: glob.sync([
-              path.join(__dirname, 'components/**/*.vue'),
-              path.join(__dirname, 'layouts/**/*.vue'),
-              path.join(__dirname, 'i18n/**/*.js'),
-              path.join(__dirname, 'pages/**/*.vue'),
-              path.join(__dirname, 'plugins/**/*.vue')
-            ]),
-            styleExtensions: ['.css'],
-            whitelist: ['body', 'html', 'nuxt-progress'],
-            whitelistPatterns: [/cookie-consent/],
-            extractors: [
-              {
-                extractor: class {
-                  static extract(content) {
-                    return content.match(/[A-z0-9-:\\/]+/g)
-                  }
-                },
-                extensions: ['vue', 'js']
-              }
-            ]
-          }))
         }
       }
     }
