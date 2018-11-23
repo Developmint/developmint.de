@@ -1,5 +1,4 @@
 import helmet from 'helmet'
-import shrinkRay from 'shrink-ray-current'
 import tailwindConfig from './tailwind.js'
 import policies from './csp'
 import i18n from './i18n'
@@ -237,8 +236,7 @@ export default {
   render: {
     csp: isDev ? false : {
       policies
-    },
-    compressor: shrinkRay()
+    }
   },
 
   /*
