@@ -8,10 +8,10 @@
       </div>
       <transition
         appear
+        duration="1000"
         enter-active-class="fade-in-down"
         leave-active-class="fade-out-down"
-        mode="out-in"
-        duration="1000">
+        mode="out-in">
         <div
           :key="currentSloganIndex"
           class="block text-center text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
@@ -40,8 +40,8 @@
           </div>
           <quote
             :key="currentQuoteIndex"
-            :quote="currentQuote.quote"
             :person="currentQuote.person"
+            :quote="currentQuote.quote"
             class="flex-no-shrink md:flex-shrink flex-no-grow md:flex-grow"/>
           <div class="flex-no-grow text-5xl md:text-10xl opacity-25 text-grey-darker group-hover:text-grey-lightest select-none transition-all">
             «
@@ -55,10 +55,10 @@
         <div class="lg:flex justify-center items-center my-16">
           <expertise-category
             v-for="(expertise, index) in $t('index.expertises.content')"
-            :title="expertise.title"
-            :list-items="expertise.listItems"
+            :is-first="!index"
             :key="index"
-            :is-first="!index"/>
+            :list-items="expertise.listItems"
+            :title="expertise.title"/>
         </div>
         <p
           class="text-sm text-grey-darker text-center mt-8 mb-4"
@@ -73,9 +73,9 @@
               <information-icon
                 v-for="(data,index) in $t('index.informationIcons')"
                 :class="{'opacity-0': !showIcons}"
+                :content="data.content"
                 :key="index"
-                :title="data.title"
-                :content="data.content">
+                :title="data.title">
                 <component
                   :is="data.img"
                   class="h-48 p-1 mb-8 transition-all"/>
@@ -161,3 +161,28 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .bg-gradient-rains-rains-dark {
+    background-image: linear-gradient(to right, config('colors.rains'), config('colors.rains-dark'));
+  }
+
+  .bg-hero {
+    background-size: cover;
+    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
+
+    @screen md {
+      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
+    }
+  }
+
+  .bg-cta-end {
+    background-size: cover;
+    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact_sm.jpg");
+
+    @screen md {
+      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
+      background-position: bottom;
+    }
+  }
+</style>
