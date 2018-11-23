@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/Developmint/developmint.de/compare/v1.2.0...v1.2.1) (2018-11-23)
+
+
+### Bug Fixes
+
+* move CSS back into the respective components ([728389c](https://github.com/Developmint/developmint.de/commit/728389c))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/Developmint/developmint.de/compare/v1.1.8...v1.2.0) (2018-11-23)
 
