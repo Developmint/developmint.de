@@ -23,8 +23,7 @@
           v-observe-visibility="!i ? handleVisibility : () => {}"
           v-for="({duration, to, prefix}, i) in $options.numbers"
           :key="i"
-          class="my-8 lg:my-0 mx-4 text-xl"
-        >
+          class="my-8 lg:my-0 mx-4 text-xl">
           <animated-number
             :should-start="isVisible"
             :duration="duration"
