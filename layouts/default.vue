@@ -34,7 +34,11 @@ export default {
   methods: {
     hideContactUsModal() {
       this.showContactUsModal = false
-      history.back()
+      if (history.length > 2) {
+        this.$router.back()
+      } else {
+        this.$router.push(this.$route.path)
+      }
     },
     checkForHash(to) {
       this.showContactUsModal = to.hash.includes(this.$t('anchors.contact-us'))
