@@ -12,10 +12,10 @@
       <team-member
         v-for="(member, i) in $options.members"
         :key="i"
-        :slug="member.slug"
-        :name="member.name"
         :links="member.links"
-        :odd="!!(i%2)"/>
+        :name="member.name"
+        :odd="!!(i%2)"
+        :slug="member.slug"/>
     </section>
   </div>
 </template>
@@ -59,3 +59,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .bg-about-us {
+    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
+    background-size: cover;
+    background-position: top;
+
+    @screen md {
+      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
+      background-position: top;
+    }
+  }
+</style>
