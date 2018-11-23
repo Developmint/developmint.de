@@ -56,9 +56,6 @@ export default {
       { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript.' }],
-    link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700' }
-    ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
       {
@@ -161,6 +158,7 @@ export default {
    * Nuxt plugins
    */
   plugins: [
+    { src: '~/plugins/webfontloader', ssr: false },
     { src: '~/plugins/vue-prototype-extensions' },
     { src: '~/plugins/vue-scroll-directive', ssr: false },
     { src: '~/plugins/vue-observe-visibility-directive', ssr: false }
