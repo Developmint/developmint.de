@@ -6237,6 +6237,13 @@ nuxt-svg-loader@^0.0.1:
     consola "^1.4.4"
     vue-svg-loader "^0.11.0"
 
+nuxt-webfontloader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/nuxt-webfontloader/-/nuxt-webfontloader-1.0.0.tgz#99a05bf56f9ed95e88df30154216bf93f9187629"
+  integrity sha512-1YsAzAN2SZGmrf9LvOrpGdnffEeOnh426NUgkhdMLDRSJxk6qdo+M23julOtAJPaF4oXE4rx9okGvDDFvvGUkg==
+  dependencies:
+    webfontloader "^1.6.28"
+
 nuxt@^2.2.0:
   version "2.3.2"
   resolved "https://registry.npmjs.org/nuxt/-/nuxt-2.3.2.tgz#5273f85212482d4f23ec7bbd1b0e7e18a1d8e423"

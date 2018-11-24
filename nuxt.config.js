@@ -158,7 +158,6 @@ export default {
    * Nuxt plugins
    */
   plugins: [
-    { src: '~/plugins/webfontloader', ssr: false },
     { src: '~/plugins/vue-prototype-extensions' },
     { src: '~/plugins/vue-scroll-directive', ssr: false },
     { src: '~/plugins/vue-observe-visibility-directive', ssr: false }
@@ -182,8 +181,15 @@ export default {
     '@nuxtjs/pwa',
     ['@nuxtjs/axios', { baseURL: '/api/contact' }],
     ['nuxt-i18n', i18n],
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    'nuxt-webfontloader'
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700']
+    }
+  },
 
   /*
    * Workbox
