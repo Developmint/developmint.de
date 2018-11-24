@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/Developmint/developmint.de/compare/v1.2.0...v1.3.0) (2018-11-24)
+
+
+### Bug Fixes
+
+* leaving page when directly accessing contact-us + close modal ([fbd9383](https://github.com/Developmint/developmint.de/commit/fbd9383))
+
+
+### Features
+
+* upgrade to nuxt-webfontloader ([75941aa](https://github.com/Developmint/developmint.de/commit/75941aa))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/Developmint/developmint.de/compare/v1.2.0...v1.2.1) (2018-11-23)
 
