@@ -9,13 +9,14 @@
       </h2>
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
-      <team-member
+      <TeamMember
         v-for="(member, i) in $options.members"
         :key="i"
         :links="member.links"
         :name="member.name"
         :odd="!!(i%2)"
-        :slug="member.slug"/>
+        :slug="member.slug"
+      />
     </section>
   </div>
 </template>

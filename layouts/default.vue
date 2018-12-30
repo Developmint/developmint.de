@@ -1,11 +1,12 @@
 <template>
   <div class="font-lato text-rains text-base antialiased leading-normal bg-grey-lightest overflow-hidden">
-    <navbar/>
-    <nuxt/>
-    <app-footer/>
-    <contact-us
+    <Navbar />
+    <Nuxt />
+    <AppFooter />
+    <ContactUs
       v-if="showContactUsModal"
-      @close="hideContactUsModal"/>
+      @close="hideContactUsModal"
+    />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 import helmet from 'helmet'
-import tailwindConfig from './tailwind.js'
+import { colors } from './tailwind.js'
 import policies from './csp'
 import i18n from './i18n'
 
@@ -18,43 +18,10 @@ export default {
   },
 
   /*
-   * Scroll behavior
-   */
-  router: {
-    scrollBehavior: (to, from, savedPosition) => {
-      let position = false
-
-      if (to.matched.length < 2 || to.matched.some(r => r.components.default.options.scrollToTop)) {
-        position = { x: 0, y: 0 }
-      }
-
-      if (savedPosition) {
-        position = savedPosition
-      }
-
-      return new Promise((resolve) => {
-        // wait for the out transition to complete (if necessary)
-        window.$nuxt.$once('triggerScroll', () => {
-          // coords will be used if no selector is provided,
-          // or if the selector didn't match any element.
-          if (to.hash && document.querySelector(to.hash)) {
-            // scroll to anchor by returning the selector
-            position = { selector: to.hash }
-          }
-          resolve(position)
-        })
-      })
-    }
-  },
-
-  /*
    * Head of the page
    */
   head: {
     titleTemplate,
-    meta: [
-      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
-    ],
     noscript: [{ innerHTML: 'This website requires JavaScript.' }],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
@@ -158,9 +125,9 @@ export default {
    * Nuxt plugins
    */
   plugins: [
-    { src: '~/plugins/vue-prototype-extensions' },
-    { src: '~/plugins/vue-scroll-directive', ssr: false },
-    { src: '~/plugins/vue-observe-visibility-directive', ssr: false }
+    '~/plugins/vue-prototype-extensions',
+    '~/plugins/vue-scroll-directive.client',
+    '~/plugins/vue-observe-visibility-directive.client'
   ],
 
   /*
@@ -211,11 +178,11 @@ export default {
   /*
    * Customize the progress bar color
    */
-  loading: { color: tailwindConfig.colors.developmint },
+  loading: { color: colors.developmint },
   loadingIndicator: {
     name: 'rectangle-bounce',
     color: 'white',
-    background: tailwindConfig.colors.developmint
+    background: colors.developmint
   },
 
   /*
@@ -226,8 +193,8 @@ export default {
     short_name: 'Developmint',
     start_url: '/',
     display: 'standalone',
-    background_color: tailwindConfig.colors.rains,
-    theme_color: tailwindConfig.colors.developmint
+    background_color: colors.rains,
+    theme_color: colors.developmint
   },
 
   serverMiddleware: [

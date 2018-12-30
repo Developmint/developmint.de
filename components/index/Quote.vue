@@ -1,14 +1,19 @@
 <template>
   <div class="transition-all mt-3 opacity-75">
-    <transition
+    <Transition
       name="slide-fade"
       appear
-      mode="out-in">
+      mode="out-in"
+    >
       <div class="text-center animated">
-        <div class="italic text-lg md:text-xl text-center">"{{ quote }}"</div>
-        <div class="text-center italic text-xs md:text-sm mt-2">— {{ person }}</div>
+        <div class="italic text-lg md:text-xl text-center">
+          "{{ quote }}"
+        </div>
+        <div class="text-center italic text-xs md:text-sm mt-2">
+          — {{ person }}
+        </div>
       </div>
-    </transition>
+    </Transition>
   </div>
 </template>
 

@@ -1,9 +1,10 @@
 <template>
-  <if-bot>
-    <cookie-consent
+  <IfBot>
+    <CookieConsent
       message="We use Cookies for user analysis and on-page improvements!"
-      link-label="Learn about cookies"/>
-  </if-bot>
+      link-label="Learn about cookies"
+    />
+  </IfBot>
 </template>
 
 <script>

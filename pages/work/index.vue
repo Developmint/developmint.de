@@ -9,26 +9,33 @@
       </h2>
     </section>
     <div class="flex flex-wrap justify-center">
-      <work-preview
+      <WorkPreview
         v-for="(info, i) in $options.projects"
         :key="i"
         :odd="!!(i % 2)"
-        v-bind="info"/>
+        v-bind="info"
+      />
     </div>
     <div class="bg-white shadow w-full py-32 flex flex-col items-center">
-      <h3 class="text-2xl text-center">{{ $t('work.appendix.heading') }}</h3>
-      <p class="w-full md:w-1/2 p-8 md:p-3">{{ $t('work.appendix.subheading') }}</p>
+      <h3 class="text-2xl text-center">
+        {{ $t('work.appendix.heading') }}
+      </h3>
+      <p class="w-full md:w-1/2 p-8 md:p-3">
+        {{ $t('work.appendix.subheading') }}
+      </p>
       <div class="w-full md:w-3/4 flex flex-col lg:flex-row items-center lg:justify-around mt-16">
         <div
-          v-observe-visibility="!i ? handleVisibility : () => {}"
           v-for="({duration, to, prefix}, i) in $options.numbers"
           :key="i"
-          class="my-8 lg:my-0 mx-4 text-xl">
-          <animated-number
+          v-observe-visibility="!i ? handleVisibility : () => {}"
+          class="my-8 lg:my-0 mx-4 text-xl"
+        >
+          <AnimatedNumber
             :duration="duration"
             :should-start="isVisible"
             :to="to"
-            class="text-2xl font-bold"/>
+            class="text-2xl font-bold"
+          />
           <span>{{ prefix }} {{ $t('work.appendix.statistics')[i] }}</span>
         </div>
       </div>
