@@ -27,7 +27,7 @@ module.exports = {
       de: '/ueber-uns',
       en: '/about-us'
     },
-    'work/index': {
+    work: {
       de: '/referenzen',
       en: '/work'
     },
