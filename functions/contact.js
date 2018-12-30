@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { promisify } from 'util'
 import sendmail from 'sendmail'
 import validator from 'validator'
@@ -5,9 +6,17 @@ import xssFilters from 'xss-filters'
 
 const shouldSend = process.env.SEND_MAIL
 
-const pSendMail = promisify(sendmail())
+const noop = () => {}
+const sendmailOptions = {
+  logger: {
+    debug: noop,
+    info: noop,
+    warn: console.warn,
+    error: console.error
+  }
+}
+const pSendMail = promisify(sendmail(sendmailOptions))
 
-// eslint-disable-next-line require-await
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: JSON.stringify({ 'error': 'Method not allowed' }) }
@@ -27,7 +36,6 @@ exports.handler = async (event) => {
       await sendMailFunction(...sanitizedAttributes)
       return { statusCode: 200, body: JSON.stringify({ 'message': 'OH YEAH' }) }
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.error(e)
       return { statusCode: 500, body: 'error' }
     }
@@ -55,6 +63,5 @@ const sendMail = (name, email, msg) => pSendMail({
 })
 
 const sendMailDev = (...args) => {
-  // eslint-disable-next-line no-console
   console.log(...args)
 }
