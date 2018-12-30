@@ -49,6 +49,7 @@
     </div>
   </nav>
 </template>
+
 <script>
 import { version } from '~/package.json'
 
@@ -61,3 +62,10 @@ export default {
   currentYear: (new Date()).getFullYear()
 }
 </script>
+
+<style lang="pcss">
+  .bg-footer {
+    background-image: linear-gradient(rgba(9, 0, 16, 1), rgba(11, 7, 16, 0.97));
+    background-size: cover;
+  }
+</style>

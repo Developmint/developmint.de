@@ -119,7 +119,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="pcss">
   .bg-work {
     background-size: cover;
     background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");

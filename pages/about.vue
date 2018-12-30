@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="pcss">
   .bg-about-us {
     background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
     background-size: cover;

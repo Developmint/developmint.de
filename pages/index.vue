@@ -179,7 +179,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="pcss">
+  .bg-gradient-developmint-lighter-rains-lighter-rains-lightest {
+    background-image: linear-gradient(23deg, config('colors.developmint-lighter'), config('colors.rains-lighter'), config('colors.rains-lightest'));
+  }
+
   .bg-gradient-rains-rains-dark {
     background-image: linear-gradient(to right, config('colors.rains'), config('colors.rains-dark'));
   }

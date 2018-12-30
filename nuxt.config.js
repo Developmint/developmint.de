@@ -112,12 +112,8 @@ export default {
     twitterCard: 'summary'
   },
 
-  /*
-  ** CSS Load
-   */
   css: [
-    // SCSS file in the project
-    '@/assets/styles/app.scss'
+    '~/assets/styles/app.pcss'
   ],
 
   /*
@@ -217,7 +213,8 @@ export default {
     transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
     postcss: {
       plugins: {
-        tailwindcss: './tailwind.js'
+        tailwindcss: './tailwind.js',
+        'postcss-nested': {}
       }
     },
 
