@@ -7,12 +7,8 @@
       <h2 class="my-2 text-center font-normal" v-text="title" />
       <div class="lg:flex justify-center">
         <ul class="list-reset">
-          <li
-            v-for="(item, index) in listItems"
-            :key="index"
-            class="my-4 text-center"
-            v-html="item"
-          />
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <li v-for="(item, index) in listItems" :key="index" class="my-4 text-center" v-html="item" />
         </ul>
       </div>
     </div>

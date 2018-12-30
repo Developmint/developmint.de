@@ -52,6 +52,7 @@
         </div>
       </div>
     </div>
+    <!-- eslint-disable-next-line vue/no-v-html -->
     <p class="flex-grow text-justify leading-normal px-2" v-html="$t(`about.${slug}`)" />
   </div>
 </template>

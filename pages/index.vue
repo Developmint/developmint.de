@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <main>
     <section class="min-h-screen md:min-h-750 bg-hero flex flex-col justify-center items-center">
       <div
@@ -125,9 +126,9 @@
 export default {
   components: {
     InformationIcon: () => import('~/components/index/InformationIcon'),
-    DevicesIcon: () => import('~/assets/img/icons/index/devices'),
-    DataIcon: () => import('~/assets/img/icons/index/data'),
-    AnalyticsIcon: () => import('~/assets/img/icons/index/analytics'),
+    DevicesIcon: () => import('~/assets/img/icons/index/devices.svg'),
+    DataIcon: () => import('~/assets/img/icons/index/data.svg'),
+    AnalyticsIcon: () => import('~/assets/img/icons/index/analytics.svg'),
     Quote: () => import('~/components/index/Quote'),
     ExpertiseCategory: () => import('~/components/index/ExpertiseCategory')
   },

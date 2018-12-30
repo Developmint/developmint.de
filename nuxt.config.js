@@ -1,9 +1,5 @@
-import helmet from 'helmet'
 import { colors } from './tailwind.js'
-import policies from './csp'
 import i18n from './i18n'
-
-import contact from './api/contact'
 
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
@@ -146,11 +142,17 @@ export default {
       ]
     }],
     '@nuxtjs/pwa',
-    ['@nuxtjs/axios', { baseURL: '/api/contact' }],
+    ['@nuxtjs/axios', { baseURL: '/.netlify/functions/' }],
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-webfontloader'
-  ],
+  ].concat(isDev ? '@nuxtjs/proxy' : []),
+
+  proxy: {
+    '/.netlify/functions/': {
+      target: 'http://localhost:9000'
+    }
+  },
 
   webfontloader: {
     google: {
@@ -197,17 +199,12 @@ export default {
     theme_color: colors.developmint
   },
 
-  serverMiddleware: [
-    helmet({
-      referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
-    }),
-    contact(isDev)
-  ],
-
-  render: {
-    csp: isDev ? false : {
-      policies
-    }
+  purgeCSS: {
+    mode: 'postcss',
+    paths: [
+      'i18n/**/*.js'
+    ],
+    whitelistPatterns: [/cookie-consent/]
   },
 
   /*
@@ -221,17 +218,8 @@ export default {
       }
     },
 
-    purgeCSS: {
-      mode: 'postcss',
-      paths: [
-        'i18n/**/*.js'
-      ],
-      whitelistPatterns: [/cookie-consent/]
-    },
-
     /*
      * Run ESLint on save
-     * Add PurgeCSS
      */
     extend(config, ctx) {
       if (ctx.isClient) {

@@ -208,7 +208,7 @@ export default {
       this.error = false
       try {
         // Empty string is no bug as API URL is already configured
-        await this.$axios.$post('', {
+        await this.$axios.$post('contact', {
           name: this.name,
           email: this.email,
           msg: this.msg
