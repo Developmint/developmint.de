@@ -1,8 +1,11 @@
-import nodemailer from 'nodemailer'
+import { promisify } from 'util'
+import sendmail from 'sendmail'
 import validator from 'validator'
 import xssFilters from 'xss-filters'
 
 const shouldSend = process.env.SEND_MAIL
+
+const pSendMail = promisify(sendmail())
 
 // eslint-disable-next-line require-await
 exports.handler = async (event) => {
@@ -20,8 +23,14 @@ exports.handler = async (event) => {
       return { statusCode: 422, body: JSON.stringify({ 'error': 'Ugh.. That looks unprocessable!' }) }
     }
     const sendMailFunction = shouldSend ? sendMail : sendMailDev
-    sendMailFunction(...sanitizedAttributes)
-    return { statusCode: 200, body: JSON.stringify({ 'message': 'OH YEAH' }) }
+    try {
+      await sendMailFunction(...sanitizedAttributes)
+      return { statusCode: 200, body: JSON.stringify({ 'message': 'OH YEAH' }) }
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e)
+      return { statusCode: 500, body: 'error' }
+    }
   } catch (_) {
     return { statusCode: 422, body: JSON.stringify({ 'error': 'Ugh.. That looks unprocessable!' }) }
   }
@@ -38,19 +47,12 @@ const validateAndSanitize = (key, value) => {
   return rejectFunctions.hasOwnProperty(key) && !rejectFunctions[key](value) && xssFilters.inHTMLData(value)
 }
 
-const sendMail = (name, email, msg) => {
-  const transporter = nodemailer.createTransport({
-    sendmail: true,
-    newline: 'unix',
-    path: '/usr/sbin/sendmail'
-  })
-  transporter.sendMail({
-    from: email,
-    to: process.env.MAIL_TO,
-    subject: 'New contact form message',
-    text: msg
-  })
-}
+const sendMail = (name, email, msg) => pSendMail({
+  from: email,
+  to: process.env.MAIL_TO,
+  subject: 'New contact form message',
+  text: msg
+})
 
 const sendMailDev = (...args) => {
   // eslint-disable-next-line no-console
