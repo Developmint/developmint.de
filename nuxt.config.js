@@ -5,7 +5,7 @@ const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 export default {
-  modern: true,
+  modern: 'client',
   generate: {
     fallback: true
   },
