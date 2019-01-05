@@ -102,7 +102,6 @@ export default {
     name: 'Developmint',
     description: 'Developmint is an experienced Software agency based in Dresden (Germany). Let your visions become' +
       ' reality with us!',
-    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
     author: 'Developmint',
     ogHost: process.env.BASE_URL || 'https://developmint.de/',
     ogSiteName: 'Developmint',
@@ -113,7 +112,7 @@ export default {
   },
 
   css: [
-    '~/assets/styles/app.pcss'
+    '~/assets/styles/app'
   ],
 
   /*
@@ -159,9 +158,6 @@ export default {
     }
   },
 
-  /*
-   * Workbox
-   */
   workbox: {
     runtimeCaching: [
       {
