@@ -41,6 +41,7 @@
           v-for="link in $options.links"
           :key="link"
           :to="localePath(link)"
+          no-prefetch
           class="text-grey-light no-underline hover:text-white ml-2 lg:ml-3"
         >
           {{ $t(`footer.${link}`) }}
