@@ -11,6 +11,8 @@ install:
   - yarn
 jobs:
   include:
+    - stage: lint
+      script: yarn lint
     - stage: lighthouse
       if: type = pull_request
       install: yarn add --dev ebidel/lighthouse-ci wait-for-netlify-preview
