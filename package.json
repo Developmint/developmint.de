@@ -21,7 +21,7 @@
     "nuxt-edge": "^2.4.0-25783204.eef2af35",
     "nuxt-i18n": "^5.4.4",
     "nuxt-purgecss": "^0.2.0",
-    "nuxt-svg-loader": "^0.1.0",
+    "nuxt-svg-loader": "^1.0.1",
     "nuxt-webfontloader": "^1.0.0",
     "postcss-nested": "^4.1.1",
     "sendmail": "^1.4.1",
