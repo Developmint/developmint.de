@@ -144,7 +144,7 @@ export default {
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-webfontloader'
-  ].concat(isDev ? '@nuxtjs/proxy' : []),
+  ].concat(isDev ? '@nuxtjs/proxy' : 'nuxt-purgecss'),
 
   proxy: {
     '/.netlify/functions/': {
