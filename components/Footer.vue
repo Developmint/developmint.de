@@ -5,11 +5,11 @@
         <div class="text-center leading-loose lg:text-left lg:leading-normal">
           <span>
             &copy; 2015 - {{ $options.currentYear }}
-                        <a
-                          href="/"
-                          class="no-underline text-developmint hover:text-developmint-light"
-                          v-text="'Developmint GbR'"
-                        />
+            <a
+              href="/"
+              class="no-underline text-developmint hover:text-developmint-light"
+              v-text="'Developmint GbR'"
+            />
           </span>
           <span class="block md:inline">
             <span class="hidden lg:inline">
