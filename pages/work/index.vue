@@ -23,18 +23,20 @@
       <p class="w-full md:w-1/2 p-8 md:p-3">
         {{ $t('work.appendix.subheading') }}
       </p>
-      <div class="w-full md:w-3/4 flex flex-col lg:flex-row items-center lg:justify-around mt-16">
+      <div class="w-full md:w-3/4 flex flex-col lg:flex-row items-center lg:justify-around mt-4 md:mt-16">
         <div
-          v-for="({duration, to, prefix}, i) in $options.numbers"
+          v-for="({duration, to, prefix, precision}, i) in $options.numbers"
           :key="i"
-          v-observe-visibility="!i ? handleVisibility : () => {}"
-          class="my-8 lg:my-0 mx-4 text-xl"
+          v-observe-visibility="{ callback: !i ? handleVisibility : () => {}, once: true }"
+          class="my-6 md:my-8 lg:my-0 mx-4 text-xl text-center w-1/3"
         >
           <AnimatedNumber
             :duration="duration"
             :should-start="isVisible"
             :to="to"
-            class="text-2xl font-bold"
+            :precision="precision"
+            class="text-2xl font-bold pl-4"
+            style="font-variant-numeric: tabular-nums"
           />
           <span>{{ prefix }} {{ $t('work.appendix.statistics')[i] }}</span>
         </div>
@@ -100,16 +102,19 @@ export default {
     {
       duration: 1000,
       to: 30,
+      precision: 0,
       prefix: '+'
     },
     {
       duration: 3500,
       to: 100000,
+      precision: 0,
       prefix: '+'
     },
     {
       duration: 2500,
       to: 100,
+      precision: 2,
       prefix: '%'
     }
   ],

@@ -20,6 +20,10 @@ export default {
       type: String,
       default: 'easeOutQuad'
     },
+    precision: {
+      type: Number,
+      default: 3
+    },
     shouldStart: {
       type: Boolean,
       required: true
@@ -43,7 +47,7 @@ export default {
   },
   methods: {
     updateNumber(state) {
-      this.number = Number(state.x).toLocaleString()
+      this.number = Number(state.x).toFixed(this.precision).toLocaleString()
     },
     start() {
       if (this.state > 0) {
@@ -61,6 +65,7 @@ export default {
       tween(options)
         .then(this.updateNumber)
         .then(() => {
+          this.number = Number(this.number).toLocaleString()
           this.state = 0
         })
     }
