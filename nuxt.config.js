@@ -1,3 +1,4 @@
+import path from 'path'
 import { colors } from './tailwind.js'
 import i18n from './i18n'
 
@@ -217,7 +218,7 @@ export default {
     transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
     postcss: {
       plugins: {
-        tailwindcss: './tailwind.js',
+        tailwindcss: path.resolve(__dirname, './tailwind.js'),
         'postcss-nested': {}
       }
     },
