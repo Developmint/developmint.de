@@ -159,14 +159,6 @@ export default {
     }
   },
 
-  svgLoader: {
-    svgo: {
-      plugins: [
-        { prefixIds: true }
-      ]
-    }
-  },
-
   workbox: {
     runtimeCaching: [
       {
