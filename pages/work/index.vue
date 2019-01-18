@@ -27,7 +27,7 @@
         <div
           v-for="({duration, to, prefix, precision}, i) in $options.numbers"
           :key="i"
-          v-observe-visibility="!i ? handleVisibility : () => {}"
+          v-observe-visibility="{ callback: !i ? handleVisibility : () => {}, once: true }"
           class="my-6 md:my-8 lg:my-0 mx-4 text-xl text-center w-1/3"
         >
           <AnimatedNumber
