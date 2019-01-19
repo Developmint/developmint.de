@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && yarn lambda-build",
     "lambda-build": "netlify-lambda build ./functions",
     "lambda-serve": "netlify-lambda serve ./functions",
-    "lint": "eslint --ext .js,.vue .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "npm run lint && npm run build"
   },
   "dependencies": {
