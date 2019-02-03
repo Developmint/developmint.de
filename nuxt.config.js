@@ -208,6 +208,10 @@ export default {
    */
   build: {
     transpile: [/vue-if-bot/, /^vue-cookieconsent-component(.*)?$/, 'shifty/src/tweenable'],
+    filenames: {
+      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name]-[hash:7].[ext]',
+      font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name]-[hash:7].[ext]'
+    },
     postcss: {
       plugins: {
         tailwindcss: path.resolve(__dirname, './tailwind.js'),
