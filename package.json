@@ -26,6 +26,7 @@
     "sendmail": "^1.4.1",
     "shifty": "^2.6.1",
     "tailwindcss": "^0.7.4",
+    "terser": "3.14",
     "validator": "^10.11.0",
     "vue": "^2.5.22",
     "vue-analytics": "^5.16.2",
