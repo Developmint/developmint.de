@@ -33,7 +33,7 @@ export default {
     this.checkForHash(this.$route)
   },
   head() {
-    return this.$nuxtI18nSeo
+    return this.$nuxtI18nSeo()
   },
   methods: {
     hideContactUsModal() {
