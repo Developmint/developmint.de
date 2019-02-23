@@ -1,4 +1,5 @@
 import path from 'path'
+import fs from 'fs'
 import { colors } from './tailwind.js'
 import i18n from './i18n'
 
@@ -95,6 +96,12 @@ export default {
           })
       }
     ]
+  },
+
+  hooks: {
+    'generate:distCopied'() {
+      fs.copyFileSync(path.resolve(__dirname, './_redirects'), path.resolve(__dirname, './dist/_redirects'))
+    }
   },
 
   /*
