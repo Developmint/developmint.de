@@ -161,9 +161,11 @@ export default {
   },
 
   workbox: {
+    offlineAnalytics: true,
     runtimeCaching: [
       {
         urlPattern: 'https://fonts.(?:googleapis|gstatic).com/(.*)',
+        handler: 'staleWhileRevalidate',
         strategyOptions: {
           cacheName: 'google-fonts',
           cacheExpiration: {
