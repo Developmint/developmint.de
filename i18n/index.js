@@ -14,7 +14,7 @@ module.exports = {
     }
   ],
   defaultLocale: 'en',
-  seo: true,
+  seo: false,
   lazy: true,
   detectBrowserLanguage: {
     cookieKey: 'redirected',

@@ -32,6 +32,9 @@ export default {
   mounted() {
     this.checkForHash(this.$route)
   },
+  head() {
+    return this.$nuxtI18nSeo()
+  },
   methods: {
     hideContactUsModal() {
       this.showContactUsModal = false

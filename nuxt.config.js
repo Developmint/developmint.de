@@ -1,4 +1,5 @@
 import path from 'path'
+import fs from 'fs'
 import { colors } from './tailwind.js'
 import i18n from './i18n'
 
@@ -6,7 +7,7 @@ const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 export default {
-  modern: 'client',
+  modern: isProd && 'client',
   generate: {
     fallback: true
   },
@@ -97,6 +98,12 @@ export default {
     ]
   },
 
+  hooks: {
+    'generate:distCopied'() {
+      fs.copyFileSync(path.resolve(__dirname, './_redirects'), path.resolve(__dirname, './dist/_redirects'))
+    }
+  },
+
   /*
    * Meta information
    */
@@ -161,9 +168,11 @@ export default {
   },
 
   workbox: {
+    offlineAnalytics: true,
     runtimeCaching: [
       {
         urlPattern: 'https://fonts.(?:googleapis|gstatic).com/(.*)',
+        handler: 'staleWhileRevalidate',
         strategyOptions: {
           cacheName: 'google-fonts',
           cacheExpiration: {
