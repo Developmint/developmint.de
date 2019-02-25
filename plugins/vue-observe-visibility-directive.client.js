@@ -1,4 +1,9 @@
 import Vue from 'vue'
 import { ObserveVisibility } from 'vue-observe-visibility'
 
-Vue.directive('observe-visibility', ObserveVisibility)
+export default async function () {
+  if (!(IntersectionObserver in window)) {
+    await import('intersection-observer')
+  }
+  Vue.directive('observe-visibility', ObserveVisibility)
+}

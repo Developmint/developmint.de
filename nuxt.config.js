@@ -25,7 +25,6 @@ export default {
     noscript: [{ innerHTML: 'This website requires JavaScript.' }],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver' },
       {
         type: 'application/ld+json',
         innerHTML: JSON.stringify(
