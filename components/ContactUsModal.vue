@@ -30,7 +30,7 @@
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="text"
             @focus="focusedElement = 'name'"
-            @blur="foucsedElement = ''"
+            @blur="focusedElement = ''"
           >
         </div>
         <span
@@ -55,7 +55,7 @@
             class="appearance-none bg-transparent py-4 px-2 mx-2 md:mx-0 md:px-8 w-5/6 md:w-full text-developmint-darkest"
             type="email"
             @focus="focusedElement = 'email'"
-            @blur="foucsedElement = ''"
+            @blur="focusedElement = ''"
           >
         </div>
         <span
@@ -80,7 +80,7 @@
             class="appearance-none bg-transparent text-developmint-darkest resize-none"
             rows="6"
             @focus="focusedElement='msg'"
-            @blur="foucsedElement = ''"
+            @blur="focusedElement = ''"
           />
         </div>
         <span
@@ -166,7 +166,7 @@ export default {
     empty() {
       const dataKeys = ['name', 'email', 'msg']
 
-      return dataKeys.map(k => this[k]).some(v => !v)
+      return dataKeys.some(k => !this[k])
     },
     submissionDisabled() {
       return this.empty || this.$v.$error || this.submitting
