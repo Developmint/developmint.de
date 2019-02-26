@@ -8,7 +8,6 @@
       <h2 class="text-white text-2xl md:text-3xl xl:text-5xl text-center lg:text-left capitalize font-normal mb-2 lg:mb-4 xl:mb-8">
         {{ $t('contact.heading') }}
       </h2>
-      <pre class="hidden">{{ $v }}</pre>
       <form
         v-show="!isSubmitted"
         class=" w-5/6 lg:w-2/3 xl:w-1/3 mx-auto flex flex-col items-center text-sm"
