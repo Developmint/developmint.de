@@ -10,8 +10,8 @@
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <TeamMember
-        v-for="(member, i) in $options.members"
-        :key="i"
+        v-for="(member) in $options.members"
+        :key="member.slug"
         :links="member.links"
         :name="member.name"
         :odd="!!(i%2)"
