@@ -10,19 +10,16 @@
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <TeamMember
-        v-for="(member, i) in $options.members"
-        :key="i"
-        :links="member.links"
-        :name="member.name"
+        v-for="member in $options.members"
+        :key="member.slug"
+        v-bind="member"
         :odd="!!(i%2)"
-        :slug="member.slug"
       />
     </section>
   </div>
 </template>
 
 <script>
-import { deterministicRotate } from '~/shared/helpers'
 import TeamMember from '~/components/about-us/TeamMember'
 
 export default {
@@ -30,7 +27,15 @@ export default {
   components: {
     TeamMember
   },
-  members: deterministicRotate([
+  computed: {
+    head() {
+      return this.$createSeo('about', [{
+        name: 'og:image',
+        content: require('~/assets/img/bg/about-us.jpg')
+      }])
+    }
+  },
+  members: [
     {
       slug: 'alex',
       name: 'Alexander Lichter',
@@ -51,13 +56,7 @@ export default {
         linkedin: 'https://www.linkedin.com/in/max-langer-17b133136/'
       }
     }
-  ]),
-  head() {
-    return this.$createSeo('about', [{
-      name: 'og:image',
-      content: require('~/assets/img/bg/about-us.jpg')
-    }])
-  }
+  ]
 }
 </script>
 

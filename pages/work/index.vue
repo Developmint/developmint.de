@@ -46,7 +46,6 @@
 </template>
 
 <script>
-import { deterministicRotate } from '~/shared/helpers'
 import WorkPreview from '~/components/work/WorkPreview'
 
 export default {
@@ -67,10 +66,11 @@ export default {
       }
     }
   },
-  projects: deterministicRotate([
+  projects: [
     {
-      slug: 'addism',
-      url: 'https://addism.de/'
+      slug: 'nuxt',
+      url: 'https://nuxtjs.org/',
+      svg: () => import('~/assets/img/work/nuxt.svg')
     },
     {
       slug: 'itexia',
@@ -81,13 +81,12 @@ export default {
       url: 'https://hochschulinitiative-deutschland.de/'
     },
     {
-      slug: 'lichter-io',
-      url: 'https://lichter.io/'
+      slug: 'addism',
+      url: 'https://addism.de/'
     },
     {
-      slug: 'nuxt',
-      url: 'https://nuxtjs.org/',
-      svg: () => import('~/assets/img/work/nuxt.svg')
+      slug: 'lichter-io',
+      url: 'https://lichter.io/'
     },
     {
       slug: 'ostseeferien-binz',
@@ -97,7 +96,7 @@ export default {
       slug: 'association-manager',
       url: ''
     }
-  ]),
+  ],
   numbers: [
     {
       duration: 1000,
