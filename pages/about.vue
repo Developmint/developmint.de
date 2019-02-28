@@ -12,10 +12,8 @@
       <TeamMember
         v-for="member in $options.members"
         :key="member.slug"
-        :links="member.links"
-        :name="member.name"
+        v-bind="member"
         :odd="!!(i%2)"
-        :slug="member.slug"
       />
     </section>
   </div>
