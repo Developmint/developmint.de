@@ -209,7 +209,7 @@ export default {
     paths: [
       'i18n/**/*.js'
     ],
-    whitelistPatterns: [/cookie-consent/]
+    whitelistPatterns: [/cookie-consent/, /^ani/]
   },
 
   /*
