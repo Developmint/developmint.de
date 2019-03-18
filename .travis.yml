@@ -16,4 +16,4 @@ jobs:
     - stage: lighthouse
       if: type = pull_request
       install: yarn add --dev ebidel/lighthousebot wait-for-netlify-preview
-      script: lighthousebot --perf=90 --pwa=90 --a11y=90 --bp=100 --seo=90 "$(wait-for-netlify-preview)"
+      script: lighthousebot --perf=90 --pwa=90 --a11y=90 --bp=93 --seo=90 "$(wait-for-netlify-preview)"
