@@ -4,7 +4,7 @@
     class="lg:mx-6 lg:w-1/3 leading-tight lg:border-t-0"
   >
     <div class="lg:ml-8 p-4">
-      <h2 class="my-2 text-center font-normal" v-text="title" />
+      <h3 class="my-2 text-center font-normal" v-text="title" />
       <div class="lg:flex justify-center">
         <ul class="list-reset">
           <!-- eslint-disable-next-line vue/no-v-html -->

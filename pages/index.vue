@@ -15,9 +15,9 @@
         leave-active-class="fade-out-down"
         mode="out-in"
       >
-        <div
+        <h1
           :key="currentSloganIndex"
-          class="block text-center text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
+          class="block text-center font-normal text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
           v-html="currentSlogan"
         />
       </Transition>
@@ -29,9 +29,9 @@
     </section>
     <div class="shadow-inner">
       <section class="container mx-auto py-16 md:px-4 md:mb-16 lg:mb-32">
-        <h1 class="text-center my-8 text-xl lg:text-3xl font-normal">
+        <h2 class="text-center my-8 text-xl lg:text-3xl font-normal">
           {{ $t('index.intro.heading') }}
-        </h1>
+        </h2>
         <p
           class="md:text-justify p-4 md:p-8"
           v-html="$t('index.intro.text')"
@@ -56,9 +56,9 @@
         </div>
       </div>
       <section class="w-full xl:w-3/4 mx-auto mt-16 py-8 p-4 text-md">
-        <h1 class="text-center mb-8 text-3xl font-normal">
+        <h2 class="text-center mb-8 text-3xl font-normal">
           {{ $t('index.expertises.heading') }}
-        </h1>
+        </h2>
         <p class="text-center text-lg my-1">
           {{ $t('index.expertises.subheadings[0]') }}
         </p>
@@ -104,9 +104,9 @@
     </div>
     <section class="bg-cta-end shadow-over-grey-darkest text-white">
       <div class="container mx-auto p-4 py-64">
-        <h1 class="text-center font-normal text-3xl text-rains-lightest mb-3 uppercase text-shadow">
+        <h2 class="text-center font-normal text-3xl text-rains-lightest mb-3 uppercase text-shadow">
           {{ $t('index.end.heading') }}
-        </h1>
+        </h2>
         <p class="text-center">
           {{ $t('index.end.subheading') }}
         </p>
