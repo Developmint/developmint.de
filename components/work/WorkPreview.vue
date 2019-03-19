@@ -33,7 +33,7 @@
           rel="noopener"
           class="block text-rains no-underline text-center mx-6 mt-4 hover:text-shadow-sm transition-all"
           @click="logClick('heading')"
-        ><h2 class="text-2xl font-bold" v-t="`work.projects.${slug}.title`" /></a>
+        ><h2 v-t="`work.projects.${slug}.title`" class="text-2xl font-bold" /></a>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <p class="mt-2 p-6 py-8 md:py-6 text-justify my-16 md:my-0 md:px-16" v-html="$t(`work.projects.${slug}.shortDescription`)" />
       </div>
