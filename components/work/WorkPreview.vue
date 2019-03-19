@@ -28,13 +28,12 @@
       </a>
       <div class="my-6 xl:px-6 xl:w-1/2">
         <a
-          v-t="`work.projects.${slug}.title`"
           v-bind="bindUrl"
           target="_blank"
           rel="noopener"
-          class="block text-rains no-underline text-center mx-6 mt-4 font-bold text-2xl hover:text-shadow-sm transition-all"
+          class="block text-rains no-underline text-center mx-6 mt-4 hover:text-shadow-sm transition-all"
           @click="logClick('heading')"
-        />
+        ><h2 class="text-2xl font-bold" v-t="`work.projects.${slug}.title`" /></a>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <p class="mt-2 p-6 py-8 md:py-6 text-justify my-16 md:my-0 md:px-16" v-html="$t(`work.projects.${slug}.shortDescription`)" />
       </div>
