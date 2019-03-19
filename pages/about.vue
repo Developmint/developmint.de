@@ -26,13 +26,11 @@ export default {
   components: {
     TeamMember
   },
-  computed: {
-    head() {
-      return this.$createSeo('about', [{
-        name: 'og:image',
-        content: require('~/assets/img/bg/about-us.jpg')
-      }])
-    }
+  head() {
+    return this.$createSeo('about', [{
+      name: 'og:image',
+      content: require('~/assets/img/bg/about-us.jpg')
+    }])
   },
   members: [
     {
@@ -65,9 +63,9 @@ export default {
     background-size: cover;
     background-position: top;
 
-    @screen md {
-      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
-      background-position: top;
-    }
+  @screen md {
+    background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
+    background-position: top;
+  }
   }
 </style>
