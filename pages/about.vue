@@ -13,7 +13,6 @@
         v-for="member in $options.members"
         :key="member.slug"
         v-bind="member"
-        :odd="!!(i%2)"
       />
     </section>
   </div>

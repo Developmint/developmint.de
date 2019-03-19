@@ -80,10 +80,6 @@ export default {
     links: {
       type: Object,
       default: () => ({})
-    },
-    odd: {
-      type: Boolean,
-      required: true
     }
   }
 }
