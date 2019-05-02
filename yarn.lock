@@ -3942,10 +3942,10 @@ eslint-plugin-import@^2.17.2:
     read-pkg-up "^2.0.0"
     resolve "^1.10.0"
 
-eslint-plugin-jest@^22.5.0:
-  version "22.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.5.0.tgz#3a02527a5b08f7232f7bb0a52da98407bf84cdd0"
-  integrity sha512-YLeCRAuU3qP9lRZMul1/IbxXGg1THVpWFPBEa+VUQkcqEtO3W9GDKZ84MxYxzKTwMChTjj1l2vuNKva8HYtGPg==
+eslint-plugin-jest@^22.5.1:
+  version "22.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.5.1.tgz#a31dfe9f9513c6af7c17ece4c65535a1370f060b"
+  integrity sha512-c3WjZR/HBoi4GedJRwo2OGHa8Pzo1EbSVwQ2HFzJ+4t2OoYM7Alx646EH/aaxZ+9eGcPiq0FT0UGkRuFFx2FHg==
 
 eslint-plugin-node@^8.0.1:
   version "8.0.1"
@@ -5116,10 +5116,10 @@ inquirer@^6.2.2:
     strip-ansi "^5.0.0"
     through "^2.3.6"
 
-intersection-observer@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.1.tgz#e340fc56ce74290fe2b2394d1ce88c4353ac6dfa"
-  integrity sha512-Zd7Plneq82kiXFixs7bX62YnuZ0BMRci9br7io88LwDyF3V43cQMI+G5IiTlTNTt+LsDUppl19J/M2Fp9UkH6g==
+intersection-observer@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.6.0.tgz#d64aae04211b4cec051537168f5fa670a4acc770"
+  integrity sha512-WUVAqGJr08yh73XKe1JhylQ9BiBIytrkt8SH5Knu7Uy44ij5cICi6PbVLIbV/D2eIx9LJVkGBo9WF80R4VXJ+w==
 
 invariant@^2.2.2:
   version "2.2.4"
@@ -6247,10 +6247,10 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-netlify-lambda@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.4.5.tgz#db0aa18fee02c3aa942cabeadbce77022f6b2dbb"
-  integrity sha512-BjfH3AFpDEkGsi5ONw6fe7WZl/yNECmN07bOM9tHSd52xMy0OEO8rc0URBkolQnK297gqBZvLi4dXZenCO8lFw==
+netlify-lambda@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.4.7.tgz#a03e4a4c6f6f8d27abb7986891b11b4a74d82e82"
+  integrity sha512-tTS1Vm6sDky8lTi6SZgAwrOWz9sLhlwUpoh5Vg3L/Iz6oR03XAdIxXAoSZjbRD2OHhLzATh0LsBpCN1BlFF2ug==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
@@ -6472,18 +6472,18 @@ nuxt-edge@^3.0.0-25886174.42eefa0e:
     "@nuxt/opencollective" "^0.2.1"
     "@nuxt/webpack-edge" "3.0.0-25886174.42eefa0e"
 
-nuxt-i18n@^5.8.5:
-  version "5.8.5"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.5.tgz#9ae047113aae927565bda816594d04b8e8b106d7"
-  integrity sha512-kvykf57EctValhPcvOBTLgVUlegDVqjlBhmSF1F1JQGDNT8FQK/u9cohnk2FQ/nBKLaFJbz1KUGNKXL/QvejVg==
+nuxt-i18n@^5.10.0:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.10.0.tgz#e03ef6bd13fd320479e88ad7a5eb515928c1576e"
+  integrity sha512-DHPVr7r1Fp5jCOBvXwvs2E0GevswOkz+G1d6SfgcZDzYdnteJKNOYpMdFw9M6mAxRenq1OhFmrKIgtoORwdrqw==
   dependencies:
     "@kazupon/vue-i18n-loader" "^0.3.0"
     acorn "^6.1.1"
     acorn-walk "^6.1.1"
     cookie "^0.3.1"
     js-cookie "^2.2.0"
-    vue-i18n "^8.8.2"
-    vue-i18n-extensions "^0.2.0"
+    vue-i18n "^8.11.1"
+    vue-i18n-extensions "^0.2.1"
 
 nuxt-purgecss@^0.2.1:
   version "0.2.1"
@@ -9428,15 +9428,15 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
   integrity sha512-KmvZVtmM26BQOMK1rwUZsrqxEGeKiYSZGA7SNWE6uExx8UX/cj9hq2MRV/wWC3Cq6AoeDGk57rL9YMFRel/q+g==
 
-vue-i18n-extensions@^0.2.0:
+vue-i18n-extensions@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vue-i18n-extensions/-/vue-i18n-extensions-0.2.1.tgz#86ebea45a1f9c9594cd124f264e107aea193d7dd"
   integrity sha512-xBrItI7bEwBnG7eAlnyUARP41JYYn2+ABMR8q1Yh5FM9hHCbs4XPZwG+4+FPeIZ6b5gYk4YUP//m+fWiuU9z9A==
 
-vue-i18n@^8.8.2:
-  version "8.9.0"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.9.0.tgz#5f084001fe5b4c7ad8c00ee5f11396a88ff2e55b"
-  integrity sha512-8wr/D9yU8CLC8ne9stdQn/N58E7GRSUSO75bCucj2AIFTDyjGfoze5RxFvh2w3e7yxgnz5x+ooOIcoX59PHguQ==
+vue-i18n@^8.11.1:
+  version "8.11.2"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.11.2.tgz#92827fc42449f4602d2a0ddb437dfc4e3370d9d7"
+  integrity sha512-STcpmxqBrG77SyWi7e0Yn/B3DjKR6mSDwYS4F/V7zoi+e/+CPbVb2TaBqFwnrkoDcPmRfjM7nTwsiRQQOGdifw==
 
 vue-if-bot@^1.2.0:
   version "1.2.0"
