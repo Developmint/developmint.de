@@ -2,25 +2,27 @@
   <!-- eslint-disable vue/no-v-html -->
   <main>
     <section class="min-h-screen md:min-h-750 bg-hero flex flex-col justify-center items-center">
-      <div
-        :class="{'capitalize' : $i18n.locale !== 'de'}"
-        class="text-center text-lg lg:text-3xl text-rains-lighter mt-8 md:mt-16 lg:mt-32"
-      >
-        {{ $t('index.hero.intro') }}
-      </div>
-      <Transition
-        appear
-        duration="1000"
-        enter-active-class="fade-in-down"
-        leave-active-class="fade-out-down"
-        mode="out-in"
-      >
-        <h1
-          :key="currentSloganIndex"
-          class="block text-center font-normal text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
-          v-html="currentSlogan"
-        />
-      </Transition>
+      <h1 class="font-normal text-center">
+        <span
+          :class="{'capitalize' : $i18n.locale !== 'de'}"
+          class="text-lg lg:text-3xl text-rains-lighter mt-8 md:mt-16 lg:mt-32"
+        >
+          {{ $t('index.hero.intro') }}
+        </span>
+        <Transition
+          appear
+          duration="1000"
+          enter-active-class="fade-in-down"
+          leave-active-class="fade-out-down"
+          mode="out-in"
+        >
+          <span
+            :key="currentSloganIndex"
+            class="block font-normal text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
+            v-html="currentSlogan"
+          />
+        </Transition>
+      </h1>
       <NuxtLink
         :to="'#' + $t('anchors.contact-us')"
         class="no-underline mt-8 md:mt-16 lg:mt-32 opacity-85 bg-gradient-rains-rains-dark hover:bg-gradient-rains-dark-rains rounded-full text-2xl md:text-3xl lg:text-4xl text-grey-light px-24 py-2 border border-grey-dark hover:border-grey hover:opacity-100 transition-opacity transition-border-color"
@@ -192,18 +194,18 @@ export default {
     background-size: cover;
     background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
 
-    @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
-    }
+  @screen md {
+    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
+  }
   }
 
   .bg-cta-end {
     background-size: cover;
     background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact_sm.jpg");
 
-    @screen md {
-      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
-      background-position: bottom;
-    }
+  @screen md {
+    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
+    background-position: bottom;
+  }
   }
 </style>
