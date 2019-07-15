@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       ...this.$t('seo.privacy'),
       meta: [
@@ -19,14 +19,14 @@ export default {
     }
   },
   watch: {
-    '$route'(to, from) {
+    '$route' (to, from) {
       if (to.hash === '#optout') {
         this.optOut()
       }
     }
   },
   methods: {
-    optOut() {
+    optOut () {
       document.cookie = 'ga_optout=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'
       this.$ga.disable()
     }

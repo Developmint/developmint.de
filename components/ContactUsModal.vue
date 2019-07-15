@@ -139,7 +139,7 @@ import { email, minLength, required } from 'vuelidate/src/validators'
 
 export default {
   mixins: [validationMixin],
-  data() {
+  data () {
     return {
       name: '',
       email: '',
@@ -164,15 +164,15 @@ export default {
     }
   },
   computed: {
-    empty() {
+    empty () {
       const dataKeys = ['name', 'email', 'msg']
 
       return dataKeys.some(k => !this[k])
     },
-    submissionDisabled() {
+    submissionDisabled () {
       return this.empty || this.$v.$error || this.submitting
     },
-    submitButtonClasses() {
+    submitButtonClasses () {
       const baseClasses = 'ml-4 mt-4 px-6 py-3 rounded transition-all border text-grey-light'
       const additionalClasses = this.submissionDisabled
         ? 'opacity-50 cursor-not-allowed border-grey-light'
@@ -181,7 +181,7 @@ export default {
       return `${baseClasses} ${additionalClasses}`
     }
   },
-  mounted() {
+  mounted () {
     const keyHandler = (event) => {
       if (event.keyCode !== 27) {
         return
@@ -196,14 +196,14 @@ export default {
     })
   },
   methods: {
-    validate() {
+    validate () {
       if (this.submissionDisabled) {
         return
       }
 
       this.submitForm()
     },
-    async submitForm() {
+    async submitForm () {
       this.submitting = true
       this.$ga.event('submit', 'form', this.$i18n.locale)
       this.error = false

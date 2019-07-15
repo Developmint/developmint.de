@@ -80,30 +80,30 @@ import Consent from '~/components/Consent'
 
 export default {
   components: { Consent },
-  data() {
+  data () {
     return {
       isUncollapsed: false,
       scrollOffset: 0
     }
   },
   computed: {
-    isUserScrolling() { return this.scrollOffset },
-    navClasses() {
+    isUserScrolling () { return this.scrollOffset },
+    navClasses () {
       return {
         'pt-2 lg:pt-2 bg-rains': this.isUserScrolling || this.isUncollapsed,
         'bg-transparent': !this.isUserScrolling
       }
     },
-    subNavClasses() {
+    subNavClasses () {
       return {
         'py-2 lg:py-2': this.isUserScrolling
       }
     },
-    otherLocales() {
+    otherLocales () {
       return this.$i18n.locales.filter(({ code }) => code !== this.$i18n.locale)
     }
   },
-  mounted() {
+  mounted () {
     this.handleScroll()
 
     const resizeHandler = () => {
@@ -118,10 +118,10 @@ export default {
     })
   },
   methods: {
-    toggleVisibility() {
+    toggleVisibility () {
       this.isUncollapsed = !this.isUncollapsed
     },
-    handleScroll() {
+    handleScroll () {
       this.scrollOffset = window.scrollY
     }
   },

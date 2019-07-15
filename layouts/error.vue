@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       title: '404 - There is no software here!'
     }

@@ -54,13 +54,13 @@ export default {
     WorkPreview,
     AnimatedNumber: () => import('~/components/work/AnimatedNumber')
   },
-  data() {
+  data () {
     return {
       isVisible: false
     }
   },
   methods: {
-    handleVisibility(isVisible) {
+    handleVisibility (isVisible) {
       if (isVisible) {
         this.isVisible = true
       }
@@ -117,7 +117,7 @@ export default {
       prefix: '%'
     }
   ],
-  head() {
+  head () {
     return this.$createSeo('work')
   }
 }

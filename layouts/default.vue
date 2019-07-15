@@ -19,24 +19,24 @@ export default {
     AppFooter: () => import('~/components/Footer'),
     ContactUs: () => import('~/components/ContactUsModal')
   },
-  data() {
+  data () {
     return {
       showContactUsModal: false
     }
   },
   watch: {
-    $route(to) {
+    $route (to) {
       this.checkForHash(to)
     }
   },
-  mounted() {
+  mounted () {
     this.checkForHash(this.$route)
   },
-  head() {
+  head () {
     return this.$nuxtI18nSeo()
   },
   methods: {
-    hideContactUsModal() {
+    hideContactUsModal () {
       this.showContactUsModal = false
       if (history.length > 2) {
         this.$router.back()
@@ -44,7 +44,7 @@ export default {
         this.$router.push(this.$route.path)
       }
     },
-    checkForHash(to) {
+    checkForHash (to) {
       this.showContactUsModal = to.hash.includes(this.$t('anchors.contact-us'))
     }
   }

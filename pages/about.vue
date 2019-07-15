@@ -26,7 +26,7 @@ export default {
   components: {
     TeamMember
   },
-  head() {
+  head () {
     return this.$createSeo('about', [{
       name: 'og:image',
       content: require('~/assets/img/bg/about-us.jpg')

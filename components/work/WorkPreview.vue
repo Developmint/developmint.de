@@ -65,11 +65,11 @@ export default {
     }
   },
   computed: {
-    bindUrl() {
+    bindUrl () {
       // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
       return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
     },
-    imageSources() {
+    imageSources () {
       return {
         src: require(`~/assets/img/work/${this.slug}.jpg`),
         srcset: `${require(`~/assets/img/work/${this.slug}@2x.jpg`)} 2x`

@@ -98,7 +98,7 @@ export default {
   },
 
   hooks: {
-    'generate:distCopied'() {
+    'generate:distCopied' () {
       fs.copyFileSync(path.resolve(__dirname, './_redirects'), path.resolve(__dirname, './dist/_redirects'))
     }
   },
@@ -139,7 +139,7 @@ export default {
     // Simple usage
     ['@nuxtjs/google-analytics', {
       id: 'UA-62902757-7',
-      disabled: () => document.cookie.indexOf('ga_optout=true') !== -1,
+      disabled: () => document.cookie.includes('ga_optout=true'),
       debug: {
         sendHitTask: isProd
       },
@@ -231,7 +231,7 @@ export default {
     /*
      * Run ESLint on save
      */
-    extend(config, ctx) {
+    extend (config, ctx) {
       if (ctx.isClient) {
         if (ctx.isDev) {
           config.module.rules.push({

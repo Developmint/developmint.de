@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   extends: [
-    '@nuxtjs'
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
   ],
   parserOptions: {
     parser: 'babel-eslint',

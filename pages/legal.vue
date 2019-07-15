@@ -15,7 +15,7 @@
 <script>
 
 export default {
-  head() {
+  head () {
     return {
       ...this.$t('seo.legal'),
       meta: [
