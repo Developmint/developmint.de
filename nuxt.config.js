@@ -1,5 +1,5 @@
-import path from 'path'
-import fs from 'fs'
+import { resolve } from 'path'
+import { promises } from 'fs'
 import { colors } from './tailwind.js'
 import i18n from './i18n'
 
@@ -98,8 +98,10 @@ export default {
   },
 
   hooks: {
-    'generate:distCopied' () {
-      fs.copyFileSync(path.resolve(__dirname, './_redirects'), path.resolve(__dirname, './dist/_redirects'))
+    async 'generate:distCopied' () {
+      const copyFile = fileName => promises.copyFile(resolve(__dirname, 'netlify', fileName), resolve(__dirname, 'dist', fileName))
+      const files = ['_redirects', '_headers']
+      await Promise.all(files.map(copyFile))
     }
   },
 
@@ -162,7 +164,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Lato:400,700']
+      families: ['Lato:400,700&display=swap']
     }
   },
 
@@ -221,9 +223,10 @@ export default {
       img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name]-[hash:7].[ext]',
       font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name]-[hash:7].[ext]'
     },
+    publicPath: '/assets/',
     postcss: {
       plugins: {
-        tailwindcss: path.resolve(__dirname, './tailwind.js'),
+        tailwindcss: resolve(__dirname, './tailwind.js'),
         'postcss-nested': {}
       }
     },
