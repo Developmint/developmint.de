@@ -1233,7 +1233,7 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^3.1.5"
 
-"@nuxtjs/axios@^5.4.1":
+"@nuxtjs/axios@^5.5.4":
   version "5.5.4"
   resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.5.4.tgz#c4aee2322901b19d4072670c03144662a73ea6f4"
   integrity sha512-/Ljsyh5VIc9paXGrQue7RQ+PpBNES1oit0g4l+ya1tfyKnZMpHSbghuLcv0xq+BpXlSEr690uemHbz54/N6U5w==
@@ -1311,7 +1311,7 @@
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa-utils/-/pwa-utils-3.0.0-beta.16.tgz#808ddb090f3831c5b32931ab2d08231cc55abff9"
   integrity sha512-3sF8iAstLi/dbQ39S4Zdy/QsK5IArgJ2s/nuGxOTVuxz01m07VdMbJejzsdYbyz31mQP0w4IPFNYOCPZhcvVig==
 
-"@nuxtjs/pwa@^3.0.0-beta.14":
+"@nuxtjs/pwa@^3.0.0-beta.16":
   version "3.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.0-beta.16.tgz#be140b5c6c8fade76e95ed9ccda8d5585074642d"
   integrity sha512-K/+XJDYTeC/7e5p3RRT7fxa+wqDPjjbRTboLHy43FGLWzVbpvqx8JFeaFguMbrkjUknP3z4Tio6L3mG57OZlmg==
@@ -1910,7 +1910,7 @@ babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-eslint@^10.0.1:
+babel-eslint@^10.0.2:
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.2.tgz#182d5ac204579ff0881684b040560fdcc1558456"
   integrity sha512-UdsurWPtgiPgpJ06ryUnuaSXC2s0WoSZnQmEpbAH65XZSdwowgN5MvyP7e88nW07FYXv72erVtpBkxyDVKhH1Q==
@@ -3688,7 +3688,7 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-eslint-loader@^2.1.2:
+eslint-loader@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-2.2.1.tgz#28b9c12da54057af0845e2a6112701a2f6bf8337"
   integrity sha512-RLgV9hoCVsMLvOxCuNjdqOrUqIj9oJg8hF44vzJaYqsAHuY9G2YAeN3joQ9nxP0p5Th9iFSIpKo+SD8KISxXRg==
@@ -4969,10 +4969,10 @@ inquirer@^6.2.2:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-intersection-observer@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.6.0.tgz#d64aae04211b4cec051537168f5fa670a4acc770"
-  integrity sha512-WUVAqGJr08yh73XKe1JhylQ9BiBIytrkt8SH5Knu7Uy44ij5cICi6PbVLIbV/D2eIx9LJVkGBo9WF80R4VXJ+w==
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
+  integrity sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg==
 
 invariant@^2.2.2:
   version "2.2.4"
@@ -6152,10 +6152,10 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-lambda@^1.4.7:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.5.0.tgz#52b1a16af73b3eeb1dee3c6178f189f010dd6450"
-  integrity sha512-Np1+dGu850o5qVzVlUlvuLD7M2QzL9HuH0BqKZisXtFPz8SYLv7Ulyj1GNYnUfBBa6SnZAQ+wU4L4u3laGm7Ww==
+netlify-lambda@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.5.1.tgz#723f83494bd3f2fd1681d0a9c5db3df571c70074"
+  integrity sha512-i8Sd47KKUtlNziEZlwJjoE5p9gQMt8PM+NS/bimMe9lFiOoZWliSUAk2yIGsQqLCT1uxFIFFmMM99M5LuKfdJw==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
@@ -6380,7 +6380,7 @@ nuxt-edge@^3.0.0-25886174.42eefa0e:
     "@nuxt/opencollective" "^0.2.1"
     "@nuxt/webpack-edge" "3.0.0-25886174.42eefa0e"
 
-nuxt-i18n@^5.10.0:
+nuxt-i18n@^5.12.7:
   version "5.12.7"
   resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.12.7.tgz#2698c38af16bc1ef059a72e629c1632dca6f4108"
   integrity sha512-LfUW9cywrag2TIj7THX1aVCkNnVydf/px/QCV+xlj+e5luD0cHwg+u6dTwvHGmwZy/gnIh6jz7J4C6iVMbuAGA==
@@ -6414,7 +6414,7 @@ nuxt-svg-loader@^1.0.1:
     consola "^2.3.2"
     svg-to-vue-component "^0.3.1"
 
-nuxt-webfontloader@^1.0.0:
+nuxt-webfontloader@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/nuxt-webfontloader/-/nuxt-webfontloader-1.1.0.tgz#68b47ffbeaee4c41969f42f57a86946e0c36715c"
   integrity sha512-GyDgABmI0Oq54s2tA9SZC28TmHy2xGdWSXrfcGPPfDBVhgQQlGL5CJcAlvovcuhefzzZrzGgs35HIcv5qym4fQ==
@@ -8298,7 +8298,7 @@ send@0.17.1:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
-sendmail@^1.4.1:
+sendmail@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/sendmail/-/sendmail-1.6.1.tgz#6be92fb4be70d1d9ad102030aeb1e737bd512159"
   integrity sha512-lIhvnjSi5e5jL8wA1GPP6j2QVlx6JOEfmdn0QIfmuJdmXYGmJ375kcOU0NSm/34J+nypm4sa1AXrYE5w3uNIIA==
@@ -9455,7 +9455,7 @@ vue-no-ssr@^1.1.1:
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha512-ZMjqRpWabMPqPc7gIrG0Nw6vRf1+itwf0Itft7LbMXs2g3Zs/NFmevjZGN1x7K3Q95GmIjWbQZTVerxiBxI+0g==
 
-vue-observe-visibility@^0.4.3:
+vue-observe-visibility@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.4.tgz#cf3e945bf80c1317a1c32bc516d6cfd4dda8f8fd"
   integrity sha512-2eDYHgL2MJ2wkkNZnus56D0CG8m80BFLuvEcGnD7rQ9jxFogpXMsM9aM5Md+XT8AmYGYCqVfOVBaWFtVvwbpmw==
