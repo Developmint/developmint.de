@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/netlify-files": "^1.0.0",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "eslint-plugin-nuxt": "^0.4.3",
     "intersection-observer": "^0.6.0",

@@ -1,5 +1,4 @@
 import { resolve } from 'path'
-import { promises } from 'fs'
 import { colors } from './tailwind.js'
 import i18n from './i18n'
 
@@ -97,14 +96,6 @@ export default {
     ]
   },
 
-  hooks: {
-    async 'generate:distCopied' () {
-      const copyFile = fileName => promises.copyFile(resolve(__dirname, 'netlify', fileName), resolve(__dirname, 'dist', fileName))
-      const files = ['_redirects', '_headers']
-      await Promise.all(files.map(copyFile))
-    }
-  },
-
   /*
    * Meta information
    */
@@ -153,7 +144,8 @@ export default {
     ['@nuxtjs/axios', { baseURL: '/.netlify/functions/' }],
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/netlify-files'
   ].concat(isDev ? '@nuxtjs/proxy' : 'nuxt-purgecss'),
 
   proxy: {
@@ -166,6 +158,10 @@ export default {
     google: {
       families: ['Lato:400,700&display=swap']
     }
+  },
+
+  netlifyFiles: {
+    existingFilesDirectory: './netlify/'
   },
 
   workbox: {
