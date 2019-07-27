@@ -1,5 +1,5 @@
 <template>
-  <transition name="animodal">
+  <transition name="animodal" appear>
     <div class="fixed pin-t w-full h-screen bg-rains-trans z-20 overflow-hidden md:overflow-y-scroll text-white p-4 lg:p-8 lg:pt-0 xl:p-16 text-2xl lg:text-3xl transition-all">
       <button
         class="close-button modal-close"
