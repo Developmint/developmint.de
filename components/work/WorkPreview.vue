@@ -31,7 +31,7 @@
           v-bind="bindUrl"
           target="_blank"
           rel="noopener"
-          class="block text-rains no-underline text-center mx-6 mt-4 hover:underline transition-all"
+          class="block text-rains no-underline mx-6 md:px-6 mt-4 hover:underline transition-all"
           @click="logClick('heading')"
         ><h2 v-t="`work.projects.${slug}.title`" class="text-2xl font-bold" /></a>
         <!-- eslint-disable-next-line vue/no-v-html -->
