@@ -37,7 +37,7 @@
             v-show="$v.name.$error"
             class="text-sm self-start ml-2 mb-4 text-red-light"
           >
-            Please type a valid name
+            {{ $t('contact.errors.name') }}
           </span>
           <div
             :class="{'shadow-white': focusedElement === 'email', 'shadow-red': $v.email.$error}"
@@ -62,7 +62,7 @@
             v-show="$v.email.$error"
             class="text-sm self-start ml-2 mb-4 text-red-light"
           >
-            Please insert a valid E-Mail
+            {{ $t('contact.errors.email') }}
           </span>
           <div
             :class="{'shadow-white': focusedElement === 'msg', 'shadow-red': $v.msg.$error}"
@@ -87,17 +87,16 @@
             v-show="$v.msg.$error"
             class="text-xm self-start ml-2 mb-4 text-red-light"
           >
-            Please provide a valid message with at least 25 characters
+            {{ $t('contact.errors.message') }}
           </span>
           <p class="text-xs md:text-base my-4 px-2 text-grey-light">
-            We use the data you provide us through this form only to process your contact request! You
-            find more information in our
+            {{ $t('contact.privacy.text') }}
             <NuxtLink
               :to="localePath('privacy')"
               tabindex="-1"
               class="text-white hover:text-developmint-lighter"
             >
-              Privacy Policy
+              {{ $t('contact.privacy.policy') }}
             </NuxtLink>
           </p>
           <div class="flex justify-between lg:block lg:ml-auto">
@@ -120,13 +119,13 @@
           v-show="isSubmitted"
           class="text-2xl text-developmint"
         >
-          Thanks for your submission!
+          {{ $t('contact.message.success') }}
         </div>
         <div
           v-if="error"
           class="text-2xl text-red-dark"
         >
-          An error occurred!
+          {{ $t('contact.message.error') }}
         </div>
       </div>
     </div>

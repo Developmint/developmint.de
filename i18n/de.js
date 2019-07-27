@@ -18,11 +18,24 @@ module.exports = {
   contact: {
     heading: 'Kommen Sie ihrem Ziel einen Schritt näher',
     fields: {
-      tell: 'Erzählen Sie uns mehr!'
+      tell: 'Wie können wir Ihnen weiterhelfen?'
     },
     buttons: {
       back: 'Zurück',
       submit: 'Absenden'
+    },
+    error: {
+      name: 'Bitte geben Sie einen gültigen Namen (Vor- und Nachnamen) ein.',
+      email: 'Bitte nutzen Sie eine valide E-Mail.',
+      message: 'Bitte geben Sie eine gültige Nachricht mit mindestens 25 Zeichen ein.'
+    },
+    privacy: {
+      text: `Wir nutzen die von Ihnen hier eingegebenen Daten nur um die Kontaktanfrage zu verarbeiten. Mehr Informationen finde Sie in unserer`,
+      policy: 'Datenschutzbestimmung'
+    },
+    message: {
+      success: 'Danke für die Anfrage! Wir werden Sie schnellstmöglich kontaktieren.',
+      error: `Ein unbekannter Fehler ist aufgetreten. Das sollte nicht passieren, aber wir wurden bereits informiert.`
     }
   },
   index: {

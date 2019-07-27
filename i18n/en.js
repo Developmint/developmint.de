@@ -18,11 +18,24 @@ module.exports = {
   contact: {
     heading: 'One step closer to your goal',
     fields: {
-      tell: 'Tell us more!'
+      tell: 'Tell us more about your inquiry!'
     },
     buttons: {
       back: 'Back',
       submit: 'Submit'
+    },
+    error: {
+      name: 'Please type in a valid name.',
+      email: 'Please insert a valid email.',
+      message: 'Please provide a valid message with at least 25 characters.'
+    },
+    privacy: {
+      text: `We use the data you provide us through this form only to process your contact request! You can find more information in our`,
+      policy: 'Privacy Policy'
+    },
+    message: {
+      success: 'Thanks for your submission! We will contact you as soon as possible.',
+      error: 'An unknown error occurred. This should not happen, but we were already notified.'
     }
   },
   index: {
