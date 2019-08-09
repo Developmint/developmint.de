@@ -24,7 +24,7 @@ module.exports = {
       back: 'Back',
       submit: 'Submit'
     },
-    error: {
+    errors: {
       name: 'Please type in a valid name.',
       email: 'Please insert a valid email.',
       message: 'Please provide a valid message with at least 25 characters.'

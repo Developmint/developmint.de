@@ -24,7 +24,7 @@ module.exports = {
       back: 'Zurück',
       submit: 'Absenden'
     },
-    error: {
+    errors: {
       name: 'Bitte geben Sie einen gültigen Namen (Vor- und Nachnamen) ein.',
       email: 'Bitte nutzen Sie eine valide E-Mail.',
       message: 'Bitte geben Sie eine gültige Nachricht mit mindestens 25 Zeichen ein.'
