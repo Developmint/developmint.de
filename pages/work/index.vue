@@ -100,13 +100,13 @@ export default {
   numbers: [
     {
       duration: 1000,
-      to: 30,
+      to: 50,
       precision: 0,
       prefix: '+'
     },
     {
       duration: 3500,
-      to: 100000,
+      to: 500000,
       precision: 0,
       prefix: '+'
     },
