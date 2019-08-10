@@ -5,6 +5,9 @@ import i18n from './i18n'
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
+
+const baseUrl = process.env.BASE_URL || 'https://developmint.de/'
+
 export default {
   modern: isProd && 'client',
   generate: {
@@ -14,7 +17,7 @@ export default {
    * Environment
    */
   env: {
-    baseUrl: process.env.BASE_URL || 'https://developmint.de/'
+    baseUrl
   },
 
   /*
@@ -104,7 +107,7 @@ export default {
     description: 'Developmint is an experienced Software agency based in Dresden (Germany). Let your visions become' +
       ' reality with us!',
     author: 'Developmint',
-    ogHost: process.env.BASE_URL || 'https://developmint.de/',
+    ogHost: baseUrl,
     ogSiteName: 'Developmint',
     ogImage: {
       path: 'logo.png'
@@ -145,13 +148,26 @@ export default {
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-webfontloader',
-    '@nuxtjs/netlify-files'
+    '@nuxtjs/netlify-files',
+    '@nuxtjs/sitemap'
   ].concat(isDev ? '@nuxtjs/proxy' : 'nuxt-purgecss'),
 
   proxy: {
     '/.netlify/functions/': {
       target: 'http://localhost:9000'
     }
+  },
+
+  sitemap: {
+    hostname: baseUrl,
+    exclude: [
+      '/legal',
+      '/de/impressum',
+      '/privacy',
+      '/de/datenschutz',
+      '/disclaimer',
+      '/de/haftungsausschluss'
+    ]
   },
 
   webfontloader: {
@@ -237,7 +253,7 @@ export default {
             enforce: 'pre',
             test: /\.(js|vue)$/,
             loader: 'eslint-loader',
-            exclude: /(node_modules)/
+            exclude: /(node_modules)|(\.svg$)/
           })
         }
       }
