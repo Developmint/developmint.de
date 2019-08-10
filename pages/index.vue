@@ -115,7 +115,7 @@
         <div class="flex justify-center">
           <NuxtLink
             :to="'#' + $t('anchors.contact-us')"
-            class="no-underline mt-16 opacity-85 rounded text-xl lg:text-3xl text-grey-light px-8 lg:px-24 py-2 border border-grey-dark hover:border-grey hover:opacity-100 transition-opacity transition-border-color"
+            class="no-underline mt-16 opacity-85 rounded-full text-xl lg:text-3xl text-grey-light px-8 lg:px-24 py-2 border border-grey-dark hover:border-grey hover:opacity-100 transition-opacity transition-border-color"
             v-text="$t('index.end.cta')"
           />
         </div>
