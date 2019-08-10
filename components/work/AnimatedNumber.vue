@@ -53,6 +53,7 @@ export default {
       if (this.state > 0) {
         return
       }
+
       this.state = 1
       const options = {
         from: { x: this.from, y: 0 },

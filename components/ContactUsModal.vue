@@ -228,7 +228,7 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
   textarea:focus, input:focus {
     outline: none;
   }

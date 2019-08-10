@@ -32,9 +32,9 @@
         >
           <AnimatedNumber
             :duration="duration"
+            :precision="precision"
             :should-start="isVisible"
             :to="to"
-            :precision="precision"
             class="text-2xl font-bold pl-4"
             style="font-variant-numeric: tabular-nums"
           />
@@ -123,7 +123,7 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
   .bg-work {
     background-size: cover;
     background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");

@@ -10,9 +10,9 @@
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <TeamMember
-        v-for="member in $options.members"
         :key="member.slug"
         v-bind="member"
+        v-for="member in $options.members"
       />
     </section>
   </div>
@@ -57,15 +57,15 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
   .bg-about-us {
     background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
     background-size: cover;
     background-position: top;
 
-  @screen md {
-    background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
-    background-position: top;
-  }
+    @screen md {
+      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
+      background-position: top;
+    }
   }
 </style>

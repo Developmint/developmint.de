@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
   .cookie-consent {
     @apply .w-full .py-2 .relative .flex .items-center .justify-center .bg-developmint-darker .text-developmint-lightest .text-xs;
 

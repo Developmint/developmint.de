@@ -69,11 +69,11 @@
         </p>
         <div class="lg:flex justify-center items-center my-16">
           <ExpertiseCategory
-            v-for="(expertise, index) in $t('index.expertises.content')"
-            :key="index"
             :is-first="!index"
+            :key="index"
             :list-items="expertise.listItems"
             :title="expertise.title"
+            v-for="(expertise, index) in $t('index.expertises.content')"
           />
         </div>
         <p
@@ -88,11 +88,11 @@
           <Transition name="slide-fade">
             <div class="lg:flex flex-row justify-around lg:my-8 md:p-4">
               <InformationIcon
-                v-for="(data,index) in $t('index.informationIcons')"
-                :key="index"
                 :class="{'opacity-0': !showIcons}"
                 :content="data.content"
+                :key="index"
                 :title="data.title"
+                v-for="(data,index) in $t('index.informationIcons')"
               >
                 <Component
                   :is="data.img"
@@ -181,7 +181,7 @@ export default {
 }
 </script>
 
-<style lang="pcss">
+<style lang="postcss">
   .bg-gradient-developmint-lighter-rains-lighter-rains-lightest {
     background-image: linear-gradient(23deg, config('colors.developmint-lighter'), config('colors.rains-lighter'), config('colors.rains-lightest'));
   }
@@ -194,18 +194,18 @@ export default {
     background-size: cover;
     background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
 
-  @screen md {
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
-  }
+    @screen md {
+      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
+    }
   }
 
   .bg-cta-end {
     background-size: cover;
     background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact_sm.jpg");
 
-  @screen md {
-    background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
-    background-position: bottom;
-  }
+    @screen md {
+      background-image: linear-gradient(rgba(9, 0, 16, 0.25), rgba(11, 7, 16, 1)), url("~assets/img/bg/contact.jpg");
+      background-position: bottom;
+    }
   }
 </style>
