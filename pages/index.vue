@@ -69,11 +69,11 @@
         </p>
         <div class="lg:flex justify-center items-center my-16">
           <ExpertiseCategory
-            :is-first="!index"
+            v-for="(expertise, index) in $t('index.expertises.content')"
             :key="index"
+            :is-first="!index"
             :list-items="expertise.listItems"
             :title="expertise.title"
-            v-for="(expertise, index) in $t('index.expertises.content')"
           />
         </div>
         <p
@@ -88,11 +88,11 @@
           <Transition name="slide-fade">
             <div class="lg:flex flex-row justify-around lg:my-8 md:p-4">
               <InformationIcon
+                v-for="(data,index) in $t('index.informationIcons')"
+                :key="index"
                 :class="{'opacity-0': !showIcons}"
                 :content="data.content"
-                :key="index"
                 :title="data.title"
-                v-for="(data,index) in $t('index.informationIcons')"
               >
                 <Component
                   :is="data.img"
