@@ -1,9 +1,11 @@
+const screens = require('./tailwind/screens')
 module.exports = {
   'theme': {
     'container': {
       'center': true,
       'padding': '1rem'
     },
+    screens,
     'extend': {
       'colors': {
         'developmint': {

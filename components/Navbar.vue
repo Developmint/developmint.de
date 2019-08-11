@@ -18,9 +18,9 @@
           @click.native="isUncollapsed = false"
         >
           <img
-            src="~/assets/img/logo.png"
-            class="w-48 xl:w-64 h-auto"
             alt="Developmint Logo"
+            class="w-48 xl:w-64 h-auto"
+            src="~/assets/img/logo.png"
           >
         </NuxtLink>
         <div class="block lg:hidden mt-1">

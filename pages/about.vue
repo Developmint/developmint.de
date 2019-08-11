@@ -10,9 +10,9 @@
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <TeamMember
+        v-for="member in $options.members"
         :key="member.slug"
         v-bind="member"
-        v-for="member in $options.members"
       />
     </section>
   </div>
