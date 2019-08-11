@@ -1,5 +1,4 @@
-import { resolve } from 'path'
-import { colors } from './tailwind.js'
+import { colors } from './tailwind_old.js'
 import i18n from './i18n'
 
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
@@ -115,9 +114,10 @@ export default {
     twitterCard: 'summary'
   },
 
-  css: [
-    '~/assets/styles/app'
-  ],
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/styles/app.pcss'
+  },
 
   /*
    * Nuxt plugins
@@ -149,8 +149,9 @@ export default {
     'nuxt-svg-loader',
     'nuxt-webfontloader',
     '@nuxtjs/netlify-files',
-    '@nuxtjs/sitemap'
-  ].concat(isDev ? '@nuxtjs/proxy' : 'nuxt-purgecss'),
+    '@nuxtjs/sitemap',
+    '@nuxtjs/tailwindcss'
+  ].concat(isDev ? '@nuxtjs/proxy' : []),
 
   proxy: {
     '/.netlify/functions/': {
@@ -219,7 +220,6 @@ export default {
   },
 
   purgeCSS: {
-    mode: 'postcss',
     paths: [
       'i18n/**/*.js'
     ],
@@ -236,12 +236,6 @@ export default {
       font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name]-[hash:7].[ext]'
     },
     publicPath: '/assets/',
-    postcss: {
-      plugins: {
-        tailwindcss: resolve(__dirname, './tailwind.js'),
-        'postcss-nested': {}
-      }
-    },
 
     /*
      * Run ESLint on save

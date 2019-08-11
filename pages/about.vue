@@ -1,10 +1,10 @@
 <template>
   <div>
     <section class="min-h-screen md:min-h-750 bg-about-us flex flex-col justify-center items-center">
-      <h1 class="text-center text-4xl md:text-6xl font-normal text-rains-lighter capitalize mt-16 md:mt-32 mb-4 md:mb-0">
+      <h1 class="text-center text-4xl md:text-6xl text-rains-400 capitalize mt-16 md:mt-32 mb-4 md:mb-0">
         {{ $t('about.heading') }}
       </h1>
-      <h2 class="font-normal text-center text-rains-lighter text-xl md:text-3xl w-4/5">
+      <h2 class="text-center text-rains-300 text-xl md:text-3xl w-4/5">
         {{ $t('about.subheading') }}
       </h2>
     </section>
@@ -59,12 +59,12 @@ export default {
 
 <style lang="postcss">
   .bg-about-us {
-    background-image: linear-gradient(rgba(11, 7, 16, 0.6), config('colors.rains-dark')), url("~assets/img/bg/about-us_sm.jpg");
+    background-image: linear-gradient(rgba(11, 7, 16, 0.6), theme('colors.rains.600')), url("~assets/img/bg/about-us_sm.jpg");
     background-size: cover;
     background-position: top;
 
     @screen md {
-      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, config('colors.rains-dark')), url("~assets/img/bg/about-us.jpg");
+      background-image: linear-gradient(rgba(11, 7, 16, .6), rgba(11, 7, 16, .6) 80%, theme('colors.rains.600')), url("~assets/img/bg/about-us.jpg");
       background-position: top;
     }
   }

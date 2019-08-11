@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-4 pin-b z-10 bg-footer text-xs text-grey-light border-t-2 border-rains">
+  <nav class="py-4 pin-b z-10 bg-footer text-xs text-gray-400 border-t-2 border-rains-500">
     <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start p-2 mx-8">
       <div class="flex flex-col lg:flex-row items-center">
         <div class="text-center leading-loose lg:text-left lg:leading-normal">
@@ -7,7 +7,7 @@
             &copy; 2015 - {{ $options.currentYear }}
             <a
               href="/"
-              class="no-underline text-developmint hover:text-developmint-light"
+              class="no-underline text-developmint-500 hover:text-developmint-400"
               v-text="'Developmint GbR'"
             />
           </span>
@@ -26,7 +26,7 @@
           </span>
         </div>
         <a
-          class="flex items-center font-hairline mr-2 text-grey-light no-underline hover:text-white"
+          class="flex items-center font-hairline mr-2 text-gray-400 no-underline hover:text-white"
           href="https://github.com/Developmint/developmint.de"
           target="_blank"
           rel="noopener"
@@ -42,7 +42,7 @@
           :key="link"
           :to="localePath(link)"
           no-prefetch
-          class="text-grey-light no-underline hover:text-white ml-2 lg:ml-3"
+          class="text-gray-400 no-underline hover:text-white ml-2 lg:ml-3"
         >
           {{ $t(`footer.${link}`) }}
         </NuxtLink>

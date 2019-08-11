@@ -6,7 +6,7 @@
     <Consent />
     <nav
       :class="navClasses"
-      class="w-full flex items-center justify-between flex-wrap lg:flex-no-wrap lg:p-6 pb-0 lg:pb-0 pin-t transition-all-300"
+      class="w-full flex items-center justify-between flex-wrap lg:flex-no-wrap pb-0 lg:p-2 pin-t transition-all-300"
     >
       <div
         :class="subNavClasses"
@@ -25,7 +25,7 @@
         </NuxtLink>
         <div class="block lg:hidden mt-1">
           <button
-            class="flex items-center lg:items-start px-3 py-2 border rounded text-white border-white hover:text-developmint-lighter hover:border-b hover:border-developmint-lighter"
+            class="flex items-center lg:items-start px-3 py-2 border rounded text-white border-white hover:text-developmint-300 hover:border-b hover:border-developmint-300"
             @click="toggleVisibility"
           >
             <svg
@@ -90,7 +90,7 @@ export default {
     isUserScrolling () { return this.scrollOffset },
     navClasses () {
       return {
-        'pt-2 lg:pt-2 bg-rains': this.isUserScrolling || this.isUncollapsed,
+        'py-2 bg-rains-500': this.isUserScrolling || this.isUncollapsed,
         'bg-transparent': !this.isUserScrolling
       }
     },

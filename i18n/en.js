@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   general: {
     preview: 'preview image'
   },
@@ -42,18 +42,18 @@ module.exports = {
     hero: {
       intro: 'Let us turn your visions into',
       slogans: [
-        'great <span class="text-developmint-light">software</span>',
-        'beautiful <span class="text-developmint-light">websites</span>',
-        'innovative <span class="text-developmint-light">apps</span>',
-        'the product <span class="text-developmint-light">you want</span>'
+        'great <span class="text-developmint-400">software</span>',
+        'beautiful <span class="text-developmint-400">websites</span>',
+        'innovative <span class="text-developmint-400">apps</span>',
+        'the product <span class="text-developmint-400">you want</span>'
       ],
       cta: 'Get a quote!'
     },
     intro: {
       heading: 'It\'s your choice',
       text: 'Are you searching for a company that builds beautiful and efficient software while feeling the' +
-      ' zeitgeist? If that\'s the case, <a href="/work" class="no-underline text-developmint' +
-      ' hover:text-developmint-light">Developmint</a> is the business you are looking for. With the right mix' +
+      ' zeitgeist? If that\'s the case, <a href="/work" class="no-underline text-developmint-500' +
+      ' hover:text-developmint-400">Developmint</a> is the business you are looking for. With the right mix' +
       ' of curiosity, experience and courage to think outside the box, we were able to convince many businesses of' +
       ' working with us. And so far, none of our customers regretted it!' +
       '<br><br>' +
@@ -89,7 +89,8 @@ module.exports = {
         person: 'Michael Müller - eXcuro'
       },
       {
-        quote: 'I contacted Developmint with my web app idea. After a few weeks the app was already fully developed!' +
+        quote: 'I contacted Developmint with my web app idea. After a few weeks the app was already fully' +
+          ' developed!' +
         ' Excellent service and best value for money.',
         person: 'Imre Lehoczki - Event planner'
       }
@@ -197,7 +198,7 @@ module.exports = {
         title: 'Lichter.io',
         shortDescription: 'The personal website of Alex which is used as CV and portfolio page. Want to know more' +
         ' about how the website was created? No problem, the code is <a href="https://github.com/manniL/lichter.io"' +
-        ' target="_blank" rel="noopener" class="text-developmint hover:text-developmint-light no-underline">open' +
+        ' target="_blank" rel="noopener" class="text-developmint-500 hover:text-developmint-400 no-underline">open' +
         ' source</a>'
       },
       'nuxt': {

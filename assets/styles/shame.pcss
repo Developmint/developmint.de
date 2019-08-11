@@ -1,11 +1,11 @@
 @variants group-hover {
   .text-shadow {
-    text-shadow: 4px 4px 10px config('colors.rains');
+    text-shadow: 4px 4px 10px theme('colors.rains.500');
   }
 }
 
-.shadow-over-grey-darkest {
-  box-shadow: 0 0 30px -18px config('colors.grey-darkest');
+.shadow-over-gray-darkest {
+  box-shadow: 0 0 30px -18px theme('colors.gray.800');
 }
 
 @variants responsive, hover, group-hover {
@@ -15,7 +15,7 @@
 }
 
 ::selection {
-  @apply .bg-developmint .text-white;
+  @apply .bg-developmint-500 .text-white;
 }
 
 .slide-fade-enter-active {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   general: {
     preview: 'Vorschaubild'
   },
@@ -42,10 +42,10 @@ module.exports = {
     hero: {
       intro: 'Mit uns werden Ihre Visionen zu',
       slogans: [
-        'großartiger <span class="text-developmint-light">Software</span>',
-        'wunderschönen <span class="text-developmint-light">Webseiten</span>',
-        'innovativen <span class="text-developmint-light">Apps</span>',
-        'ihrem <span class="text-developmint-light">Erfolg</span>'
+        'großartiger <span class="text-developmint-400">Software</span>',
+        'wunderschönen <span class="text-developmint-400">Webseiten</span>',
+        'innovativen <span class="text-developmint-400">Apps</span>',
+        'ihrem <span class="text-developmint-400">Erfolg</span>'
       ],
       cta: 'Jetzt anfragen!'
     },
@@ -53,7 +53,7 @@ module.exports = {
       heading: 'Sie haben die Wahl',
       text: 'Sind Sie auf der Suche nach einem Unternehmen das effiziente und vollkommene Software baut, die' +
       ' ständig am Puls der Zeit orientiert? Dann sind Sie bei ' +
-      '<a href="/referenzen" class="no-underline text-developmint hover:text-developmint-light">Developmint</a>' +
+      '<a href="/referenzen" class="text-developmint-500 hover:text-developmint-400">Developmint</a>' +
       ' goldrichtig. Mit einer gelungenen Mischung aus Neugierde, Erfahrung und dem Mut über den Tellerrand zu' +
       ' schauen konnten wir bereits eine Vielzahl von Unternehmen von uns Überzeugen. Und keiner unserer Kunden hat' +
       ' es bisher bereut!<br><br> Durch erprobte Strategien und breitgefächerte Kompetenz können die meisten' +
@@ -64,14 +64,14 @@ module.exports = {
       {
         title: 'Stylisch auf allen Geräten',
         img: 'DevicesIcon',
-        content: '<p class="font-normal text-md">Unsere Arbeit ist darauf ausgelegt auf jedem populären Gerät gut' +
+        content: '<p>Unsere Arbeit ist darauf ausgelegt auf jedem populären Gerät gut' +
         ' auszusehen, egal ob es sich um einem kleinen Smartphone-Bildschirm oder einen großen Fernseher handelt.' +
         ' Welches Gerät der Endnutzer auch hat, Ihre Software wird super darauf aussehen!</p>'
       },
       {
         title: 'Von der Idee zum Produkt',
         img: 'DataIcon',
-        content: '<p class="font-normal text-md">Nicht ganz sicher was Sie wollen? Kein Problem, wir finden das' +
+        content: '<p>Nicht ganz sicher was Sie wollen? Kein Problem, wir finden das' +
         ' einfach gemeinsam heraus! Nachdem wir mehr über Ihre Ideen und Planungen erfahren haben, fokussieren wir' +
         ' uns darauf diese Umzusetzen und mit unseren Erfahrungen und Best Practices das Beste aus ihren Gedanken' +
         ' herauszuholen.</p>'
@@ -79,7 +79,7 @@ module.exports = {
       {
         title: 'Langzeit-Analyse',
         img: 'AnalyticsIcon',
-        content: '<p class="font-normal text-md">Wenn die Veröffentlichung der App oder Website gekommen ist, dann' +
+        content: '<p>Wenn die Veröffentlichung der App oder Website gekommen ist, dann' +
         ' ist die Arbeit noch nicht vorüber. Nutzerfeedback analysieren und auf die Wünsche dieser reagieren ist' +
         ' wichtig für ein erfolgreiches Projekt. Developmint kann Ihnen bei diesen zwei Aufgaben helfen, indem' +
         ' Evaluationen bereitgestellt und Ziele für die Schritte nach dem Release geplant werden.</p>'
@@ -202,10 +202,10 @@ module.exports = {
       },
       'lichter-io': {
         title: 'Lichter.io',
-        shortDescription: 'Die persönliche Website von Alex, welche größtenteils als Lebenslauf und Portfolio dient.' +
-        ' Des Weiteren ist der Code der Seite <a href="https://github.com/manniL/lichter.io" target="_blank"' +
-        ' rel="noopener" class="text-developmint hover:text-developmint-light no-underline">öffentlich</a>, damit man' +
-        ' einen direkten Einblick in die Arbeitsweise erhält.'
+        shortDescription: `Die persönliche Website von Alex, welche größtenteils als Lebenslauf und Portfolio dient.
+        Des Weiteren ist der Code der Seite
+        <a href="https://github.com/manniL/lichter.io" target="_blank" rel="noopener" class="text-developmint-500 hover:text-developmint-400">
+        öffentlich</a>, damit man einen direkten Einblick in die Arbeitsweise erhält.`
       },
       'nuxt': {
         title: 'Nuxt.js',
@@ -299,18 +299,21 @@ module.exports = {
         Projektbilder: Alexander Lichter und Max Langer -
         <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
            rel="noreferrer noopener nofollow"
+           class="underline"
            target="_blank">CC-BY-NC-SA 3.0</a>
       </li>
       <li>
         Quellcode -
         <a href="https://raw.githubusercontent.com/developmint/developmint.de/master/LICENSE"
            rel="noreferrer noopener nofollow"
+           class="underline"
            target="_blank">MIT</a></li>
       <li>
         Text, redaktionelle und sonstige geschriebene Inhalte: Alexander Lichter and Max Langer
         -
         <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
            rel="noreferrer noopener nofollow"
+           class="underline"
            target="_blank">CC-BY-NC-SA 3.0</a>
       </li>
       <li>
@@ -318,6 +321,7 @@ module.exports = {
         -
         <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
            rel="noreferrer noopener nofollow"
+           class="underline"
            target="_blank">CC-BY-NC-SA 3.0</a>
       </li>
       <li>
@@ -366,22 +370,22 @@ module.exports = {
        Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
     </p>`,
     privacy: `
-    <h1 class="font-normal text-3xl py-4">Datenschutzerklärung</h1>
+    <h1 class="text-3xl py-4">Datenschutzerklärung</h1>
     <p>
       Hey! Erst ein mal vielen Dank am Interesse unserer Datenschutzerklärung!<br>
       Wir kümmern uns intensiv um die Sicherheit Ihrer Daten und werden unser Bestes tun, damit wir nur die benötigten Daten
       sammeln und diese so gut wie möglich schützen!
     </p>
     
-    <h2 class="font-normal text-2xl py-4">Überblick</h2>
+    <h2 class="text-2xl py-4">Überblick</h2>
     
-    <h3 class="font-normal text-xl py-4">Wer ist verantwortlich für die Datenerfassung auf developmint.de?</h3>
+    <h3 class="text-xl py-4">Wer ist verantwortlich für die Datenerfassung auf developmint.de?</h3>
     <p>
       Das sind wir: Developmint GbR! Unsere Kontaktdaten finden Sie im
-      <a href="/de/impressum" rel="nofollow" target="_blank">Impressum</a>.
+      <a href="/de/impressum" class="underline" rel="nofollow" target="_blank">Impressum</a>.
     </p>
     
-    <h3 class="font-normal text-xl py-4">Wie erheben wir Daten?</h3>
+    <h3 class="text-xl py-4">Wie erheben wir Daten?</h3>
     <p>
       Ersteinmal erheben wir die Daten, die du uns bereitstellst, solltest du uns Kontaktieren (z.B. durch ein
       Kontaktformular, per E-Mail, Telefon oder soziale Medien)<br>
@@ -390,14 +394,14 @@ module.exports = {
       Browser Sie nutzen) werden automatisch (und auch hier anonym) genutzt, um Ihr Seitenerlebnis zu verbessern
     </p>
     
-    <h3 class="font-normal text-xl py-4">Wie nutzten wir die Daten?</h3>
+    <h3 class="text-xl py-4">Wie nutzten wir die Daten?</h3>
     <p>
       Wir erstellen mittels der Daten Statistiken um unsere Website zu verbessern, Probleme festzustellen und um
       herauszufinden, was der Nutzer, also Sie, auf der Seite gut oder schlecht finden.<br>
       Solltest du uns deine E-Mail bereitgestellt haben, werden wir diese nur nutzen um die Kontaktanfrage zu bearbeiten.
     </p>
     
-    <h3 class="font-normal text-xl py-4">Was sind Ihre Rechte?</h3>
+    <h3 class="text-xl py-4">Was sind Ihre Rechte?</h3>
     <p>
       Sie haben jederzeit das Recht, informationen über Grund, Herkunft und Empfänger Ihrer Daten kostenlos anzufragen.<br>
       Weiterhin können Sie die Berichtigung, Löschung oder den Verschluss Ihrer Daten fordern.<br>
@@ -410,15 +414,15 @@ module.exports = {
       Falls sie noch Fragen haben, schreiben sie uns eine Mail an privacy@developmint.de.<br>
     </p>
     
-    <h3 class="font-normal text-xl py-4">Rechtliche Grundlage</h3>
+    <h3 class="text-xl py-4">Rechtliche Grundlage</h3>
     <p>
       Die rechtliche Grundlage für den Datenschutz finden Sie in den Gesetztestexten der DSGVO(Datenschutz-Grundverordnung)
       und dem Telemediengesetz (TMG).
     </p>
     
-    <h2 class="font-normal text-2xl py-4">2. Erhebung und Nutzung von personenbezogenen Daten</h2>
+    <h2 class="text-2xl py-4">2. Erhebung und Nutzung von personenbezogenen Daten</h2>
     
-    <h3 class="font-normal text-xl py-4">Cookies</h3>
+    <h3 class="text-xl py-4">Cookies</h3>
     <p>
       Diese Website benutzt Cookies (so wie wir es dir bereits beim erstmaligen Besuch der Seite gesagt haben).<br>
       Cookies sind kleine Informationsteile die als Datei auf Ihrem Endgerät durch die Website gespeichert werden. <br>
@@ -435,7 +439,7 @@ module.exports = {
       dadurch auf Ihre Identität schlussfolgern können.
     </p>
     
-    <h3 class="font-normal text-xl py-4">Kontaktaufnahme</h3>
+    <h3 class="text-xl py-4">Kontaktaufnahme</h3>
     <p>
       Wenn Sie mit uns Kontakt aufnehmen (z.B. per Kontaktformular, Telefon, Email oder durch soziale Medien) werden die
       Ihre Angaben lediglich zur Bearbeitung der Kontaktanfrage und deren Abwicklung (gemäß DSGVO) verarbeitet. Die Daten
@@ -447,7 +451,7 @@ module.exports = {
       Auch werden die Daten nicht zum Anreichern von Informationen aus anderen Quellen genutzt.<br>
     </p>
     
-    <h3 class="font-normal text-xl py-4">Server-Log Dateien</h3>
+    <h3 class="text-xl py-4">Server-Log Dateien</h3>
     <p>
       Um Betrug oder bösartige Nutzung von developmint.de zu verfolgen, speichern wir sogenannte Server-Log Dateien, die
       folgende Daten enthalten:
@@ -470,9 +474,9 @@ module.exports = {
       Auch werden die Daten nicht zum Anreichern von Informationen aus anderen Quellen genutzt.<br>
     </p>
     
-    <h2 class="font-normal text-2xl py-4">3. Analysetools</h2>
+    <h2 class="text-2xl py-4">3. Analysetools</h2>
     
-    <h3 class="font-normal text-xl py-4">Google Analytics</h3>
+    <h3 class="text-xl py-4">Google Analytics</h3>
     <p>
       Unsere Website nutzt Google Analytics, ein Analysetool von Google Inc. ("Google").
       In diesem Zusammenhang werden pseudonymisierte Nutzungsprofile erstellt und Cookies (siehe 2.) verwendet.<br>
@@ -520,7 +524,7 @@ module.exports = {
       >in diesem Google Analytics-Hilfe Artikel</a>
     </p>
     
-    <h2 class="font-normal text-2xl py-4">Änderungen in der Datenschutzerkärung</h2>
+    <h2 class="text-2xl py-4">Änderungen in der Datenschutzerkärung</h2>
     <p>
       Wir können diese Datenschutzerklärung von Zeit zu Zeit und nach eigenem Ermessen ändern. Wir empfehlen Ihnen, diese
       Seite regelmäßig auf Änderungen dieser Datenschutzerklärung zu überprüfen. Ihre fortgesetzte Nutzung der Website nach
