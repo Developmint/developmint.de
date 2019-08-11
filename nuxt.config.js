@@ -1,4 +1,5 @@
-import { colors } from './tailwind_old.js'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import rawTailwindConfig from './tailwind.config.js'
 import i18n from './i18n'
 
 const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
@@ -6,6 +7,8 @@ const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
 const baseUrl = process.env.BASE_URL || 'https://developmint.de/'
+
+const { theme: { colors } } = resolveConfig(rawTailwindConfig)
 
 export default {
   modern: isProd && 'client',
@@ -200,11 +203,11 @@ export default {
   /*
    * Customize the progress bar color
    */
-  loading: { color: colors.developmint },
+  loading: { color: colors.developmint['500'] },
   loadingIndicator: {
     name: 'rectangle-bounce',
     color: 'white',
-    background: colors.developmint
+    background: colors.developmint['500']
   },
 
   /*
@@ -215,8 +218,8 @@ export default {
     short_name: 'Developmint',
     start_url: '/',
     display: 'standalone',
-    background_color: colors.rains,
-    theme_color: colors.developmint
+    background_color: colors.rains['500'],
+    theme_color: colors.developmint['500']
   },
 
   purgeCSS: {
