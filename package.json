@@ -25,6 +25,7 @@
     "nuxt-i18n": "^5.12.7",
     "nuxt-svg-loader": "^1.0.1",
     "nuxt-webfontloader": "^1.1.0",
+    "postcss-nested": "^4.1.2",
     "sendmail": "^1.6.1",
     "shifty": "^2.8.0",
     "validator": "^10.11.0",

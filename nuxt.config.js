@@ -237,6 +237,12 @@ export default {
     },
     publicPath: '/assets/',
 
+    postcss: {
+      plugins: {
+        'postcss-nested': {}
+      }
+    },
+
     /*
      * Run ESLint on save
      */

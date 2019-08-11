@@ -182,8 +182,6 @@ export default {
 </script>
 
 <style lang="postcss">
-  /* purgecss start ignore */
-
   .bg-gradient-developmint-400-rains-400-rains-300 {
     background-image: linear-gradient(23deg, theme('colors.developmint.400'), theme('colors.rains.400'), theme('colors.rains.300'));
   }
@@ -191,8 +189,6 @@ export default {
   .bg-gradient-rains-500-rains-600 {
     background-image: linear-gradient(to right, theme('colors.rains.500'), theme('colors.rains.600'));
   }
-
-  /* purgecss end ignore */
 
   .bg-hero {
     background-size: cover;
