@@ -197,8 +197,8 @@ export default {
         title: 'Hochschulinitiative Deutschland',
         shortDescription: 'Die Hochschulinitiative Deutschland ist eine Plattform, die unterschiedlichste Angebote für' +
         ' Studenten bereitstellt. Dazu zählen unter anderem Seminare, Gewinnspiele, Wettbewerbe und Gutscheinaktionen.' +
-        ' Wir haben größere Teile der Website konzipiert und arbeiten immer noch aktiv an der Weiterentwickelung der' +
-        ' Seite.'
+        ' Wir haben größere Teile der ursprünglichen Website konzipiert und langfristig an der Weiterentwicklung' +
+          ' der Plattform mitgewirkt.'
       },
       'lichter-io': {
         title: 'Lichter.io',

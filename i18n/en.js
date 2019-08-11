@@ -191,8 +191,8 @@ export default {
       hid: {
         title: 'Hochschulinitiative Deutschland',
         shortDescription: 'Hochschulinitiative Deutschland is a German platform that provides great offers for' +
-        ' students, including giveaways, seminars, and other goodies. We created huge parts of the homepage and are' +
-        ' still developing new features for it actively.'
+        ' students, including giveaways, seminars, and other goodies. We have created huge parts of the initial' +
+          ' homepage and have developed new features of the platform for quite some time.'
       },
       'lichter-io': {
         title: 'Lichter.io',
