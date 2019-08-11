@@ -28,7 +28,7 @@
     "postcss-nested": "^4.1.2",
     "sendmail": "^1.6.1",
     "shifty": "^2.8.0",
-    "validator": "^10.11.0",
+    "validator": "^11.1.0",
     "vue-cookieconsent-component": "^1.2.0",
     "vue-if-bot": "^1.2.0",
     "vue-observe-visibility": "^0.4.4",
