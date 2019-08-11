@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style lang="postcss">
+  /* purgecss start ignore */
   .cookie-consent {
     @apply .w-full .py-2 .relative .flex .items-center .justify-center .bg-developmint-700 .text-developmint-200 .text-xs;
 
@@ -51,4 +52,6 @@ export default {
       }
     }
   }
+
+  /* purgecss end ignore */
 </style>
