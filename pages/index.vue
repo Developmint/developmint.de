@@ -2,10 +2,10 @@
   <!-- eslint-disable vue/no-v-html -->
   <main>
     <section class="min-h-screen md:min-h-750 bg-hero flex flex-col justify-center items-center">
-      <h1 class="font-normal text-center">
+      <h1 class="text-center mt-16">
         <span
           :class="{'capitalize' : $i18n.locale !== 'de'}"
-          class="text-lg lg:text-3xl text-rains-lighter mt-8 md:mt-16 lg:mt-32"
+          class="text-lg lg:text-3xl text-rains-400 mt-8 md:mt-16 lg:mt-32"
         >
           {{ $t('index.hero.intro') }}
         </span>
@@ -18,20 +18,20 @@
         >
           <span
             :key="currentSloganIndex"
-            class="block font-normal text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-lightest my-4 opacity-85 text-shadow animated capitalize"
+            class="block text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-rains-300 my-4 opacity-85 text-shadow animated capitalize"
             v-html="currentSlogan"
           />
         </Transition>
       </h1>
       <NuxtLink
         :to="'#' + $t('anchors.contact-us')"
-        class="no-underline mt-8 md:mt-16 lg:mt-32 opacity-85 bg-gradient-rains-rains-dark hover:bg-gradient-rains-dark-rains rounded-full text-2xl md:text-3xl lg:text-4xl text-grey-light px-24 py-2 border border-grey-dark hover:border-grey hover:opacity-100 transition-opacity transition-border-color"
+        class="mt-8 md:mt-16 lg:mt-32 opacity-85 bg-gradient-rains-500-rains-600 hover:bg-gradient-rains-dark-rains rounded-full text-2xl md:text-3xl lg:text-4xl text-gray-400 px-24 py-2 border border-gray-600 hover:border-gray hover:opacity-100 transition-opacity transition-border-color"
         v-text="$t('index.hero.cta')"
       />
     </section>
     <div class="shadow-inner">
       <section class="container mx-auto py-16 md:px-4 md:mb-16 lg:mb-32">
-        <h2 class="text-center my-8 text-xl lg:text-3xl font-normal">
+        <h2 class="text-center my-8 text-xl lg:text-3xl">
           {{ $t('index.intro.heading') }}
         </h2>
         <p
@@ -42,23 +42,23 @@
     </div>
     <div class="bg-white">
       <div class="md:py-2 rounded">
-        <div class="h-screen md:h-auto container py-8 md:py-0 px-4 md:-mt-32 bg-gradient-developmint-lighter-rains-lighter-rains-lightest mx-auto rounded flex flex-col md:flex-row justify-around md:justify-start items-center group shadow-lg transition-all md:hover:scale-1025">
-          <div class="flex-no-grow text-5xl md:text-10xl opacity-50 text-grey-lighter group-hover:text-grey-dark select-none transition-all">
+        <div class="h-screen md:h-auto container py-8 md:py-0 px-4 md:-mt-32 bg-gradient-developmint-400-rains-400-rains-300 mx-auto rounded flex flex-col md:flex-row justify-around md:justify-between items-center group shadow-lg transition-all md:hover:scale-1025">
+          <div class="flex-grow-0 text-5xl md:text-10xl opacity-50 text-gray-300 group-hover:text-gray-600 select-none transition-all">
             »
           </div>
           <Quote
             :key="currentQuoteIndex"
             :person="currentQuote.person"
             :quote="currentQuote.quote"
-            class="flex-no-shrink md:flex-shrink flex-no-grow md:flex-grow"
+            class="flex-shrink-0 md:flex-shrink flex-grow-0 md:flex-grow max-w-5xl"
           />
-          <div class="flex-no-grow text-5xl md:text-10xl opacity-25 text-grey-darker group-hover:text-grey-lightest select-none transition-all">
+          <div class="flex-grow-0 text-5xl md:text-10xl opacity-25 text-gray-700 group-hover:text-gray-200 select-none transition-all">
             «
           </div>
         </div>
       </div>
       <section class="w-full xl:w-3/4 mx-auto mt-16 py-8 p-4 text-md">
-        <h2 class="text-center mb-8 text-3xl font-normal">
+        <h2 class="text-center mb-8 text-3xl">
           {{ $t('index.expertises.heading') }}
         </h2>
         <p class="text-center text-lg my-1">
@@ -77,7 +77,7 @@
           />
         </div>
         <p
-          class="text-sm text-grey-darker text-center mt-8 mb-4"
+          class="text-sm text-gray-700 text-center mt-8 mb-4"
           v-html="$t('index.expertises.end')"
         />
       </section>
@@ -104,9 +104,9 @@
         </div>
       </div>
     </div>
-    <section class="bg-cta-end shadow-over-grey-darkest text-white">
-      <div class="container mx-auto p-4 py-64">
-        <h2 class="text-center font-normal text-3xl text-rains-lightest mb-3 uppercase text-shadow">
+    <section class="bg-cta-end shadow-over-gray-darkest text-white">
+      <div class="container mx-auto p-4 py-48">
+        <h2 class="text-center text-3xl text-rains-300 mb-3 uppercase text-shadow">
           {{ $t('index.end.heading') }}
         </h2>
         <p class="text-center">
@@ -115,7 +115,7 @@
         <div class="flex justify-center">
           <NuxtLink
             :to="'#' + $t('anchors.contact-us')"
-            class="no-underline mt-16 opacity-85 rounded-full text-xl lg:text-3xl text-grey-light px-8 lg:px-24 py-2 border border-grey-dark hover:border-grey hover:opacity-100 transition-opacity transition-border-color"
+            class="mt-16 opacity-85 rounded-full text-xl lg:text-3xl text-gray-400 px-8 lg:px-24 py-2 border border-gray-600 hover:border-gray-500 hover:opacity-100 transition-opacity transition-border-color"
             v-text="$t('index.end.cta')"
           />
         </div>
@@ -182,20 +182,20 @@ export default {
 </script>
 
 <style lang="postcss">
-  .bg-gradient-developmint-lighter-rains-lighter-rains-lightest {
-    background-image: linear-gradient(23deg, config('colors.developmint-lighter'), config('colors.rains-lighter'), config('colors.rains-lightest'));
+  .bg-gradient-developmint-400-rains-400-rains-300 {
+    background-image: linear-gradient(23deg, theme('colors.developmint.400'), theme('colors.rains.400'), theme('colors.rains.300'));
   }
 
-  .bg-gradient-rains-rains-dark {
-    background-image: linear-gradient(to right, config('colors.rains'), config('colors.rains-dark'));
+  .bg-gradient-rains-500-rains-600 {
+    background-image: linear-gradient(to right, theme('colors.rains.500'), theme('colors.rains.600'));
   }
 
   .bg-hero {
     background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
+    background-image: linear-gradient(theme('colors.rains.600'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero_sm.jpg");
 
     @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
+      background-image: linear-gradient(theme('colors.rains.600'), rgba(11, 7, 16, 0.65)), url("~assets/img/bg/hero.jpg");
     }
   }
 

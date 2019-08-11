@@ -20,17 +20,18 @@ export default {
 </script>
 
 <style lang="postcss">
+  /* purgecss start ignore */
   .cookie-consent {
-    @apply .w-full .py-2 .relative .flex .items-center .justify-center .bg-developmint-darker .text-developmint-lightest .text-xs;
+    @apply .w-full .py-2 .relative .flex .items-center .justify-center .bg-developmint-700 .text-developmint-200 .text-xs;
 
     @screen md {
       @apply .text-sm .text-center;
     }
 
     &-link {
-      @apply .no-underline .text-developmint-light;
+      @apply .no-underline .text-developmint-300;
       &:hover {
-        @apply text-developmint-lighter;
+        @apply text-developmint-200;
       }
     }
 
@@ -51,4 +52,6 @@ export default {
       }
     }
   }
+
+  /* purgecss end ignore */
 </style>

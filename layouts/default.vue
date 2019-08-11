@@ -1,5 +1,5 @@
 <template>
-  <div class="font-lato text-rains text-base antialiased leading-normal bg-grey-lightest overflow-hidden">
+  <div class="font-lato text-rains-500 text-base antialiased leading-normal bg-gray-100 overflow-hidden">
     <Navbar />
     <Nuxt />
     <AppFooter />

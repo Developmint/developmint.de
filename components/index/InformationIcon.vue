@@ -4,7 +4,7 @@
     <h3 class="mt-3 text-lg text-center mb-4 group-hover:text-black transition-all" v-text="title" />
 
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="text-justify group-hover:text-black transition-all text-grey-darkest" v-html="content" />
+    <div class="text-justify group-hover:text-black transition-all text-gray-800" v-html="content" />
   </div>
 </template>
 

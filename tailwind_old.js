@@ -88,9 +88,9 @@ const colors = {
   'developmint-darker': '#0e5513',
   'developmint-dark': '#13761a',
   'developmint': '#199922',
-  'developmint-light': '#60c367',
-  'developmint-lighter': '#a4dda8',
-  'developmint-lightest': '#e8f6e9',
+  'developmint-400': '#60c367',
+  'developmint-300': '#a4dda8',
+  'developmint-400est': '#e8f6e9',
 
   'rains-darker': '#3f1c3d',
   'rains-dark': '#110710',
@@ -878,24 +878,6 @@ module.exports = {
     width: ['responsive'],
     zIndex: ['responsive']
   },
-
-  /*
-  |-----------------------------------------------------------------------------
-  | Plugins                                https://tailwindcss.com/docs/plugins
-  |-----------------------------------------------------------------------------
-  |
-  | Here is where you can register any plugins you'd like to use in your
-  | project. Tailwind's built-in `container` plugin is enabled by default to
-  | give you a Bootstrap-style responsive container component out of the box.
-  |
-  | Be sure to view the complete plugin documentation to learn more about how
-  | the plugin system works.
-  |
-  */
-
-  plugins: [
-    require('tailwindcss/plugins/container')()
-  ],
 
   /*
   |-----------------------------------------------------------------------------

@@ -1,10 +1,10 @@
 <template>
   <div>
     <section class="min-h-screen md:min-h-750 bg-work flex flex-col justify-center items-center">
-      <h1 class="text-center text-4xl md:text-6xl font-normal text-rains-lighter capitalize mt-16 md:mt-32 mb-4 md:mb-0">
+      <h1 class="text-center text-4xl md:text-6xl text-rains-400 capitalize mt-16 md:mt-32 mb-4 md:mb-0">
         {{ $t('work.index.heading') }}
       </h1>
-      <h2 class="font-normal text-center text-rains-lighter text-xl md:text-3xl w-4/5">
+      <h2 class="text-center text-rains-300 text-xl md:text-3xl w-4/5">
         {{ $t('work.index.subheading') }}
       </h2>
     </section>
@@ -12,12 +12,12 @@
       <WorkPreview
         v-for="(info, i) in $options.projects"
         :key="i"
-        :odd="!!(i % 2)"
+        :odd="Boolean(i % 2)"
         v-bind="info"
       />
     </div>
     <div class="bg-white shadow w-full py-32 flex flex-col items-center">
-      <h3 class="text-2xl text-center">
+      <h3 class="text-3xl pb-4 text-center">
         {{ $t('work.appendix.heading') }}
       </h3>
       <p class="w-full md:w-1/2 p-8 md:p-3">
@@ -126,10 +126,10 @@ export default {
 <style lang="postcss">
   .bg-work {
     background-size: cover;
-    background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");
+    background-image: linear-gradient(theme('colors.rains.600'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work_sm.jpg");
     background-position: bottom;
     @screen md {
-      background-image: linear-gradient(config('colors.rains-dark'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work.jpg");
+      background-image: linear-gradient(theme('colors.rains.600'), rgba(11, 7, 16, 0.6)), url("~assets/img/bg/work.jpg");
       background-position: center;
     }
   }
