@@ -986,10 +986,13 @@
   dependencies:
     core-js "^2.5.7"
 
-"@kazupon/vue-i18n-loader@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@kazupon/vue-i18n-loader/-/vue-i18n-loader-0.3.0.tgz#e068de2d75d891275814ae28ad1fcaf1b537694f"
-  integrity sha512-M2280E9PMxetu6mOdtyh1d6Dif7LwH4gvxD2dgsu7HOyzR26AUNok8DxZ1Y5YAexJvPfbBXC75Llui2myO05Hg==
+"@kazupon/vue-i18n-loader@^0.4.0":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@kazupon/vue-i18n-loader/-/vue-i18n-loader-0.4.1.tgz#71730a821ff15754eb004629d673b47f8d80fdd1"
+  integrity sha512-hVznmhnyoUKozGY7pwq/UtPL76UDzb+aiN2YksZZIzCY/MkEqih0MSyEmTGw7+HVWzJRPAlDyoRNR4tWKmkCRw==
+  dependencies:
+    js-yaml "^3.13.1"
+    json5 "^2.1.0"
 
 "@nuxt/babel-preset-app-edge@3.0.0-25886174.42eefa0e":
   version "3.0.0-25886174.42eefa0e"
@@ -1660,10 +1663,20 @@ acorn-walk@^6.1.1:
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-6.2.0.tgz#123cb8f3b84c2171f1f7fb252615b1c78a6b1a8c"
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
-acorn@^6.0.2, acorn@^6.0.7, acorn@^6.1.1, acorn@^6.2.1:
+acorn-walk@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-7.0.0.tgz#c8ba6f0f1aac4b0a9e32d1f0af12be769528f36b"
+  integrity sha512-7Bv1We7ZGuU79zZbb6rRqcpxo3OY+zrdtloZWoyD8fmGX+FeXRjE+iuGkZjSXLVovLzrsvMGMy0EkwA0E0umxg==
+
+acorn@^6.0.2, acorn@^6.0.7, acorn@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.1.tgz#3ed8422d6dec09e6121cc7a843ca86a330a86b51"
   integrity sha512-JD0xT5FCRDNyjDda3Lrg/IxFscp9q4tiYtxE1/nOzlKCk7hIRuYjhq1kCNkbPjMRMZuFq20HNQn1I9k8Oj0E+Q==
+
+acorn@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.0.0.tgz#26b8d1cd9a9b700350b71c0905546f64d1284e7a"
+  integrity sha512-PaF/MduxijYYt7unVGRuds1vBC9bFxbNf+VWqhOClfdgy7RlVkQqt610ig1/yxTgsDIfW1cWDel5EBbOy3jdtQ==
 
 addressparser@1.0.1:
   version "1.0.1"
@@ -6386,19 +6399,19 @@ nuxt-edge@^3.0.0-25886174.42eefa0e:
     "@nuxt/opencollective" "^0.2.1"
     "@nuxt/webpack-edge" "3.0.0-25886174.42eefa0e"
 
-nuxt-i18n@^5.12.7:
-  version "5.12.7"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.12.7.tgz#2698c38af16bc1ef059a72e629c1632dca6f4108"
-  integrity sha512-LfUW9cywrag2TIj7THX1aVCkNnVydf/px/QCV+xlj+e5luD0cHwg+u6dTwvHGmwZy/gnIh6jz7J4C6iVMbuAGA==
+nuxt-i18n@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.0.1.tgz#5dd075d84ff52c156fb7f191bc118555420cea6e"
+  integrity sha512-otyJW+lbDIYasPByPLK+xrZlwYcSJmMglPPiBOsg6J8+ZznsiTMakNQCNRCGej0dDynMVi9bGWv1jGo54Ma0uA==
   dependencies:
-    "@kazupon/vue-i18n-loader" "^0.3.0"
-    acorn "^6.1.1"
+    "@kazupon/vue-i18n-loader" "^0.4.0"
+    acorn "^7.0.0"
     acorn-dynamic-import "^4.0.0"
-    acorn-walk "^6.1.1"
+    acorn-walk "^7.0.0"
     cookie "^0.4.0"
     is-https "^1.0.0"
     js-cookie "^2.2.0"
-    vue-i18n "^8.11.2"
+    vue-i18n "^8.12.0"
     vue-i18n-extensions "^0.2.1"
 
 nuxt-purgecss@^0.2.1:
@@ -9383,10 +9396,10 @@ vue-i18n-extensions@^0.2.1:
   resolved "https://registry.yarnpkg.com/vue-i18n-extensions/-/vue-i18n-extensions-0.2.1.tgz#86ebea45a1f9c9594cd124f264e107aea193d7dd"
   integrity sha512-xBrItI7bEwBnG7eAlnyUARP41JYYn2+ABMR8q1Yh5FM9hHCbs4XPZwG+4+FPeIZ6b5gYk4YUP//m+fWiuU9z9A==
 
-vue-i18n@^8.11.2:
-  version "8.13.0"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.13.0.tgz#2d17c7bf3dd4941951c0ba96bcdb9e0fc566cead"
-  integrity sha512-nVwwh5m7gFtVusbcyR4WLowKcZs1r95yHMNtugwijSw9vGUiSZFt2QHVFJNO9AOXYQeLU8dgnUq7mXSBmzPWIA==
+vue-i18n@^8.12.0:
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.14.0.tgz#613cbbc21d71dc608cd085f8a94ea3a40badcd33"
+  integrity sha512-utI1Rvc8i+fmmUkkKRmHaf4QQ87s7rGVL5ZZLsKvvRzmgaIr1l+GfGxxxRmsZxHpPlgeB8OxoUZ4noqZgDL6xg==
 
 vue-if-bot@^1.2.0:
   version "1.2.0"

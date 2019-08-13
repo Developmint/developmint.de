@@ -22,7 +22,7 @@
     "eslint-plugin-nuxt": "^0.4.3",
     "intersection-observer": "^0.7.0",
     "nuxt-edge": "^3.0.0-25886174.42eefa0e",
-    "nuxt-i18n": "^5.12.7",
+    "nuxt-i18n": "^6.0.1",
     "nuxt-svg-loader": "^1.0.1",
     "nuxt-webfontloader": "^1.1.0",
     "postcss-nested": "^4.1.2",
