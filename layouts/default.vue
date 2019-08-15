@@ -33,7 +33,19 @@ export default {
     this.checkForHash(this.$route)
   },
   head () {
-    return this.$nuxtI18nSeo()
+    const i18nSeo = this.$nuxtI18nSeo()
+    const baseUrl = process.env.baseUrl
+    const { path } = this.$route
+    const pathWithSlash = path.endsWith('/') ? path : `${path}/`
+
+    return {
+      htmlAttrs: i18nSeo.htmlAttrs,
+      meta: i18nSeo.meta,
+      link: [
+        { rel: 'canonical', href: `${baseUrl}${pathWithSlash}` },
+        ...i18nSeo.link
+      ]
+    }
   },
   methods: {
     hideContactUsModal () {

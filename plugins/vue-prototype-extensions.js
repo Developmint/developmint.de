@@ -7,7 +7,7 @@ Vue.prototype.$createSeo = function (slug, baseMetaArray = []) {
       const defaultMetaArray = [
         {
           name: 'og:url',
-          content: `${process.env.baseUrl}${this.$route.path.substr(1)}`
+          content: `${process.env.baseUrl}${this.$route.path}`
         }
       ]
 
@@ -32,6 +32,6 @@ const retrieveMetaObjectArray = (metaObject) => {
     name: n,
     property: n,
     // Fix url when the meta information is og:image
-    content: wrappedName.includes('og:image') ? process.env.baseUrl + metaObject.content.substr(1) : metaObject.content
+    content: wrappedName.includes('og:image') ? process.env.baseUrl + metaObject.content : metaObject.content
   }))
 }

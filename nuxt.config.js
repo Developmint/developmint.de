@@ -6,7 +6,7 @@ const titleTemplate = c => c ? `${c} - Developmint` : 'Developmint'
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
-const baseUrl = process.env.BASE_URL || 'https://developmint.de/'
+const baseUrl = process.env.BASE_URL || 'https://www.developmint.de'
 
 const { theme: { colors } } = resolveConfig(rawTailwindConfig)
 
@@ -109,7 +109,7 @@ export default {
     description: 'Developmint is an experienced Software agency based in Dresden (Germany). Let your visions become' +
       ' reality with us!',
     author: 'Developmint',
-    ogHost: baseUrl,
+    ogHost: `${baseUrl}/`,
     ogSiteName: 'Developmint',
     ogImage: {
       path: 'logo.png'
@@ -171,7 +171,13 @@ export default {
       '/de/datenschutz',
       '/disclaimer',
       '/de/haftungsausschluss'
-    ]
+    ],
+    filter ({ routes }) {
+      return routes.map((route) => {
+        route.url = route.url.endsWith('/') ? route.url : `${route.url}/`
+        return route
+      })
+    }
   },
 
   webfontloader: {
