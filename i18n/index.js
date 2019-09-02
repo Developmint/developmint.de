@@ -24,24 +24,24 @@ module.exports = {
   parsePages: false,
   pages: {
     about: {
-      de: '/ueber-uns',
-      en: '/about-us'
+      de: '/ueber-uns/',
+      en: '/about-us/'
     },
     work: {
-      de: '/referenzen',
-      en: '/work'
+      de: '/referenzen/',
+      en: '/work/'
     },
     legal: {
-      de: '/impressum',
-      en: '/legal'
+      de: '/impressum/',
+      en: '/legal/'
     },
     disclaimer: {
-      de: '/haftungsausschluss',
-      en: '/disclaimer'
+      de: '/haftungsausschluss/',
+      en: '/disclaimer/'
     },
     privacy: {
-      de: '/datenschutz',
-      en: '/privacy'
+      de: '/datenschutz/',
+      en: '/privacy/'
     }
   },
   vueI18n: {

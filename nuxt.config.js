@@ -15,6 +15,9 @@ export default {
   generate: {
     fallback: true
   },
+  router: {
+    trailingSlash: true
+  },
   /*
    * Environment
    */
@@ -165,19 +168,14 @@ export default {
   sitemap: {
     hostname: baseUrl,
     exclude: [
-      '/legal',
-      '/de/impressum',
-      '/privacy',
-      '/de/datenschutz',
-      '/disclaimer',
-      '/de/haftungsausschluss'
+      '/legal/',
+      '/de/impressum/',
+      '/privacy/',
+      '/de/datenschutz/',
+      '/disclaimer/',
+      '/de/haftungsausschluss/'
     ],
-    filter ({ routes }) {
-      return routes.map((route) => {
-        route.url = route.url.endsWith('/') ? route.url : `${route.url}/`
-        return route
-      })
-    }
+    trailingSlash: true
   },
 
   webfontloader: {
