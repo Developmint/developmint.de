@@ -22,7 +22,7 @@
         <img
           v-else
           v-bind="imageSources"
-          :alt="`${$t(`work.projects.${slug}.title`)} ${$t(`general.preview`)}`"
+          :alt="`${name} ${$t(`general.preview`)}`"
           class="transition-all group-hover:scale-1025 group-hover:shadow-lg shadow-md border md:border-2 border-rains-300 md:border-gray-400 md:rounded max-w-none"
         >
       </a>
@@ -33,7 +33,7 @@
           rel="noopener"
           class="block text-rains-500 no-underline mx-6 md:px-6 mt-4 hover:underline transition-all"
           @click="logClick('heading')"
-        ><h2 v-t="`work.projects.${slug}.title`" class="text-2xl font-semibold" /></a>
+        ><h2 v-text="name" class="text-2xl font-semibold" /></a>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <p class="mt-2 p-6 py-8 md:py-6 text-justify my-8 md:my-0 md:px-12" v-html="$t(`work.projects.${slug}.shortDescription`)" />
       </div>
@@ -68,6 +68,9 @@ export default {
     bindUrl () {
       // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
       return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
+    },
+    name () {
+      return this.$t(`work.projects.${this.slug}.title`)
     },
     imageSources () {
       return {
