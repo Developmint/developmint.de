@@ -78,10 +78,7 @@ const sendMail = async (name, email, msg) => {
   const message = {
     replyTo: email,
     to: process.env.EMAIL_TO,
-
-    // Subject of the message
     subject: `New contact form message from ${email}`,
-
     text: msg
   }
 
