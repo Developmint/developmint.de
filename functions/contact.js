@@ -64,6 +64,8 @@ const sendMail = async (name, email, msg) => {
     {
       ...NODEMAILER_INFO,
       logger: {
+        debug: () => {},
+        info: () => {},
         warn: console.warn,
         error: console.error
       },
