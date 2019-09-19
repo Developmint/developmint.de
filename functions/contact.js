@@ -1,21 +1,23 @@
 /* eslint-disable no-console */
-import { promisify } from 'util'
-import sendmail from 'sendmail'
+import nodemailer from 'nodemailer'
 import validator from 'validator'
 import xssFilters from 'xss-filters'
 
 const shouldSend = process.env.SEND_MAIL
 
-const noop = () => {}
-const sendmailOptions = {
-  logger: {
-    debug: noop,
-    info: noop,
-    warn: console.warn,
-    error: console.error
+const NODEMAILER_INFO = {
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT || 465,
+  secure: process.env.SMTP_SECURE ? Boolean(process.env.SMTP_SECURE) : true,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD
   }
 }
-const pSendMail = promisify(sendmail(sendmailOptions))
+
+const SMTP_DEFAULT_FIELDS = {
+  from: 'Developmint <no-reply@developmint.de>'
+}
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -55,12 +57,33 @@ const validateAndSanitize = (key, value) => {
   return rejectFunctions.hasOwnProperty(key) && !rejectFunctions[key](value) && xssFilters.inHTMLData(value)
 }
 
-const sendMail = (name, email, msg) => pSendMail({
-  from: email,
-  to: process.env.MAIL_TO,
-  subject: 'New contact form message',
-  text: msg
-})
+const sendMail = async (name, email, msg) => {
+  const transporter = nodemailer.createTransport(
+    {
+      ...NODEMAILER_INFO,
+      logger: {
+        debug: () => {},
+        info: () => {},
+        warn: console.warn,
+        error: console.error
+      },
+      debug: shouldSend
+    },
+    SMTP_DEFAULT_FIELDS
+  )
+
+  // Message object
+  const message = {
+    replyTo: email,
+    to: process.env.EMAIL_TO,
+    subject: `New contact form message from ${email}`,
+    text: msg
+  }
+
+  await transporter.sendMail(message)
+
+  console.log('Message sent successfully!')
+}
 
 const sendMailDev = (...args) => {
   console.log(...args)
