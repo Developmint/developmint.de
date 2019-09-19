@@ -6,11 +6,9 @@ import xssFilters from 'xss-filters'
 const shouldSend = process.env.SEND_MAIL
 
 const NODEMAILER_INFO = {
-  smtp: {
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT || 465,
-    secure: process.env.SMTP_SECURE ? Boolean(process.env.SMTP_SECURE) : true
-  },
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT || 465,
+  secure: process.env.SMTP_SECURE ? Boolean(process.env.SMTP_SECURE) : true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASSWORD
