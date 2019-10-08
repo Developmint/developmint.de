@@ -1,5 +1,6 @@
 {
   "extends": [
-    "@nuxtjs"
+    "@nuxtjs",
+    "schedule:earlyMonday"
   ]
 }
