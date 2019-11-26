@@ -180,7 +180,7 @@ export default {
       addism: {
         title: 'Addism',
         shortDescription: 'A beautiful, structured and modern calculator for macOS with useful features including' +
-        ' the opportunity to export the calculation history in several ways, global shortcuts and a night mode'
+        ' the opportunity to export the calculation history in several ways, global shortcuts and a night mode.'
       },
       itexia: {
         title: 'Itexia',
@@ -192,14 +192,14 @@ export default {
         title: 'Hochschulinitiative Deutschland',
         shortDescription: 'Hochschulinitiative Deutschland is a German platform that provides great offers for' +
         ' students, including giveaways, seminars, and other goodies. We have created huge parts of the initial' +
-          ' homepage and have developed new features of the platform for quite some time.'
+        ' homepage and have developed new features of the platform for quite some time.'
       },
       'lichter-io': {
         title: 'Lichter.io',
         shortDescription: 'The personal website of Alex which is used as CV and portfolio page. Want to know more' +
         ' about how the website was created? No problem, the code is <a href="https://github.com/manniL/lichter.io"' +
         ' target="_blank" rel="noopener" class="text-developmint-500 hover:text-developmint-400 no-underline">open' +
-        ' source</a>'
+        ' source</a>.'
       },
       'nuxt': {
         title: 'Nuxt.js',

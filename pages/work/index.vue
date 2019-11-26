@@ -10,7 +10,7 @@
     </section>
     <div class="flex flex-wrap justify-center">
       <WorkPreview
-        v-for="(info, i) in $options.projects"
+        v-for="(info, i) in projects"
         :key="i"
         :odd="Boolean(i % 2)"
         v-bind="info"
@@ -25,7 +25,7 @@
       </p>
       <div class="w-full md:w-3/4 flex flex-col lg:flex-row items-center lg:justify-around mt-4 md:mt-16">
         <div
-          v-for="({duration, to, prefix, precision}, i) in $options.numbers"
+          v-for="({duration, to, prefix, precision}, i) in numbers"
           :key="i"
           v-observe-visibility="{ callback: !i ? handleVisibility : () => {}, once: true }"
           class="my-6 md:my-8 lg:my-0 mx-4 text-xl text-center md:w-1/3"
@@ -46,7 +46,62 @@
 </template>
 
 <script>
+import { ref } from '@vue/composition-api'
 import WorkPreview from '~/components/work/WorkPreview'
+
+const projects = [
+  {
+    slug: 'nuxt',
+    url: 'https://nuxtjs.org/',
+    svg: () => import('~/assets/img/work/nuxt.svg')
+  },
+  {
+    slug: 'itexia',
+    url: 'https://itexia.com/'
+  },
+  {
+    slug: 'hid',
+    url: 'https://hochschulinitiative-deutschland.de/'
+  },
+  {
+    slug: 'addism',
+    url: 'https://addism.de/',
+    shouldFollow: true
+  },
+  {
+    slug: 'lichter-io',
+    url: 'https://lichter.io/',
+    shouldFollow: true
+  },
+  {
+    slug: 'ostseeferien-binz',
+    url: 'https://ostseeferien-binz.de/'
+  },
+  {
+    slug: 'association-manager',
+    url: ''
+  }
+]
+const numbers = [
+  {
+    duration: 1000,
+    to: 50,
+    precision: 0,
+    prefix: '+'
+  },
+  {
+    duration: 3500,
+    to: 500000,
+    precision: 0,
+    prefix: '+'
+  },
+  {
+    duration: 2500,
+    to: 100,
+    precision: 2,
+    prefix: '%'
+  }
+]
 
 export default {
   scrollToTop: true,
@@ -54,69 +109,21 @@ export default {
     WorkPreview,
     AnimatedNumber: () => import('~/components/work/AnimatedNumber')
   },
-  data () {
-    return {
-      isVisible: false
-    }
-  },
-  methods: {
-    handleVisibility (isVisible) {
-      if (isVisible) {
-        this.isVisible = true
+  setup () {
+    const isVisible = ref(false)
+    const handleVisibility = (visibilityState) => {
+      if (visibilityState) {
+        isVisible.value = true
       }
     }
+
+    return {
+      isVisible,
+      handleVisibility,
+      numbers,
+      projects
+    }
   },
-  projects: [
-    {
-      slug: 'nuxt',
-      url: 'https://nuxtjs.org/',
-      svg: () => import('~/assets/img/work/nuxt.svg')
-    },
-    {
-      slug: 'itexia',
-      url: 'https://itexia.com/'
-    },
-    {
-      slug: 'hid',
-      url: 'https://hochschulinitiative-deutschland.de/'
-    },
-    {
-      slug: 'addism',
-      url: 'https://addism.de/'
-    },
-    {
-      slug: 'lichter-io',
-      url: 'https://lichter.io/'
-    },
-    {
-      slug: 'ostseeferien-binz',
-      url: 'https://ostseeferien-binz.de/'
-    },
-    {
-      slug: 'association-manager',
-      url: ''
-    }
-  ],
-  numbers: [
-    {
-      duration: 1000,
-      to: 50,
-      precision: 0,
-      prefix: '+'
-    },
-    {
-      duration: 3500,
-      to: 500000,
-      precision: 0,
-      prefix: '+'
-    },
-    {
-      duration: 2500,
-      to: 100,
-      precision: 2,
-      prefix: '%'
-    }
-  ],
   head () {
     return this.$createSeo('work')
   }

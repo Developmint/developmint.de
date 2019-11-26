@@ -184,7 +184,7 @@ export default {
         title: 'Addism',
         shortDescription: 'Addissm ist ein moderner und intuitiver Taschenrechner für den Mac. Seine Hauptfunktion' +
         ' ist es, dem Nutzer die gesamte Berechnung auf einen Blick zu zeigen. Weiterhin werden verschiedene' +
-        ' Exportfunktionalitäten und ein Nachtmodus geboten'
+        ' Exportfunktionalitäten und ein Nachtmodus geboten.'
       },
       itexia: {
         title: 'Itexia',

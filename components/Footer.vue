@@ -4,7 +4,7 @@
       <div class="flex flex-col lg:flex-row items-center">
         <div class="text-center leading-loose lg:text-left lg:leading-normal">
           <span>
-            &copy; 2015 - {{ $options.currentYear }}
+            &copy; 2015 - {{ currentYear }}
             <a
               href="/"
               class="no-underline text-developmint-500 hover:text-developmint-400"
@@ -31,14 +31,14 @@
           target="_blank"
           rel="noopener"
         >
-          <div>v{{ $options.version }}</div>
+          <div>v{{ version }}</div>
           <GitHubIcon class="block w-4 h-4 ml-1 fill-current" />
         </a>
       </div>
       <div class="py-4 lg:hidden" />
       <div class="flex items-center lg:inline">
         <NuxtLink
-          v-for="link in $options.links"
+          v-for="link in links"
           :key="link"
           :to="localePath(link)"
           no-prefetch
@@ -58,9 +58,13 @@ export default {
   components: {
     GitHubIcon: () => import('~/assets/img/icons/github.svg')
   },
-  links: ['legal', 'privacy', 'disclaimer'],
-  version,
-  currentYear: (new Date()).getFullYear()
+  setup () {
+    return {
+      links: ['legal', 'privacy', 'disclaimer'],
+      version,
+      currentYear: (new Date()).getFullYear()
+    }
+  }
 }
 </script>
 

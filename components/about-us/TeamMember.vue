@@ -58,8 +58,6 @@
 </template>
 
 <script>
-import logClick from '~/mixins/logClick'
-
 export default {
   components: {
     GitHubIcon: () => import('~/assets/img/icons/github.svg'),
@@ -67,7 +65,6 @@ export default {
     TwitterIcon: () => import('~/assets/img/icons/team/twitter.svg'),
     LinkedInIcon: () => import('~/assets/img/icons/team/linkedin.svg')
   },
-  mixins: [logClick],
   props: {
     slug: {
       type: String,
@@ -80,6 +77,17 @@ export default {
     links: {
       type: Object,
       default: () => ({})
+    }
+  },
+  setup ({ name }, context) {
+    const logClick = (eventName) => {
+      context.root.$ga.event({
+        eventCategory: 'click',
+        eventAction: `${name} - ${eventName}`
+      })
+    }
+    return {
+      logClick
     }
   }
 }

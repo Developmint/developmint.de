@@ -1,6 +1,6 @@
 {
   "name": "developmint.de",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Our company website",
   "author": "Alexander Lichter <alichter@developmint.de>",
   "private": true,
@@ -8,9 +8,9 @@
     "dev": "nuxt",
     "generate": "nuxt generate && yarn lambda-build",
     "lambda-build": "netlify-lambda build ./functions",
+    "lambda-dev": "yarn lambda-build && yarn lambda-serve",
     "lambda-serve": "netlify-lambda serve ./functions",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "npm run lint && npm run build"
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.6.0",
@@ -19,6 +19,7 @@
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/sitemap": "^1.3.1",
     "@nuxtjs/tailwindcss": "^1.1.2",
+    "@vue/composition-api": "^0.3.2",
     "eslint-plugin-nuxt": "^0.4.3",
     "intersection-observer": "^0.7.0",
     "nodemailer": "^6.3.0",
