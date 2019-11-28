@@ -52,6 +52,13 @@
             :quote="currentQuote.quote"
             class="flex-shrink-0 md:flex-shrink flex-grow-0 md:flex-grow max-w-5xl"
           />
+          <Quote
+            v-for="({quote, person}) in quotesWithoutCurrent"
+            :key="quote + person"
+            :person="person"
+            :quote="quote"
+            class="hidden flex-shrink-0 md:flex-shrink flex-grow-0 md:flex-grow max-w-5xl"
+          />
           <div class="flex-grow-0 text-5xl md:text-10xl opacity-25 text-gray-700 group-hover:text-gray-200 select-none transition-all">
             «
           </div>
@@ -84,7 +91,7 @@
     </div>
     <div class="shadow-inner">
       <div class="lg:mx-8 xl:mx-16 py-4 px-0 md:px-4">
-        <div v-observe-visibility="visibilityChanged">
+        <div v-observe-visibility="onVisibilityChange">
           <Transition name="slide-fade">
             <div class="lg:flex flex-row justify-around lg:my-8 md:p-4">
               <InformationIcon
@@ -125,6 +132,11 @@
 </template>
 
 <script>
+import { ref, computed } from '@vue/composition-api'
+import { useInterval } from '@/compositions/useInterval'
+
+const nextItem = (arrayRef, indexRef) => () => { indexRef.value = (indexRef.value + 1) % arrayRef.value.length }
+
 export default {
   components: {
     InformationIcon: () => import('~/components/index/InformationIcon'),
@@ -134,42 +146,43 @@ export default {
     Quote: () => import('~/components/index/Quote'),
     ExpertiseCategory: () => import('~/components/index/ExpertiseCategory')
   },
-  data () {
-    return {
-      currentSloganIndex: 0,
-      currentQuoteIndex: 0,
-      showIcons: false
-    }
-  },
-  computed: {
-    slogans () {
-      return this.$t('index.hero.slogans')
-    },
-    currentSlogan () {
-      return this.slogans[this.currentSloganIndex]
-    },
-    quotes () {
-      return this.$t('index.quotes')
-    },
-    currentQuote () {
-      return this.quotes[this.currentQuoteIndex]
-    }
-  },
-  mounted () {
-    setInterval(this.nextSlogan, 7.5 * 1000)
-    setInterval(this.nextQuote, 7.5 * 1000)
-  },
-  methods: {
-    nextSlogan () {
-      this.currentSloganIndex = (this.currentSloganIndex + 1) % this.slogans.length
-    },
-    nextQuote () {
-      this.currentQuoteIndex = (this.currentQuoteIndex + 1) % this.quotes.length
-    },
-    visibilityChanged (visible) {
-      if (visible) {
-        this.showIcons = true
+  setup (props, context) {
+    // Workaround to get i18n working - https://github.com/kazupon/vue-i18n/issues/693
+    const slogans = computed(() => context.root.$i18n.t('index.hero.slogans'))
+    const currentSloganIndex = ref(0)
+    const currentSlogan = computed(() => slogans.value[currentSloganIndex.value])
+    const nextSlogan = nextItem(slogans, currentSloganIndex)
+    const slogansWithoutCurrent = computed(() => slogans.value.slice().splice(currentSloganIndex.value))
+    useInterval(7.5, nextSlogan)
+
+    const quotes = computed(() => context.root.$i18n.t('index.quotes'))
+    const currentQuoteIndex = ref(0)
+    const currentQuote = computed(() => quotes.value[currentQuoteIndex.value])
+    const nextQuote = nextItem(quotes, currentQuoteIndex)
+    const quotesWithoutCurrent = computed(() => quotes.value.slice().splice(currentQuoteIndex.value))
+    useInterval(7.5, nextQuote)
+
+    const showIcons = ref(false)
+    const onVisibilityChange = (isVisible) => {
+      if (isVisible) {
+        showIcons.value = true
       }
+    }
+
+    return {
+      // Slogans
+      slogans,
+      currentSloganIndex,
+      currentSlogan,
+      slogansWithoutCurrent,
+      // Quotes
+      quotes,
+      currentQuoteIndex,
+      currentQuote,
+      quotesWithoutCurrent,
+      // Icon-related stuff
+      showIcons,
+      onVisibilityChange
     }
   },
   head () {

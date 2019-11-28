@@ -129,6 +129,7 @@ export default {
    * Nuxt plugins
    */
   plugins: [
+    '~/plugins/composition-api',
     '~/plugins/vue-prototype-extensions',
     '~/plugins/vue-scroll-directive.client',
     '~/plugins/vue-observe-visibility-directive.client'

@@ -10,7 +10,7 @@
     </section>
     <section class="md:mx-16 my-24 bg-rains-light xl:flex">
       <TeamMember
-        v-for="member in $options.members"
+        v-for="member in members"
         :key="member.slug"
         v-bind="member"
       />
@@ -21,39 +21,45 @@
 <script>
 import TeamMember from '~/components/about-us/TeamMember'
 
+const members = [
+  {
+    slug: 'alex',
+    name: 'Alexander Lichter',
+    links: {
+      web: 'https://lichter.io/?ref=developmint.de',
+      twitter: 'https://twitter.com/TheAlexLichter',
+      github: 'https://github.com/manniL/',
+      linkedin: 'https://www.linkedin.com/in/alexanderlichter'
+    }
+  },
+  {
+    slug: 'max',
+    name: 'Max Langer',
+    links: {
+      web: 'https://max.codes/?ref=developmint.de',
+      twitter: 'https://twitter.com/mangerlahn',
+      github: 'https://github.com/mangerlahn/',
+      linkedin: 'https://www.linkedin.com/in/max-langer-17b133136/'
+    }
+  }
+]
+
 export default {
   scrollToTop: true,
   components: {
     TeamMember
+  },
+  setup () {
+    return {
+      members
+    }
   },
   head () {
     return this.$createSeo('about', [{
       name: 'og:image',
       content: require('~/assets/img/bg/about-us.jpg')
     }])
-  },
-  members: [
-    {
-      slug: 'alex',
-      name: 'Alexander Lichter',
-      links: {
-        web: 'https://lichter.io/?ref=developmint.de',
-        twitter: 'https://twitter.com/TheAlexLichter',
-        github: 'https://github.com/manniL/',
-        linkedin: 'https://www.linkedin.com/in/alexanderlichter'
-      }
-    },
-    {
-      slug: 'max',
-      name: 'Max Langer',
-      links: {
-        web: 'https://max.codes/?ref=developmint.de',
-        twitter: 'https://twitter.com/mangerlahn',
-        github: 'https://github.com/mangerlahn/',
-        linkedin: 'https://www.linkedin.com/in/max-langer-17b133136/'
-      }
-    }
-  ]
+  }
 }
 </script>
 

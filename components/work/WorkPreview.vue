@@ -8,9 +8,9 @@
       class="flex flex-col xl:justify-around md:mx-16 xl:p-16"
     >
       <a
-        v-bind="bindUrl"
+        v-bind="boundUrl"
         target="_blank"
-        rel="noopener"
+        :rel="rel"
         class="text-rains-500 flex justify-center group sm:mt-8 lg:my-8 md:w-1/2"
         @click="logClick('img')"
       >
@@ -28,9 +28,9 @@
       </a>
       <div class="my-6 xl:px-6 xl:w-1/2">
         <a
-          v-bind="bindUrl"
+          v-bind="boundUrl"
           target="_blank"
-          rel="noopener"
+          :rel="rel"
           class="block text-rains-500 no-underline mx-6 md:px-6 mt-4 hover:underline transition-all"
           @click="logClick('heading')"
         ><h2 v-t="`work.projects.${slug}.title`" class="text-2xl font-semibold" /></a>
@@ -42,10 +42,9 @@
 </template>
 
 <script>
-import logClick from '~/mixins/logClick'
+import { computed } from '@vue/composition-api'
 
 export default {
-  mixins: [logClick],
   props: {
     slug: {
       type: String,
@@ -62,18 +61,35 @@ export default {
     svg: {
       type: [Boolean, Function],
       default: false
+    },
+    shouldFollow: {
+      type: Boolean,
+      default: false
     }
   },
-  computed: {
-    bindUrl () {
-      // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
-      return this.url.length ? { href: `${this.url}?ref=developmint.de` } : {}
-    },
-    imageSources () {
-      return {
-        src: require(`~/assets/img/work/${this.slug}.jpg`),
-        srcset: `${require(`~/assets/img/work/${this.slug}@2x.jpg`)} 2x`
-      }
+  setup (props, context) {
+    const logClick = (eventName) => {
+      context.root.$ga.event({
+        eventCategory: 'click',
+        eventAction: `work preview: ${props.slug} - ${eventName}`
+      })
+    }
+
+    // Looks weird, but is needed to disable links if empty url is provided, because no href will be bound then
+    const boundUrl = computed(() => props.url.length ? { href: `${props.url}?ref=developmint.de` } : {})
+
+    const rel = computed(() => `noopener${props.shouldFollow ? '' : ' nofollow'}`)
+
+    const imageSources = computed(() => ({
+      src: require(`~/assets/img/work/${props.slug}.jpg`),
+      srcset: `${require(`~/assets/img/work/${props.slug}@2x.jpg`)} 2x`
+    }))
+
+    return {
+      logClick,
+      boundUrl,
+      imageSources,
+      rel
     }
   }
 }
