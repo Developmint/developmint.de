@@ -53,7 +53,7 @@ export default {
       heading: 'Sie haben die Wahl',
       text: 'Sind Sie auf der Suche nach einem Unternehmen das effiziente und vollkommene Software baut, die' +
       ' ständig am Puls der Zeit orientiert? Dann sind Sie bei ' +
-      '<a href="/referenzen" class="text-developmint-500 hover:text-developmint-400">Developmint</a>' +
+      '<a href="/de/referenzen/" class="text-developmint-500 hover:text-developmint-400">Developmint</a>' +
       ' goldrichtig. Mit einer gelungenen Mischung aus Neugierde, Erfahrung und dem Mut über den Tellerrand zu' +
       ' schauen konnten wir bereits eine Vielzahl von Unternehmen von uns Überzeugen. Und keiner unserer Kunden hat' +
       ' es bisher bereut!<br><br> Durch erprobte Strategien und breitgefächerte Kompetenz können die meisten' +
@@ -376,15 +376,15 @@ export default {
       Wir kümmern uns intensiv um die Sicherheit Ihrer Daten und werden unser Bestes tun, damit wir nur die benötigten Daten
       sammeln und diese so gut wie möglich schützen!
     </p>
-    
+
     <h2 class="text-2xl py-4">Überblick</h2>
-    
+
     <h3 class="text-xl py-4">Wer ist verantwortlich für die Datenerfassung auf developmint.de?</h3>
     <p>
       Das sind wir: Developmint GbR! Unsere Kontaktdaten finden Sie im
       <a href="/de/impressum" class="underline" rel="nofollow" target="_blank">Impressum</a>.
     </p>
-    
+
     <h3 class="text-xl py-4">Wie erheben wir Daten?</h3>
     <p>
       Ersteinmal erheben wir die Daten, die du uns bereitstellst, solltest du uns Kontaktieren (z.B. durch ein
@@ -393,14 +393,14 @@ export default {
       Technische Daten (z.B. das Betriebssystem, die Bildschirmgröße und -auflösung, die Sprachpreferenzen sowie welchen
       Browser Sie nutzen) werden automatisch (und auch hier anonym) genutzt, um Ihr Seitenerlebnis zu verbessern
     </p>
-    
+
     <h3 class="text-xl py-4">Wie nutzten wir die Daten?</h3>
     <p>
       Wir erstellen mittels der Daten Statistiken um unsere Website zu verbessern, Probleme festzustellen und um
       herauszufinden, was der Nutzer, also Sie, auf der Seite gut oder schlecht finden.<br>
       Solltest du uns deine E-Mail bereitgestellt haben, werden wir diese nur nutzen um die Kontaktanfrage zu bearbeiten.
     </p>
-    
+
     <h3 class="text-xl py-4">Was sind Ihre Rechte?</h3>
     <p>
       Sie haben jederzeit das Recht, informationen über Grund, Herkunft und Empfänger Ihrer Daten kostenlos anzufragen.<br>
@@ -413,15 +413,15 @@ export default {
       Natürlich ist es in unserem Interesse den Schutz Ihrer personenbezogenen Daten zu garantieren.<br>
       Falls sie noch Fragen haben, schreiben sie uns eine Mail an privacy@developmint.de.<br>
     </p>
-    
+
     <h3 class="text-xl py-4">Rechtliche Grundlage</h3>
     <p>
       Die rechtliche Grundlage für den Datenschutz finden Sie in den Gesetztestexten der DSGVO(Datenschutz-Grundverordnung)
       und dem Telemediengesetz (TMG).
     </p>
-    
+
     <h2 class="text-2xl py-4">2. Erhebung und Nutzung von personenbezogenen Daten</h2>
-    
+
     <h3 class="text-xl py-4">Cookies</h3>
     <p>
       Diese Website benutzt Cookies (so wie wir es dir bereits beim erstmaligen Besuch der Seite gesagt haben).<br>
@@ -438,7 +438,7 @@ export default {
       Die Cookies erlauben uns zu herauszufinden, ob Sie die Seite zuvor bereits besucht haben. Das bedeutet nicht, dass wir
       dadurch auf Ihre Identität schlussfolgern können.
     </p>
-    
+
     <h3 class="text-xl py-4">Kontaktaufnahme</h3>
     <p>
       Wenn Sie mit uns Kontakt aufnehmen (z.B. per Kontaktformular, Telefon, Email oder durch soziale Medien) werden die
@@ -450,7 +450,7 @@ export default {
       Keine Daten werden an Drittanbieter gesendet. <br>
       Auch werden die Daten nicht zum Anreichern von Informationen aus anderen Quellen genutzt.<br>
     </p>
-    
+
     <h3 class="text-xl py-4">Server-Log Dateien</h3>
     <p>
       Um Betrug oder bösartige Nutzung von developmint.de zu verfolgen, speichern wir sogenannte Server-Log Dateien, die
@@ -473,9 +473,9 @@ export default {
       Keine Daten werden an Drittanbieter gesendet. <br>
       Auch werden die Daten nicht zum Anreichern von Informationen aus anderen Quellen genutzt.<br>
     </p>
-    
+
     <h2 class="text-2xl py-4">3. Analysetools</h2>
-    
+
     <h3 class="text-xl py-4">Google Analytics</h3>
     <p>
       Unsere Website nutzt Google Analytics, ein Analysetool von Google Inc. ("Google").
@@ -512,7 +512,7 @@ export default {
       <br>
       Als Alternative (inbesonder für mobile Geräte), klicken sie auf
       <a href="#optout">diesen Link</a> um den gleichen Effekt für diese Seite zu erzielen.<br>
-      Mit dem Klicken des Links wird ein "Opt-out Cookie" erzeugt und auf Ihrem Gerät gespeichert, damit wir Google 
+      Mit dem Klicken des Links wird ein "Opt-out Cookie" erzeugt und auf Ihrem Gerät gespeichert, damit wir Google
       Analytics für Sie auf unserer Seite deaktivieren können<br>
       Sollten Sie den Cookie löschen, müssen Sie sich erneut per opt-out austragen.<br>
       <br>
@@ -523,13 +523,13 @@ export default {
         target="_blank"
       >in diesem Google Analytics-Hilfe Artikel</a>
     </p>
-    
+
     <h2 class="text-2xl py-4">Änderungen in der Datenschutzerkärung</h2>
     <p>
       Wir können diese Datenschutzerklärung von Zeit zu Zeit und nach eigenem Ermessen ändern. Wir empfehlen Ihnen, diese
       Seite regelmäßig auf Änderungen dieser Datenschutzerklärung zu überprüfen. Ihre fortgesetzte Nutzung der Website nach
       jeder Änderung dieser Datenschutzerklärung stellt Ihre Zustimmung zu dieser Änderung dar.
-    
+
       Letzte Änderung: 24.05.2018
     </p>
 `

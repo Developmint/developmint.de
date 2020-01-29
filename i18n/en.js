@@ -52,7 +52,7 @@ export default {
     intro: {
       heading: 'It\'s your choice',
       text: 'Are you searching for a company that builds beautiful and efficient software while feeling the' +
-      ' zeitgeist? If that\'s the case, <a href="/work" class="no-underline text-developmint-500' +
+      ' zeitgeist? If that\'s the case, <a href="/work/" class="no-underline text-developmint-500' +
       ' hover:text-developmint-400">Developmint</a> is the business you are looking for. With the right mix' +
       ' of curiosity, experience and courage to think outside the box, we were able to convince many businesses of' +
       ' working with us. And so far, none of our customers regretted it!' +
@@ -370,7 +370,7 @@ export default {
       Technical data (like the OS, screen size, language preference, browser) is collected automatically to improve your
       website experience.
     </p>
-    
+
     <h3 class="font-normal text-xl py-4">How do we use your data?</h3>
     <p>
       We use statistics to further develop the Website, to recognize problems or errors and to find out what you, the
@@ -413,7 +413,7 @@ export default {
       The Cookies allow us to detect if you have visited the page before. This does not mean that we know your identity
       because of these Cookies.
     </p>
-    
+
     <h3 class="font-normal text-xl py-4">Contacting us</h3>
     <p>
       When you contact us (f.ex. through a contact form, via e-mail, telephone or social media), we will use the data
@@ -425,7 +425,7 @@ export default {
       Nor is any of this information matched to any information that may be collected by other components of our
       website.
     </p>
-    
+
     <h3 class="font-normal text-xl py-4">Log files</h3>
     <p>
       To follow up fraud or malicious use of developmint.de, we store server log files containing the following data:
@@ -442,13 +442,13 @@ export default {
     <br>
      <p>
      This data will only be used in case of fraud. We store those server logs for 30 days and delete the data after the
-     period (if they are not related to any incidents that happened, otherwise we delete them after the incident has 
+     period (if they are not related to any incidents that happened, otherwise we delete them after the incident has
      been resolved).<br>
      No data is transferred to third parties.<br>
      Nor is any of this information matched to any information that may be collected by other components of our
      website.
     </p>
-    
+
     <h2 class="font-normal text-2xl py-4">3. Analytics Tools</h2>
 
     <h3 class="font-normal text-xl py-4">Google Analytics</h3>
