@@ -70,7 +70,7 @@ const projects = [
   },
   {
     slug: 'lichter-io',
-    url: 'https://lichter.io/',
+    url: 'https://www.lichter.io/',
     shouldFollow: true
   },
   {

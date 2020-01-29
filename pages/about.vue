@@ -26,7 +26,7 @@ const members = [
     slug: 'alex',
     name: 'Alexander Lichter',
     links: {
-      web: 'https://lichter.io/?ref=developmint.de',
+      web: 'https://www.lichter.io/?ref=developmint.de',
       twitter: 'https://twitter.com/TheAlexLichter',
       github: 'https://github.com/manniL/',
       linkedin: 'https://www.linkedin.com/in/alexanderlichter'
