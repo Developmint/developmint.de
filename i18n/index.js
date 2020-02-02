@@ -16,10 +16,7 @@ module.exports = {
   defaultLocale: 'en',
   seo: false,
   lazy: true,
-  detectBrowserLanguage: {
-    cookieKey: 'redirected',
-    useCookie: true
-  },
+  detectBrowserLanguage: false,
   langDir: 'i18n/',
   parsePages: false,
   pages: {
