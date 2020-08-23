@@ -44,7 +44,7 @@
     "eslint-loader": "^3.0.2",
     "husky": "^3.0.8",
     "netlify-lambda": "^1.6.3",
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.0"
   },
   "husky": {
     "hooks": {
