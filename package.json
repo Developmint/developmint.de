@@ -42,7 +42,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-loader": "^3.0.2",
-    "husky": "^3.0.8",
+    "husky": "^4.3.8",
     "netlify-lambda": "^1.6.3",
     "standard-version": "^7.0.0"
   },
