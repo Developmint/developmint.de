@@ -27,7 +27,7 @@
     "nuxt-i18n": "^6.3.0",
     "nuxt-svg-loader": "^1.0.1",
     "nuxt-webfontloader": "^1.1.0",
-    "postcss-nested": "^4.1.2",
+    "postcss-nested": "^5.0.6",
     "shifty": "^2.8.0",
     "validator": "^11.1.0",
     "vue-cookieconsent-component": "^1.2.0",
