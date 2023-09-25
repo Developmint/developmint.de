@@ -1,0 +1,9 @@
+/                     https://www.lichter.io/about/
+/de/                  https://www.lichter.io/about/
+/about-us/            https://www.lichter.io/about/
+/work/                https://www.lichter.io/consulting/
+/de/referenzen/       https://www.lichter.io/consulting/
+/de/ueber-uns/        https://www.lichter.io/about/
+
+# Fallback
+/*                    https://www.lichter.io/

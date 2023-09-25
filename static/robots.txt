@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /legal
-Disallow: /de/impressum
-Disallow: /privacy
-Disallow: /de/datenschutz
-Disallow: /disclaimer
-Disallow: /de/haftungsausschluss
